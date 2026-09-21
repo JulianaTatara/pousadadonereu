@@ -1,0 +1,85 @@
+{
+  "site": {
+    "name": "Pousada do Nereu",
+    "location": "Palmital River · Garuva, SC",
+    "logo": "",
+    "heroImage": "",
+    "heroVideo": "",
+    "address": "Estrada Geral do Palmital, p55, cxp 06. Bairro Palmital. Garuva, Santa Catarina, Brazil",
+    "email": "pousadadonereu@hotmail.com",
+    "phonePrimary": "+55 (47) 3445-2951",
+    "whatsapp": "+55 (47) 99975-3651",
+    "instagram": "@pousadadonereu"
+  },
+  "pages": {
+    "home": {
+      "title": "Welcome to Pousada do Nereu",
+      "heroTitle": "Palmital",
+      "heroSubtitle": "Garuva, Santa Catarina, Brazil",
+      "intro": "Welcome to our inn on the banks of the Palmital River.",
+      "body": "This is the first draft of the new website. We will migrate the photos, videos and full content from Webnode while keeping everything easy to edit through the CMS.",
+      "featureImage": "",
+      "featureCaption": "",
+      "secondaryTitle": "A riverside inn for fishing and nature",
+      "secondaryIntro": "Accommodation, sport fishing, boats and a peaceful setting surrounded by nature.",
+      "secondaryBody": "Once you approve the look, we will migrate and refine the remaining content page by page."
+    },
+    "boats": {
+      "title": "Our boats",
+      "heroTitle": "Boats",
+      "intro": "Boats, experienced pilots and local fishing support.",
+      "body": "Use the gallery below to add, remove and reorganize photos through the CMS.",
+      "heroImage": "",
+      "gallery": []
+    },
+    "accommodations": {
+      "title": "Accommodation",
+      "heroTitle": "Accommodation",
+      "intro": "Present the rooms and facilities here.",
+      "body": "We will migrate the current information and images from Webnode.",
+      "heroImage": "",
+      "gallery": []
+    },
+    "photos": {
+      "title": "Photos",
+      "heroTitle": "Gallery",
+      "intro": "River views, fishing, facilities and moments at Pousada do Nereu.",
+      "body": "You will be able to upload new photos directly through the CMS.",
+      "heroImage": "",
+      "gallery": []
+    },
+    "rates": {
+      "title": "Rates",
+      "heroTitle": "Rates",
+      "intro": "Please contact the inn to confirm availability and payment options.",
+      "body": "All prices can be edited through the CMS.",
+      "items": [
+        {"title":"Accommodation","description":"Room with minibar, television and air conditioning. Breakfast included.","price":"R$ 130.00"},
+        {"title":"Breakfast","description":"Breakfast only.","price":"R$ 30.00"},
+        {"title":"Dinner","description":"Fresh home-style meal.","price":"R$ 70.00"},
+        {"title":"Boat for 1, 2 or 3 people","description":"Professional pilot and 20 L of fuel.","price":"R$ 680.00"}
+      ]
+    },
+    "bayMap": {
+      "title": "Bay map",
+      "heroTitle": "Bay map",
+      "intro": "Add the map from the current site here.",
+      "body": "This area can hold a large map image and information about the fishing area.",
+      "image": "",
+      "caption": ""
+    },
+    "directions": {
+      "title": "Directions",
+      "heroTitle": "Directions",
+      "intro": "Estrada Geral do Palmital, p55, cxp 06. Bairro Palmital. Garuva, Santa Catarina, Brazil",
+      "body": "Take exit 10 from BR-101, then follow the unpaved road and the signs to Pousada do Nereu.",
+      "mapUrl": ""
+    },
+    "contact": {
+      "title": "Contact",
+      "heroTitle": "Contact",
+      "intro": "Send us a message or contact us by phone, WhatsApp, email or Instagram.",
+      "form": {"name":"Name","email":"Email","phone":"Phone","message":"Message","send":"Send"}
+    }
+  }
+}
