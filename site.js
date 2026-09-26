@@ -241,10 +241,41 @@ async function loadCmsPageContent(){
     if(!response.ok)return;
     const data=await response.json();
     const hero=data.hero||{};
-    const heroImg=document.querySelector('.hero-media img');
+    const heroMedia=document.querySelector('.hero-media');
+    const heroImg=heroMedia?.querySelector('img');
     if(heroImg){
       if(hero.image)heroImg.src=hero.image;
       if(hero.alt)heroImg.alt=hero.alt;
+    }
+    if(heroMedia){
+      let heroVideo=heroMedia.querySelector('video[data-cms-hero-video]');
+      if(hero.video){
+        if(!heroVideo){
+          heroVideo=document.createElement('video');
+          heroVideo.setAttribute('data-cms-hero-video','');
+          heroVideo.autoplay=true;
+          heroVideo.muted=true;
+          heroVideo.loop=true;
+          heroVideo.playsInline=true;
+          heroVideo.preload='metadata';
+          heroVideo.setAttribute('aria-hidden','true');
+          heroMedia.insertBefore(heroVideo,heroMedia.firstChild);
+        }
+        heroVideo.src=hero.video;
+        if(hero.image)heroVideo.poster=hero.image;
+        heroVideo.style.display='';
+        if(heroImg)heroImg.style.display='none';
+        const playPromise=heroVideo.play();
+        if(playPromise&&typeof playPromise.catch==='function'){
+          playPromise.catch(()=>{
+            heroVideo.style.display='none';
+            if(heroImg)heroImg.style.display='';
+          });
+        }
+      }else{
+        if(heroVideo){heroVideo.pause();heroVideo.removeAttribute('src');heroVideo.load();heroVideo.style.display='none'}
+        if(heroImg)heroImg.style.display='';
+      }
     }
     const kickerMain=document.querySelector('.hero-kicker-main');
     const kickerSub=document.querySelector('.hero-kicker-sub');
