@@ -36,11 +36,440 @@ const NAV = [
   {href:'contato.html',pt:'Contato',en:'Contact',es:'Contacto'}
 ];
 const I18N={
-  pt:{contact:'Entre em contato',fishingConditions:'Condições de pesca',addressTitle:'Endereço',quick:'Menu rápido',social:'Redes sociais',rights:'Todos os direitos reservados.',reach:'Como chegar'},
-  en:{contact:'Contact us',fishingConditions:'Fishing conditions',addressTitle:'Address',quick:'Quick menu',social:'Social media',rights:'All rights reserved.',reach:'Directions'},
-  es:{contact:'Contáctanos',fishingConditions:'Condiciones de pesca',addressTitle:'Dirección',quick:'Menú rápido',social:'Redes sociales',rights:'Todos los derechos reservados.',reach:'Cómo llegar'}
+  pt:{contact:'Entre em contato',fishingConditions:'Condições de pesca',addressTitle:'Endereço',quick:'Menu rápido',social:'Redes sociais',rights:'Todos os direitos reservados.',reach:'Como chegar',footerBlurb:'Rústico, aconchegante e familiar. Natureza, pescaria e boas histórias às margens do Rio Palmital.',generalMessage:'Olá! Encontrei vocês pelo site da Pousada do Nereu e gostaria de mais informações.',nereuMessage:'Olá Nereu! Encontrei a pousada pelo site e gostaria de mais informações.'},
+  en:{contact:'Contact us',fishingConditions:'Fishing conditions',addressTitle:'Address',quick:'Quick menu',social:'Social media',rights:'All rights reserved.',reach:'Directions',footerBlurb:'Rustic, welcoming and family-run. Nature, fishing and good stories along the Palmital River.',generalMessage:'Hello! I found Pousada do Nereu through the website and would like more information.',nereuMessage:'Hello Nereu! I found the lodge through the website and would like more information.'},
+  es:{contact:'Contáctanos',fishingConditions:'Condiciones de pesca',addressTitle:'Dirección',quick:'Menú rápido',social:'Redes sociales',rights:'Todos los derechos reservados.',reach:'Cómo llegar',footerBlurb:'Rústico, acogedor y familiar. Naturaleza, pesca y buenas historias a orillas del río Palmital.',generalMessage:'¡Hola! Encontré Pousada do Nereu a través del sitio web y me gustaría recibir más información.',nereuMessage:'¡Hola Nereu! Encontré la posada a través del sitio web y me gustaría recibir más información.'}
 };
 const LANG_META={pt:{label:'PT',flag:'assets/flag-br.svg',alt:'Brasil'},en:{label:'EN',flag:'assets/flag-us.svg',alt:'English'},es:{label:'ES',flag:'assets/flag-es.svg',alt:'España'}};
+
+const STATIC_TRANSLATIONS={
+  en:{
+    'Conheça a Pousada do Nereu':'Discover Pousada do Nereu',
+    'A Pousada':'The Lodge',
+    'História, pessoas, paisagens e a biodiversidade que fazem parte de um lugar marcado pela pesca do robalo e pela hospitalidade familiar.':'History, people, landscapes and biodiversity come together in a place shaped by snook fishing and family hospitality.',
+    'Sobre a Pousada':'About the Lodge',
+    'Conheça a história, a estrutura e os números da Pousada do Nereu.':'Discover the history, facilities and key facts about Pousada do Nereu.',
+    'Conhecer →':'Discover →',
+    'Sobre Nós':'About Us',
+    'Conheça um pouco mais sobre os proprietários.':'Learn a little more about the owners.',
+    'Galeria':'Gallery',
+    'Veja áreas, rio, marina e momentos de pesca.':'See the lodge areas, river, marina and fishing moments.',
+    'Explorar →':'Explore →',
+    'Fauna':'Wildlife',
+    'Descubra os peixes e a biodiversidade ligados ao Ecossistema Babitonga.':'Discover the fish and biodiversity connected to the Babitonga ecosystem.',
+
+    'Nossa história':'Our story',
+    'Uma pousada clássica da região, conhecida pela pesca do robalo e pelo jeito simples, acolhedor e familiar de receber.':'A classic lodge in the region, known for snook fishing and its simple, warm, family-style hospitality.',
+    'Lotação máxima':'Maximum capacity',
+    'Quartos':'Rooms',
+    'Barcos':'Boats',
+    'Atendemos o ano todo':'Open year-round',
+    'Desde 1998':'Since 1998',
+    'Uma pousada que nasceu da pesca':'A lodge born from fishing',
+    'Às margens do Rio Palmital, a Pousada do Nereu foi inaugurada em novembro de 1998 para receber apaixonados pela pesca do robalo. Com o tempo, tornou-se ponto conhecido por pescadores de diferentes partes do Brasil e países vizinhos.':'On the banks of the Palmital River, Pousada do Nereu opened in November 1998 to welcome people passionate about snook fishing. Over time, it became a well-known destination for anglers from different parts of Brazil and neighboring countries.',
+    'A proposta permanece simples: hospedagem acolhedora, comida caseira, apoio à pescaria e contato direto com a natureza da região da Baía da Babitonga.':'The idea remains simple: welcoming accommodation, home-style food, fishing support and direct contact with the nature of the Babitonga Bay region.',
+
+    'Quem recebe você':'Meet your hosts',
+    'Uma pousada familiar é feita de pessoas. Conheça um pouco de quem faz parte da história e do dia a dia da Pousada do Nereu.':'A family-run lodge is made by people. Meet some of those who are part of the history and daily life of Pousada do Nereu.',
+    'De pescador':'From angler',
+    'para pescador':'to angler',
+    'Proprietário':'Owner',
+    'Nereu é um dos proprietários da pousada e uma referência da casa na pesca do robalo. A relação com o rio, a pescaria e os hóspedes faz parte da identidade construída pela pousada ao longo dos anos.':'Nereu is one of the lodge owners and a key reference for snook fishing. His connection with the river, fishing and guests is part of the identity the lodge has built over the years.',
+    'Proprietária':'Owner',
+    'Foto de Marcia':'Photo of Marcia',
+    'Marcia também é proprietária da Pousada do Nereu e faz parte da história e da rotina da casa. Este espaço está preparado para receber sua foto e um texto mais completo sobre sua trajetória na pousada.':'Marcia is also an owner of Pousada do Nereu and is part of the lodge’s history and daily routine. This space is ready for her photo and a fuller text about her journey at the lodge.',
+
+    'À beira do Rio Palmital':'On the banks of the Palmital River',
+    'Estrutura para quem chega com embarcação ou quer deixar o barco próximo do ponto de partida da pescaria.':'Facilities for guests arriving with their own boat or who want to keep it close to the fishing departure point.',
+    'Acesso direto ao rio':'Direct river access',
+    'Seu barco perto da água':'Your boat close to the water',
+    'Seu ponto de partida no rio.':'Your starting point on the river.',
+    'A marina dá apoio a quem chega com embarcação e quer manter o barco próximo do acesso ao Rio Palmital. Consulte disponibilidade, período e condições diretamente com a pousada.':'The marina supports guests arriving with their own boat who want to keep it close to the Palmital River access. Check availability, dates and conditions directly with the lodge.',
+    'Quero deixar meu barco com vocês':'I want to keep my boat with you',
+    'clique aqui':'click here',
+    'Rampa':'Boat ramp',
+    'Mais praticidade para embarque e desembarque.':'Easier launching and retrieval.',
+    'Acesso ao rio':'River access',
+    'Saída próxima para começar a pescaria.':'A nearby departure point to start fishing.',
+    'Vagas sob consulta':'Spaces by request',
+    'Consulte período e condições diretamente com a pousada.':'Check dates and conditions directly with the lodge.',
+
+    'Como Chegar':'Directions',
+    'Abrir no Google Maps / Traçar rota →':'Open in Google Maps / Get directions →',
+    'Distâncias aproximadas de carro':'Approximate driving distances',
+    'Destino':'Destination',
+    'Distância':'Distance',
+    'Tempo':'Time',
+    'Aeroporto de Joinville (JOI)':'Joinville Airport (JOI)',
+    'Aeroporto Afonso Pena (CWB)':'Afonso Pena Airport (CWB)',
+    'Mapa da Pousada do Nereu':'Map of Pousada do Nereu',
+
+    'Fale com a gente':'Talk to us',
+    'Contato':'Contact',
+    'Para disponibilidade, valores ou dúvidas rápidas, fale conosco pelo WhatsApp ou envie uma mensagem pelo formulário.':'For availability, rates or quick questions, contact us on WhatsApp or send a message using the form.',
+    'Fale diretamente conosco':'Contact us directly',
+    'Clique abaixo para entrar em contato conosco':'Click below to contact us',
+    'Endereço':'Address',
+    'Mensagem':'Message',
+    'Envie uma mensagem':'Send a message',
+    'Nome *':'Name *',
+    'E-mail *':'Email *',
+    'Telefone *':'Phone *',
+    'Mensagem *':'Message *',
+    'Enviar mensagem →':'Send message →',
+
+    'Tempo, lua e maré':'Weather, moon and tides',
+    'Conheça as condições climáticas e ambientais para sua pescaria':'Learn about the weather and environmental conditions for your fishing trip',
+    'Previsão da semana':'Weekly forecast',
+    'Planeje sua pescaria com o clima em mente':'Plan your fishing trip with the weather in mind',
+    'Veja a previsão da semana. Mesmo com chuva, pode sair peixe — então consulte a pousada para entender as condições do rio nos dias em que você pretende pescar.':'Check the week’s forecast. Fish can still bite in the rain, so contact the lodge to understand river conditions for the days you plan to fish.',
+    'Carregando previsão...':'Loading forecast...',
+    'Carregando previsão da semana...':'Loading weekly forecast...',
+    'Previsão automática para Garuva/SC.':'Automatic forecast for Garuva, SC.',
+    'Fases da lua':'Moon phases',
+    'Veja como a lua pode influenciar':'See how the moon can influence fishing',
+    'Essas referências seguem o conhecimento e a experiência de anos do Nereu, acompanhando a pescaria na região.':'These references are based on Nereu’s years of local fishing knowledge and experience.',
+    'Experiência local':'Local experience',
+    'Legenda das luas':'Moon phase guide',
+    'Legenda das fases da lua':'Moon phase guide',
+    'Lua nova':'New moon',
+    'Condição intermediária':'Intermediate conditions',
+    'Maiores chances de pegar peixe':'Higher chance of catching fish',
+    'Lua crescente':'Waxing moon',
+    'Costuma ser favorável':'Usually favorable',
+    'Lua cheia':'Full moon',
+    'Costuma ser menos favorável':'Usually less favorable',
+    'Lua minguante':'Waning moon',
+    'Conhecimento de quem pesca aqui há anos.':'Knowledge from years of fishing here.',
+    'Estas referências são baseadas no conhecimento e na experiência de muitos anos de Nereu, proprietário da pousada, acompanhando a pesca no Rio Palmital e na região.':'These references are based on many years of knowledge and experience from Nereu, owner of the lodge, following fishing conditions on the Palmital River and in the region.',
+    'As condições reais também podem variar com maré, chuva, vento, horário e outros fatores do dia.':'Actual conditions can also vary with tides, rain, wind, time of day and other daily factors.',
+    'Calendário lunar':'Lunar calendar',
+    'Role para baixo ↓':'Scroll down ↓',
+    'Dê zoom no mês que você tem interesse em ir pescar':'Zoom in on the month you are interested in fishing',
+    'Além da lua':'Beyond the moon',
+    'Marés':'Tides',
+    'A maré também pode influenciar a pescaria, alterando o nível da água, a força da corrente e a movimentação dos peixes no estuário. O melhor momento depende da combinação das condições do dia e do ponto de pesca.':'Tides can also influence fishing by changing water level, current strength and fish movement in the estuary. The best time depends on the combination of daily conditions and the fishing spot.',
+    'Clique aqui para conversar com o Nereu e entender as condições para sua pescaria →':'Click here to talk to Nereu and understand the conditions for your fishing trip →',
+
+    'Conheça antes de chegar':'Take a look before you arrive',
+    'Explore momentos, sabores e cantinhos da pousada. Você poderá trocar a foto de fundo depois e ajustar o desfoque como preferir.':'Explore moments, flavors and corners of the lodge.',
+    'Áreas e experiências':'Areas and experiences',
+    'Tudo':'All',
+    'Janta':'Dinner',
+    'Café da manhã':'Breakfast',
+    'Churrasqueira':'Barbecue area',
+    'Sinuca':'Pool table',
+    'Beira do rio':'Riverside',
+    'Refeitório':'Dining room',
+    'Varanda':'Veranda',
+    'Estacionamento':'Parking',
+    'Lago':'Lake',
+    'Miniaturas por localização · role a barra para o lado':'Thumbnails by area · scroll sideways',
+    'Legenda editável: vista do Rio Palmital ao entardecer.':'View of the Palmital River at sunset.',
+    'Clique para ampliar · use as setas para navegar':'Click to enlarge · use the arrows to navigate',
+    'Foto anterior':'Previous photo',
+    'Próxima foto':'Next photo',
+    'Abrir foto em tela cheia':'Open photo full screen',
+    'Foto ampliada da galeria':'Enlarged gallery photo',
+    'Acompanhe a pousada':'Follow the lodge',
+    'Você já conferiu nosso Instagram?':'Have you checked out our Instagram?',
+    'Nos siga na nossa página única e oficial e acompanhe nossos posts e stories mais recentes.':'Follow our one and only official page and keep up with our latest posts and stories.',
+    'Ver no Instagram ↗':'View on Instagram ↗',
+    'Carregando Instagram da Pousada do Nereu…':'Loading Pousada do Nereu on Instagram…',
+
+    'Ecossistema Babitonga':'Babitonga ecosystem',
+    'Biodiversidade, manguezal e pesca no Rio Palmital e na Baía da Babitonga.':'Biodiversity, mangroves and fishing on the Palmital River and in Babitonga Bay.',
+    'Água, manguezal e biodiversidade':'Water, mangroves and biodiversity',
+    'Um estuário cheio de vida':'An estuary full of life',
+    'O Ecossistema Babitonga reúne ambientes estuarinos e marinhos diversos e funciona como área de alimentação, abrigo e crescimento para muitas espécies de peixes.':'The Babitonga ecosystem brings together diverse estuarine and marine environments and provides feeding, shelter and nursery areas for many fish species.',
+    'Estuário':'Estuary',
+    'Manguezal':'Mangroves',
+    'Abrigo e alimentação':'Shelter and feeding',
+    'Tamanhos e pesos abaixo são referências máximas publicadas para cada espécie e não representam necessariamente exemplares encontrados no Rio Palmital.':'The sizes and weights below are published maximum references for each species and do not necessarily represent specimens found in the Palmital River.',
+    'Pesca local':'Local fishing',
+    'Robalo no centro da identidade':'Snook at the heart of our identity',
+    'Entre as capturas relatadas com mais frequência pela pousada estão robalo-peva, robalo-flecha e pescada-amarela, além de peixe-espada, corvina e linguado.':'Among the catches most frequently reported by the lodge are fat snook, common snook and acoupa weakfish, as well as largehead hairtail, whitemouth croaker and flounder.',
+    'Robalo-peva':'Fat snook',
+    'Robalo-flecha':'Common snook',
+    'Pescada-amarela':'Acoupa weakfish',
+    'Espécies':'Species',
+    'Peixes da região':'Fish of the region',
+    'Conheça algumas das espécies relacionadas à pesca local.':'Discover some of the species associated with local fishing.',
+    'Espécie estuarina associada a águas costeiras, manguezais e trechos de baixa salinidade.':'An estuarine species associated with coastal waters, mangroves and low-salinity areas.',
+    'O maior dos robalos da página, encontrado em ambientes costeiros, estuários, lagoas e manguezais.':'The largest snook listed here, found in coastal environments, estuaries, lagoons and mangroves.',
+    'Peixe estuarino-marinho que se alimenta principalmente de peixes e crustáceos.':'An estuarine-marine fish that feeds mainly on fish and crustaceans.',
+    'Corvina':'Whitemouth croaker',
+    'Espécie costeira e estuarina bastante associada a fundos arenosos e lodosos.':'A coastal and estuarine species strongly associated with sandy and muddy bottoms.',
+    'Peixe-espada':'Largehead hairtail',
+    'Espécie costeira de corpo extremamente alongado, encontrada também em águas salobras.':'A coastal species with an extremely elongated body, also found in brackish waters.',
+    'Linguado':'Flounder',
+    'Paralichthys brasiliensis — referência':'Paralichthys brasiliensis — reference',
+    'Peixe de fundo encontrado em áreas costeiras, baías e estuários. A espécie capturada localmente deve ser confirmada.':'A bottom-dwelling fish found in coastal areas, bays and estuaries. The species caught locally should be confirmed.',
+    'Tamanho máximo':'Maximum size',
+    'Peso máximo':'Maximum weight',
+    'Mínimo legal de captura/desembarque':'Legal minimum catch/landing size',
+    'Referências técnicas: IN MMA nº 53/2005 para tamanhos mínimos dos robalos; FishBase e literatura pesqueira para tamanhos/pesos máximos. Consulte sempre a legislação vigente antes da pesca.':'Technical references: MMA Normative Instruction No. 53/2005 for minimum snook sizes; FishBase and fisheries literature for maximum sizes/weights. Always check current regulations before fishing.'
+  },
+  es:{
+    'Conheça a Pousada do Nereu':'Conoce Pousada do Nereu',
+    'A Pousada':'La Posada',
+    'História, pessoas, paisagens e a biodiversidade que fazem parte de um lugar marcado pela pesca do robalo e pela hospitalidade familiar.':'Historia, personas, paisajes y biodiversidad forman parte de un lugar marcado por la pesca del róbalo y la hospitalidad familiar.',
+    'Sobre a Pousada':'Sobre la Posada',
+    'Conheça a história, a estrutura e os números da Pousada do Nereu.':'Conoce la historia, la estructura y los datos principales de Pousada do Nereu.',
+    'Conhecer →':'Conocer →',
+    'Sobre Nós':'Sobre Nosotros',
+    'Conheça um pouco mais sobre os proprietários.':'Conoce un poco más a los propietarios.',
+    'Galeria':'Galería',
+    'Veja áreas, rio, marina e momentos de pesca.':'Descubre las áreas, el río, la marina y momentos de pesca.',
+    'Explorar →':'Explorar →',
+    'Fauna':'Fauna',
+    'Descubra os peixes e a biodiversidade ligados ao Ecossistema Babitonga.':'Descubre los peces y la biodiversidad vinculados al ecosistema Babitonga.',
+
+    'Nossa história':'Nuestra historia',
+    'Uma pousada clássica da região, conhecida pela pesca do robalo e pelo jeito simples, acolhedor e familiar de receber.':'Una posada clásica de la región, conocida por la pesca del róbalo y por su forma sencilla, acogedora y familiar de recibir.',
+    'Lotação máxima':'Capacidad máxima',
+    'Quartos':'Habitaciones',
+    'Barcos':'Barcos',
+    'Atendemos o ano todo':'Abierto todo el año',
+    'Desde 1998':'Desde 1998',
+    'Uma pousada que nasceu da pesca':'Una posada que nació de la pesca',
+    'Às margens do Rio Palmital, a Pousada do Nereu foi inaugurada em novembro de 1998 para receber apaixonados pela pesca do robalo. Com o tempo, tornou-se ponto conhecido por pescadores de diferentes partes do Brasil e países vizinhos.':'A orillas del río Palmital, Pousada do Nereu abrió en noviembre de 1998 para recibir a apasionados por la pesca del róbalo. Con el tiempo, se convirtió en un destino conocido por pescadores de distintas partes de Brasil y de países vecinos.',
+    'A proposta permanece simples: hospedagem acolhedora, comida caseira, apoio à pescaria e contato direto com a natureza da região da Baía da Babitonga.':'La propuesta sigue siendo sencilla: hospedaje acogedor, comida casera, apoyo para la pesca y contacto directo con la naturaleza de la región de la Bahía de Babitonga.',
+
+    'Quem recebe você':'Quién te recibe',
+    'Uma pousada familiar é feita de pessoas. Conheça um pouco de quem faz parte da história e do dia a dia da Pousada do Nereu.':'Una posada familiar está hecha de personas. Conoce a quienes forman parte de la historia y del día a día de Pousada do Nereu.',
+    'De pescador':'De pescador',
+    'para pescador':'para pescador',
+    'Proprietário':'Propietario',
+    'Nereu é um dos proprietários da pousada e uma referência da casa na pesca do robalo. A relação com o rio, a pescaria e os hóspedes faz parte da identidade construída pela pousada ao longo dos anos.':'Nereu es uno de los propietarios de la posada y una referencia de la casa en la pesca del róbalo. Su relación con el río, la pesca y los huéspedes forma parte de la identidad construida por la posada a lo largo de los años.',
+    'Proprietária':'Propietaria',
+    'Foto de Marcia':'Foto de Marcia',
+    'Marcia também é proprietária da Pousada do Nereu e faz parte da história e da rotina da casa. Este espaço está preparado para receber sua foto e um texto mais completo sobre sua trajetória na pousada.':'Marcia también es propietaria de Pousada do Nereu y forma parte de la historia y de la rutina de la casa. Este espacio está preparado para recibir su foto y un texto más completo sobre su trayectoria en la posada.',
+
+    'À beira do Rio Palmital':'A orillas del río Palmital',
+    'Estrutura para quem chega com embarcação ou quer deixar o barco próximo do ponto de partida da pescaria.':'Estructura para quienes llegan con embarcación propia o quieren dejar el barco cerca del punto de salida para pescar.',
+    'Acesso direto ao rio':'Acceso directo al río',
+    'Seu barco perto da água':'Tu barco cerca del agua',
+    'Seu ponto de partida no rio.':'Tu punto de partida en el río.',
+    'A marina dá apoio a quem chega com embarcação e quer manter o barco próximo do acesso ao Rio Palmital. Consulte disponibilidade, período e condições diretamente com a pousada.':'La marina brinda apoyo a quienes llegan con embarcación y quieren mantener el barco cerca del acceso al río Palmital. Consulta disponibilidad, período y condiciones directamente con la posada.',
+    'Quero deixar meu barco com vocês':'Quiero dejar mi barco con ustedes',
+    'clique aqui':'haz clic aquí',
+    'Rampa':'Rampa',
+    'Mais praticidade para embarque e desembarque.':'Más practicidad para botar y retirar la embarcación.',
+    'Acesso ao rio':'Acceso al río',
+    'Saída próxima para começar a pescaria.':'Salida cercana para comenzar la pesca.',
+    'Vagas sob consulta':'Plazas bajo consulta',
+    'Consulte período e condições diretamente com a pousada.':'Consulta período y condiciones directamente con la posada.',
+
+    'Como Chegar':'Cómo llegar',
+    'Abrir no Google Maps / Traçar rota →':'Abrir en Google Maps / Trazar ruta →',
+    'Distâncias aproximadas de carro':'Distancias aproximadas en coche',
+    'Destino':'Destino',
+    'Distância':'Distancia',
+    'Tempo':'Tiempo',
+    'Aeroporto de Joinville (JOI)':'Aeropuerto de Joinville (JOI)',
+    'Aeroporto Afonso Pena (CWB)':'Aeropuerto Afonso Pena (CWB)',
+    'Mapa da Pousada do Nereu':'Mapa de Pousada do Nereu',
+
+    'Fale com a gente':'Habla con nosotros',
+    'Contato':'Contacto',
+    'Para disponibilidade, valores ou dúvidas rápidas, fale conosco pelo WhatsApp ou envie uma mensagem pelo formulário.':'Para disponibilidad, precios o preguntas rápidas, contáctanos por WhatsApp o envía un mensaje mediante el formulario.',
+    'Fale diretamente conosco':'Habla directamente con nosotros',
+    'Clique abaixo para entrar em contato conosco':'Haz clic abajo para ponerte en contacto con nosotros',
+    'Endereço':'Dirección',
+    'Mensagem':'Mensaje',
+    'Envie uma mensagem':'Envía un mensaje',
+    'Nome *':'Nombre *',
+    'E-mail *':'Correo electrónico *',
+    'Telefone *':'Teléfono *',
+    'Mensagem *':'Mensaje *',
+    'Enviar mensagem →':'Enviar mensaje →',
+
+    'Tempo, lua e maré':'Tiempo, luna y mareas',
+    'Conheça as condições climáticas e ambientais para sua pescaria':'Conoce las condiciones climáticas y ambientales para tu jornada de pesca',
+    'Previsão da semana':'Pronóstico semanal',
+    'Planeje sua pescaria com o clima em mente':'Planifica tu pesca teniendo en cuenta el clima',
+    'Veja a previsão da semana. Mesmo com chuva, pode sair peixe — então consulte a pousada para entender as condições do rio nos dias em que você pretende pescar.':'Consulta el pronóstico de la semana. Incluso con lluvia puede haber buena pesca, así que consulta con la posada para conocer las condiciones del río en los días que planeas pescar.',
+    'Carregando previsão...':'Cargando pronóstico...',
+    'Carregando previsão da semana...':'Cargando pronóstico semanal...',
+    'Previsão automática para Garuva/SC.':'Pronóstico automático para Garuva, SC.',
+    'Fases da lua':'Fases de la luna',
+    'Veja como a lua pode influenciar':'Descubre cómo puede influir la luna',
+    'Essas referências seguem o conhecimento e a experiência de anos do Nereu, acompanhando a pescaria na região.':'Estas referencias se basan en los años de conocimiento y experiencia local de Nereu.',
+    'Experiência local':'Experiencia local',
+    'Legenda das luas':'Guía de las fases lunares',
+    'Legenda das fases da lua':'Guía de las fases lunares',
+    'Lua nova':'Luna nueva',
+    'Condição intermediária':'Condiciones intermedias',
+    'Maiores chances de pegar peixe':'Mayores posibilidades de pescar',
+    'Lua crescente':'Luna creciente',
+    'Costuma ser favorável':'Suele ser favorable',
+    'Lua cheia':'Luna llena',
+    'Costuma ser menos favorável':'Suele ser menos favorable',
+    'Lua minguante':'Luna menguante',
+    'Conhecimento de quem pesca aqui há anos.':'Conocimiento de quien pesca aquí desde hace años.',
+    'Estas referências são baseadas no conhecimento e na experiência de muitos anos de Nereu, proprietário da pousada, acompanhando a pesca no Rio Palmital e na região.':'Estas referencias se basan en muchos años de conocimiento y experiencia de Nereu, propietario de la posada, siguiendo las condiciones de pesca en el río Palmital y en la región.',
+    'As condições reais também podem variar com maré, chuva, vento, horário e outros fatores do dia.':'Las condiciones reales también pueden variar según la marea, la lluvia, el viento, la hora y otros factores del día.',
+    'Calendário lunar':'Calendario lunar',
+    'Role para baixo ↓':'Desplázate hacia abajo ↓',
+    'Dê zoom no mês que você tem interesse em ir pescar':'Amplía el mes en el que te interesa ir a pescar',
+    'Além da lua':'Además de la luna',
+    'Marés':'Mareas',
+    'A maré também pode influenciar a pescaria, alterando o nível da água, a força da corrente e a movimentação dos peixes no estuário. O melhor momento depende da combinação das condições do dia e do ponto de pesca.':'La marea también puede influir en la pesca, modificando el nivel del agua, la fuerza de la corriente y el movimiento de los peces en el estuario. El mejor momento depende de la combinación de las condiciones del día y del punto de pesca.',
+    'Clique aqui para conversar com o Nereu e entender as condições para sua pescaria →':'Haz clic aquí para hablar con Nereu y conocer las condiciones para tu jornada de pesca →',
+
+    'Conheça antes de chegar':'Conoce el lugar antes de llegar',
+    'Explore momentos, sabores e cantinhos da pousada. Você poderá trocar a foto de fundo depois e ajustar o desfoque como preferir.':'Explora momentos, sabores y rincones de la posada.',
+    'Áreas e experiências':'Áreas y experiencias',
+    'Tudo':'Todo',
+    'Janta':'Cena',
+    'Café da manhã':'Desayuno',
+    'Churrasqueira':'Parrilla',
+    'Sinuca':'Billar',
+    'Beira do rio':'Orilla del río',
+    'Refeitório':'Comedor',
+    'Varanda':'Terraza',
+    'Estacionamento':'Estacionamiento',
+    'Lago':'Lago',
+    'Miniaturas por localização · role a barra para o lado':'Miniaturas por área · desliza hacia un lado',
+    'Legenda editável: vista do Rio Palmital ao entardecer.':'Vista del río Palmital al atardecer.',
+    'Clique para ampliar · use as setas para navegar':'Haz clic para ampliar · usa las flechas para navegar',
+    'Foto anterior':'Foto anterior',
+    'Próxima foto':'Foto siguiente',
+    'Abrir foto em tela cheia':'Abrir foto en pantalla completa',
+    'Foto ampliada da galeria':'Foto ampliada de la galería',
+    'Acompanhe a pousada':'Sigue la posada',
+    'Você já conferiu nosso Instagram?':'¿Ya viste nuestro Instagram?',
+    'Nos siga na nossa página única e oficial e acompanhe nossos posts e stories mais recentes.':'Síguenos en nuestra única página oficial y acompaña nuestras publicaciones e historias más recientes.',
+    'Ver no Instagram ↗':'Ver en Instagram ↗',
+    'Carregando Instagram da Pousada do Nereu…':'Cargando Instagram de Pousada do Nereu…',
+
+    'Ecossistema Babitonga':'Ecosistema Babitonga',
+    'Biodiversidade, manguezal e pesca no Rio Palmital e na Baía da Babitonga.':'Biodiversidad, manglar y pesca en el río Palmital y la Bahía de Babitonga.',
+    'Água, manguezal e biodiversidade':'Agua, manglar y biodiversidad',
+    'Um estuário cheio de vida':'Un estuario lleno de vida',
+    'O Ecossistema Babitonga reúne ambientes estuarinos e marinhos diversos e funciona como área de alimentação, abrigo e crescimento para muitas espécies de peixes.':'El ecosistema Babitonga reúne diversos ambientes estuarinos y marinos y funciona como zona de alimentación, refugio y crecimiento para muchas especies de peces.',
+    'Estuário':'Estuario',
+    'Manguezal':'Manglar',
+    'Abrigo e alimentação':'Refugio y alimentación',
+    'Tamanhos e pesos abaixo são referências máximas publicadas para cada espécie e não representam necessariamente exemplares encontrados no Rio Palmital.':'Los tamaños y pesos indicados son referencias máximas publicadas para cada especie y no representan necesariamente ejemplares encontrados en el río Palmital.',
+    'Pesca local':'Pesca local',
+    'Robalo no centro da identidade':'El róbalo en el centro de nuestra identidad',
+    'Entre as capturas relatadas com mais frequência pela pousada estão robalo-peva, robalo-flecha e pescada-amarela, além de peixe-espada, corvina e linguado.':'Entre las capturas más frecuentes informadas por la posada están el róbalo peva, el róbalo común y la pescada amarilla, además del pez sable, la corvina y el lenguado.',
+    'Robalo-peva':'Róbalo peva',
+    'Robalo-flecha':'Róbalo común',
+    'Pescada-amarela':'Pescada amarilla',
+    'Espécies':'Especies',
+    'Peixes da região':'Peces de la región',
+    'Conheça algumas das espécies relacionadas à pesca local.':'Conoce algunas de las especies relacionadas con la pesca local.',
+    'Espécie estuarina associada a águas costeiras, manguezais e trechos de baixa salinidade.':'Especie estuarina asociada a aguas costeras, manglares y zonas de baja salinidad.',
+    'O maior dos robalos da página, encontrado em ambientes costeiros, estuários, lagoas e manguezais.':'El mayor de los róbalos de esta página, presente en ambientes costeros, estuarios, lagunas y manglares.',
+    'Peixe estuarino-marinho que se alimenta principalmente de peixes e crustáceos.':'Pez estuarino-marino que se alimenta principalmente de peces y crustáceos.',
+    'Corvina':'Corvina',
+    'Espécie costeira e estuarina bastante associada a fundos arenosos e lodosos.':'Especie costera y estuarina muy asociada a fondos arenosos y fangosos.',
+    'Peixe-espada':'Pez sable',
+    'Espécie costeira de corpo extremamente alongado, encontrada também em águas salobras.':'Especie costera de cuerpo extremadamente alargado, que también se encuentra en aguas salobres.',
+    'Linguado':'Lenguado',
+    'Paralichthys brasiliensis — referência':'Paralichthys brasiliensis — referencia',
+    'Peixe de fundo encontrado em áreas costeiras, baías e estuários. A espécie capturada localmente deve ser confirmada.':'Pez de fondo presente en zonas costeras, bahías y estuarios. La especie capturada localmente debe confirmarse.',
+    'Tamanho máximo':'Tamaño máximo',
+    'Peso máximo':'Peso máximo',
+    'Mínimo legal de captura/desembarque':'Tamaño mínimo legal de captura/desembarque',
+    'Referências técnicas: IN MMA nº 53/2005 para tamanhos mínimos dos robalos; FishBase e literatura pesqueira para tamanhos/pesos máximos. Consulte sempre a legislação vigente antes da pesca.':'Referencias técnicas: IN MMA n.º 53/2005 para tamaños mínimos de los róbalos; FishBase y literatura pesquera para tamaños/pesos máximos. Consulta siempre la normativa vigente antes de pescar.'
+  }
+};
+
+const GALLERY_DESCRIPTIONS={
+  en:{
+    'vista do Rio Palmital e da margem da pousada.':'view of the Palmital River and the lodge riverbank.',
+    'estrutura da marina e ponto de saída para a pescaria.':'marina facilities and fishing departure point.',
+    'área de varanda e convivência da pousada.':'veranda and common area of the lodge.',
+    'detalhes do café da manhã servido na pousada.':'details of the breakfast served at the lodge.',
+    'refeições caseiras e momentos à mesa.':'home-style meals and moments around the table.',
+    'ambiente do refeitório da pousada.':'the lodge dining room.',
+    'área da churrasqueira e encontros em grupo.':'barbecue area and group gatherings.',
+    'espaço de convivência com mesa de sinuca.':'common area with a pool table.',
+    'área de estacionamento da pousada.':'the lodge parking area.',
+    'lago e área externa da pousada.':'the lake and outdoor area of the lodge.'
+  },
+  es:{
+    'vista do Rio Palmital e da margem da pousada.':'vista del río Palmital y de la orilla de la posada.',
+    'estrutura da marina e ponto de saída para a pescaria.':'estructura de la marina y punto de salida para pescar.',
+    'área de varanda e convivência da pousada.':'terraza y área de convivencia de la posada.',
+    'detalhes do café da manhã servido na pousada.':'detalles del desayuno servido en la posada.',
+    'refeições caseiras e momentos à mesa.':'comidas caseras y momentos alrededor de la mesa.',
+    'ambiente do refeitório da pousada.':'el comedor de la posada.',
+    'área da churrasqueira e encontros em grupo.':'zona de parrilla y reuniones en grupo.',
+    'espaço de convivência com mesa de sinuca.':'área de convivencia con mesa de billar.',
+    'área de estacionamento da pousada.':'el estacionamiento de la posada.',
+    'lago e área externa da pousada.':'el lago y la zona exterior de la posada.'
+  }
+};
+
+const PAGE_TITLES={
+  en:{'a-pousada.html':'The Lodge | Pousada do Nereu','sobre.html':'About the Lodge | Pousada do Nereu','sobre-nos.html':'About Us | Pousada do Nereu','galeria.html':'Gallery | Pousada do Nereu','fauna.html':'Wildlife | Pousada do Nereu','acomodacoes.html':'Accommodations | Pousada do Nereu','valores.html':'Rates | Pousada do Nereu','marina.html':'Marina | Pousada do Nereu','como-chegar.html':'Directions | Pousada do Nereu','condicoes.html':'Fishing Conditions | Pousada do Nereu','contato.html':'Contact | Pousada do Nereu'},
+  es:{'a-pousada.html':'La Posada | Pousada do Nereu','sobre.html':'Sobre la Posada | Pousada do Nereu','sobre-nos.html':'Sobre Nosotros | Pousada do Nereu','galeria.html':'Galería | Pousada do Nereu','fauna.html':'Fauna | Pousada do Nereu','acomodacoes.html':'Alojamientos | Pousada do Nereu','valores.html':'Tarifas | Pousada do Nereu','marina.html':'Marina | Pousada do Nereu','como-chegar.html':'Cómo llegar | Pousada do Nereu','condicoes.html':'Condiciones de pesca | Pousada do Nereu','contato.html':'Contacto | Pousada do Nereu'}
+};
+
+function translatedValue(value){
+  if(lang==='pt'||!value)return value;
+  const map=STATIC_TRANSLATIONS[lang]||{};
+  const trimmed=value.trim();
+  if(map[trimmed])return value.replace(trimmed,map[trimmed]);
+  if(/^até\s+/i.test(trimmed))return value.replace(trimmed,(lang==='en'?'up to ':'hasta ')+trimmed.replace(/^até\s+/i,''));
+  const photoAlt=trimmed.match(/^(.+)\s—\sfoto\s(\d+)$/i);
+  if(photoAlt){
+    const cat=map[photoAlt[1]]||photoAlt[1];
+    return value.replace(trimmed,cat+' — '+(lang==='en'?'photo ':'foto ')+photoAlt[2]);
+  }
+  const caption=trimmed.match(/^(.+)\s·\sfoto\s(\d+)\.\sLegenda editável:\s(.+)$/i);
+  if(caption){
+    const cat=map[caption[1]]||caption[1];
+    const desc=(GALLERY_DESCRIPTIONS[lang]||{})[caption[3]]||caption[3];
+    return value.replace(trimmed,cat+' · '+(lang==='en'?'photo ':'foto ')+caption[2]+'. '+(lang==='en'?'Editable caption: ':'Leyenda editable: ')+desc);
+  }
+  return value;
+}
+
+function applySiteTranslations(){
+  if(lang==='pt'){document.documentElement.lang='pt-BR';return}
+  document.documentElement.lang=lang==='en'?'en':'es';
+  let page=(location.pathname.split('/').pop()||'index.html');
+  if(page&&!page.includes('.'))page+='.html';
+  if(PAGE_TITLES[lang]?.[page])document.title=PAGE_TITLES[lang][page];
+
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+    acceptNode(node){
+      const parent=node.parentElement;
+      if(!parent||['SCRIPT','STYLE','NOSCRIPT'].includes(parent.tagName))return NodeFilter.FILTER_REJECT;
+      return node.nodeValue.trim()?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+    }
+  });
+  const nodes=[];
+  while(walker.nextNode())nodes.push(walker.currentNode);
+  nodes.forEach(node=>{node.nodeValue=translatedValue(node.nodeValue)});
+
+  document.querySelectorAll('[alt],[aria-label],[title],[placeholder],[data-title],[data-caption]').forEach(el=>{
+    ['alt','aria-label','title','placeholder','data-title','data-caption'].forEach(attr=>{
+      if(el.hasAttribute(attr))el.setAttribute(attr,translatedValue(el.getAttribute(attr)));
+    });
+  });
+
+  if(page==='contato.html'){
+    const links=[...document.querySelectorAll('.whatsapp-action-v22')];
+    if(links[0])links[0].href=wa(lang==='en'?'Hello Marcia! I found your contact through the lodge website and would like more information.':'¡Hola Marcia! Encontré tu contacto a través del sitio web de la posada y me gustaría recibir más información.');
+    if(links[1])links[1].href=wa(lang==='en'?'Hello Nereu! I found your contact through the lodge website and would like more information.':'¡Hola Nereu! Encontré tu contacto a través del sitio web de la posada y me gustaría recibir más información.',SITE.nereuPhone);
+  }
+  if(page==='marina.html'){
+    const cta=document.querySelector('.marina-cta');
+    if(cta)cta.href=wa(lang==='en'?'Hello! I saw the marina on the Pousada do Nereu website and would like to check availability and rates to keep my boat with you. My boat is approximately ___ meters long and I would need a space for the following period: _______.':'¡Hola! Vi la marina en el sitio web de Pousada do Nereu y me gustaría consultar disponibilidad y precios para dejar mi barco con ustedes. Mi barco mide aproximadamente ___ metros y necesitaría el espacio durante el siguiente período: _______.');
+  }
+  if(page==='condicoes.html'){
+    const cta=document.querySelector('.moon-nereu-cta');
+    if(cta)cta.href=wa(lang==='en'?'Hello Nereu! I found your contact through the lodge website and would like to better understand the weather, tides and moon conditions for my next fishing trip.':'¡Hola Nereu! Encontré tu contacto a través del sitio web de la posada y me gustaría entender mejor el clima, las mareas y la luna para mi próxima jornada de pesca.',SITE.nereuPhone);
+  }
+}
+
 let lang=localStorage.getItem('pousada-lang')||'pt';
 function wa(text,phone=SITE.phone){return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`}
 function label(item){return item[lang]||item.pt}
@@ -62,9 +491,9 @@ function renderShell(){
   const header=document.querySelector('[data-shell="header"]');
   if(header){header.innerHTML=`<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><img src="assets/logo.png" alt="Pousada do Nereu"></a><nav class="main-nav">${renderDesktopNav(page)}</nav><div class="header-actions"><a class="btn btn-conditions ${['luas.html','condicoes.html'].includes(page)?'active':''}" href="condicoes.html">${conditionsIcons}<span class="conditions-label"><span>${conditionsButtonLines()[0]}</span><span>${conditionsButtonLines()[1]}</span></span></a><a class="btn btn-contact" href="contato.html">${I18N[lang].contact}</a><div class="lang-switch lang-switch-vertical" aria-label="Idioma">${Object.entries(LANG_META).map(([code,m])=>`<button data-lang="${code}" title="${m.alt}"><img src="${m.flag}" alt=""><span>${m.label}</span></button>`).join('')}</div><button class="mobile-toggle" aria-label="Abrir menu">Menu</button></div></div><div class="header-wave" aria-hidden="true"><svg viewBox="0 0 1440 72" preserveAspectRatio="none"><path d="M0 0H1440V18 C1250 34 1085 17 900 25 C690 34 535 13 350 31 C235 43 120 52 0 41 Z" fill="#fffdf8"/><path d="M0 42 C135 53 245 44 355 32 C535 13 690 35 900 26 C1087 18 1252 35 1440 19" fill="none" stroke="#dbeef9" stroke-width="3" opacity=".95"/></svg></div><div class="mobile-nav">${renderMobileNav()}</div></header>`}
   const footer=document.querySelector('[data-shell="footer"]');
-  if(footer){footer.innerHTML=`<footer class="site-footer"><div class="container"><div class="footer-grid"><div><img class="footer-logo" src="assets/logo.png" alt="Pousada do Nereu"><p style="color:rgba(255,255,255,.74);max-width:340px">Rústico, aconchegante e familiar. Natureza, pescaria e boas histórias às margens do Rio Palmital.</p></div><div><div class="footer-title">${I18N[lang].addressTitle}</div><div class="footer-links"><span>${SITE.address}</span><a href="${SITE.maps}" target="_blank">→ ${I18N[lang].reach}</a><a href="${wa('Olá! Encontrei vocês pelo site da Pousada do Nereu e gostaria de mais informações.')}" target="_blank">Marcia · ${SITE.phoneDisplay}</a><a href="${wa('Olá Nereu! Encontrei a pousada pelo site e gostaria de mais informações.',SITE.nereuPhone)}" target="_blank">Nereu · ${SITE.nereuPhoneDisplay}</a></div></div><div><div class="footer-title">${I18N[lang].quick}</div><div class="footer-links"><a href="index.html">${lang==='pt'?'Início':'Home'}</a><a href="a-pousada.html">${lang==='pt'?'A Pousada':'The Lodge'}</a><a href="acomodacoes.html">${lang==='pt'?'Acomodações':'Rooms'}</a><a href="valores.html">${lang==='pt'?'Valores':'Rates'}</a><a href="marina.html">Marina</a><a href="como-chegar.html">${I18N[lang].reach}</a><a href="contato.html">${lang==='pt'?'Contato':'Contact'}</a></div></div><div><div class="footer-title">${I18N[lang].social}</div><div class="social-row"><a class="social-chip instagram" href="${SITE.instagram}" target="_blank">${instagramIcon}<span>Instagram</span></a><a class="social-chip facebook" href="${SITE.facebook}" target="_blank">${facebookIcon}<span>Facebook</span></a></div></div></div><div class="footer-bottom"><span>© ${new Date().getFullYear()} Pousada do Nereu. ${I18N[lang].rights}</span><span>PT / EN / ES</span></div></div></footer>`}
-  document.body.insertAdjacentHTML('beforeend',`<a class="floating-whatsapp" target="_blank" aria-label="WhatsApp" href="${wa('Olá! Encontrei vocês pelo site da Pousada do Nereu e gostaria de mais informações.')}">✆</a><div class="lightbox" id="lightbox"><div class="lightbox-toolbar"><button class="lightbox-tool" data-lightbox-action="zoom-out" aria-label="Reduzir zoom">−</button><button class="lightbox-tool" data-lightbox-action="zoom-in" aria-label="Aumentar zoom">+</button></div><button class="lightbox-nav prev" data-lightbox-nav="prev" aria-label="Imagem anterior">‹</button><button class="lightbox-nav next" data-lightbox-nav="next" aria-label="Próxima imagem">›</button><div class="lightbox-count" aria-live="polite"></div><button aria-label="Fechar">×</button><div class="lightbox-media-wrap"><img alt="Imagem ampliada"></div></div>`);
-  bindUI();bindLanguage();bindLightbox();bindGalleryFilters();initInteractiveGallery();initRoomFilters();applyInlineTranslations();animateStats();initConditionsWeather();initMoonCalendarZoom();
+  if(footer){footer.innerHTML=`<footer class="site-footer"><div class="container"><div class="footer-grid"><div><img class="footer-logo" src="assets/logo.png" alt="Pousada do Nereu"><p style="color:rgba(255,255,255,.74);max-width:340px">${I18N[lang].footerBlurb}</p></div><div><div class="footer-title">${I18N[lang].addressTitle}</div><div class="footer-links"><span>${SITE.address}</span><a href="${SITE.maps}" target="_blank">→ ${I18N[lang].reach}</a><a href="${wa(I18N[lang].generalMessage)}" target="_blank">Marcia · ${SITE.phoneDisplay}</a><a href="${wa(I18N[lang].nereuMessage,SITE.nereuPhone)}" target="_blank">Nereu · ${SITE.nereuPhoneDisplay}</a></div></div><div><div class="footer-title">${I18N[lang].quick}</div><div class="footer-links"><a href="index.html">${label(NAV.find(x=>x.href==='index.html'))}</a><a href="a-pousada.html">${label(NAV.find(x=>x.href==='a-pousada.html'))}</a><a href="acomodacoes.html">${label(NAV.find(x=>x.href==='acomodacoes.html'))}</a><a href="valores.html">${label(NAV.find(x=>x.href==='valores.html'))}</a><a href="marina.html">Marina</a><a href="como-chegar.html">${I18N[lang].reach}</a><a href="contato.html">${label(NAV.find(x=>x.href==='contato.html'))}</a></div></div><div><div class="footer-title">${I18N[lang].social}</div><div class="social-row"><a class="social-chip instagram" href="${SITE.instagram}" target="_blank">${instagramIcon}<span>Instagram</span></a><a class="social-chip facebook" href="${SITE.facebook}" target="_blank">${facebookIcon}<span>Facebook</span></a></div></div></div><div class="footer-bottom"><span>© ${new Date().getFullYear()} Pousada do Nereu. ${I18N[lang].rights}</span><span>PT / EN / ES</span></div></div></footer>`}
+  document.body.insertAdjacentHTML('beforeend',`<a class="floating-whatsapp" target="_blank" aria-label="WhatsApp" href="${wa(I18N[lang].generalMessage)}">✆</a><div class="lightbox" id="lightbox"><div class="lightbox-toolbar"><button class="lightbox-tool" data-lightbox-action="zoom-out" aria-label="Reduzir zoom">−</button><button class="lightbox-tool" data-lightbox-action="zoom-in" aria-label="Aumentar zoom">+</button></div><button class="lightbox-nav prev" data-lightbox-nav="prev" aria-label="Imagem anterior">‹</button><button class="lightbox-nav next" data-lightbox-nav="next" aria-label="Próxima imagem">›</button><div class="lightbox-count" aria-live="polite"></div><button aria-label="Fechar">×</button><div class="lightbox-media-wrap"><img alt="Imagem ampliada"></div></div>`);
+  applyInlineTranslations();applySiteTranslations();bindUI();bindLanguage();bindLightbox();bindGalleryFilters();initInteractiveGallery();initRoomFilters();animateStats();initConditionsWeather();initMoonCalendarZoom();
 }
 function bindUI(){document.querySelector('.mobile-toggle')?.addEventListener('click',()=>document.body.classList.toggle('menu-open'));document.querySelectorAll('.mobile-sub-toggle').forEach(b=>b.addEventListener('click',()=>{const box=document.getElementById('mobile-sub-'+b.dataset.mobileSub);box.classList.toggle('open');b.lastElementChild.textContent=box.classList.contains('open')?'−':'＋'}));document.querySelectorAll('.nav-parent').forEach(p=>{p.querySelector(':scope > a')?.addEventListener('click',e=>{if(matchMedia('(hover: none)').matches&&!p.classList.contains('open')){e.preventDefault();document.querySelectorAll('.nav-parent.open').forEach(x=>x!==p&&x.classList.remove('open'));p.classList.add('open')}})});document.addEventListener('click',e=>{if(!e.target.closest('.nav-parent'))document.querySelectorAll('.nav-parent.open').forEach(x=>x.classList.remove('open'))})}
 function bindLanguage(){document.querySelectorAll('[data-lang]').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.addEventListener('click',()=>{localStorage.setItem('pousada-lang',b.dataset.lang);location.reload()})})}
@@ -203,32 +632,38 @@ function initConditionsWeather(){
   const currentDetails=document.getElementById('weatherCurrentDetails');
   if(!list||!loading)return;
   const lat='-26.1157',lon='-48.8358';
-  const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=America%2FSao_Paulo&forecast_days=7`;
-  const codeMap={0:['☀️','Céu limpo'],1:['🌤️','Sol entre nuvens'],2:['⛅','Parcialmente nublado'],3:['☁️','Nublado'],45:['🌫️','Neblina'],48:['🌫️','Neblina'],51:['🌦️','Garoa fraca'],53:['🌦️','Garoa'],55:['🌦️','Garoa intensa'],56:['🌧️','Garoa gelada'],57:['🌧️','Garoa gelada'],61:['🌦️','Chuva fraca'],63:['🌧️','Chuva'],65:['🌧️','Chuva forte'],66:['🌧️','Chuva gelada'],67:['🌧️','Chuva gelada'],71:['❄️','Neve fraca'],73:['❄️','Neve'],75:['❄️','Neve forte'],77:['❄️','Granizo leve'],80:['🌦️','Pancadas isoladas'],81:['🌧️','Pancadas de chuva'],82:['⛈️','Pancadas fortes'],85:['❄️','Aguaceiros de neve'],86:['❄️','Aguaceiros de neve'],95:['⛈️','Trovoadas'],96:['⛈️','Trovoadas com granizo'],99:['⛈️','Trovoadas fortes']};
-  const weekday=['dom','seg','ter','qua','qui','sex','sáb'];
+  const url=\`https://api.open-meteo.com/v1/forecast?latitude=\${lat}&longitude=\${lon}&current=temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=America%2FSao_Paulo&forecast_days=7\`;
+  const labels={
+    pt:{weather:{0:'Céu limpo',1:'Sol entre nuvens',2:'Parcialmente nublado',3:'Nublado',45:'Neblina',48:'Neblina',51:'Garoa fraca',53:'Garoa',55:'Garoa intensa',56:'Garoa gelada',57:'Garoa gelada',61:'Chuva fraca',63:'Chuva',65:'Chuva forte',66:'Chuva gelada',67:'Chuva gelada',71:'Neve fraca',73:'Neve',75:'Neve forte',77:'Granizo leve',80:'Pancadas isoladas',81:'Pancadas de chuva',82:'Pancadas fortes',85:'Aguaceiros de neve',86:'Aguaceiros de neve',95:'Trovoadas',96:'Trovoadas com granizo',99:'Trovoadas fortes'},week:['dom','seg','ter','qua','qui','sex','sáb'],rain:'Chuva',humidity:'Umidade',wind:'Vento',varied:'Tempo variado',error:'Não foi possível carregar a previsão agora. Consulte a pousada para verificar as condições do rio e do clima.'},
+    en:{weather:{0:'Clear sky',1:'Mostly sunny',2:'Partly cloudy',3:'Cloudy',45:'Fog',48:'Fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',56:'Freezing drizzle',57:'Freezing drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',66:'Freezing rain',67:'Freezing rain',71:'Light snow',73:'Snow',75:'Heavy snow',77:'Snow grains',80:'Light showers',81:'Rain showers',82:'Heavy showers',85:'Snow showers',86:'Snow showers',95:'Thunderstorms',96:'Thunderstorms with hail',99:'Severe thunderstorms'},week:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],rain:'Rain',humidity:'Humidity',wind:'Wind',varied:'Variable weather',error:'The forecast could not be loaded right now. Contact the lodge to check river and weather conditions.'},
+    es:{weather:{0:'Cielo despejado',1:'Mayormente soleado',2:'Parcialmente nublado',3:'Nublado',45:'Niebla',48:'Niebla',51:'Llovizna débil',53:'Llovizna',55:'Llovizna intensa',56:'Llovizna helada',57:'Llovizna helada',61:'Lluvia débil',63:'Lluvia',65:'Lluvia fuerte',66:'Lluvia helada',67:'Lluvia helada',71:'Nieve débil',73:'Nieve',75:'Nieve fuerte',77:'Granos de nieve',80:'Chubascos aislados',81:'Chubascos',82:'Chubascos fuertes',85:'Chubascos de nieve',86:'Chubascos de nieve',95:'Tormentas',96:'Tormentas con granizo',99:'Tormentas fuertes'},week:['dom','lun','mar','mié','jue','vie','sáb'],rain:'Lluvia',humidity:'Humedad',wind:'Viento',varied:'Tiempo variable',error:'No fue posible cargar el pronóstico ahora. Consulta con la posada para verificar las condiciones del río y del clima.'}
+  };
+  const L=labels[lang]||labels.pt;
+  const emojiMap={0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',48:'🌫️',51:'🌦️',53:'🌦️',55:'🌦️',56:'🌧️',57:'🌧️',61:'🌦️',63:'🌧️',65:'🌧️',66:'🌧️',67:'🌧️',71:'❄️',73:'❄️',75:'❄️',77:'❄️',80:'🌦️',81:'🌧️',82:'⛈️',85:'❄️',86:'❄️',95:'⛈️',96:'⛈️',99:'⛈️'};
   fetch(url)
     .then(r=>{if(!r.ok)throw new Error('weather');return r.json()})
     .then(data=>{
       const current=data.current||{};
-      const [curEmoji,curLabel]=codeMap[current.weather_code]||['🌤️','Tempo variado'];
-      if(currentTemp)currentTemp.textContent=`${Math.round(current.temperature_2m ?? 0)}°`;
+      const curEmoji=emojiMap[current.weather_code]||'🌤️';
+      const curLabel=L.weather[current.weather_code]||L.varied;
+      if(currentTemp)currentTemp.textContent=\`\${Math.round(current.temperature_2m ?? 0)}°\`;
       if(currentIcon)currentIcon.textContent=curEmoji;
-      if(currentDetails)currentDetails.innerHTML=`<span>${curLabel}</span><span>Chuva: ${Math.round(current.precipitation ?? 0)} mm</span><span>Umidade: ${Math.round(current.relative_humidity_2m ?? 0)}%</span><span>Vento: ${Math.round(current.wind_speed_10m ?? 0)} km/h</span>`;
+      if(currentDetails)currentDetails.innerHTML=\`<span>\${curLabel}</span><span>\${L.rain}: \${Math.round(current.precipitation ?? 0)} mm</span><span>\${L.humidity}: \${Math.round(current.relative_humidity_2m ?? 0)}%</span><span>\${L.wind}: \${Math.round(current.wind_speed_10m ?? 0)} km/h</span>\`;
       const d=data.daily||{};
       const times=d.time||[];
       list.innerHTML=times.map((time,i)=>{
         const dt=new Date(time+'T12:00:00');
-        const [emoji]=codeMap[d.weather_code?.[i]]||['🌤️','Tempo variado'];
+        const emoji=emojiMap[d.weather_code?.[i]]||'🌤️';
         const max=Math.round(d.temperature_2m_max?.[i] ?? 0);
         const min=Math.round(d.temperature_2m_min?.[i] ?? 0);
         const rain=Math.round(d.precipitation_probability_max?.[i] ?? 0);
-        return `<div class="weather-day-mini ${i===0?'today':''}"><strong>${weekday[dt.getDay()]}</strong><span class="weather-mini-icon" aria-hidden="true">${emoji}</span><span class="weather-mini-temp">${max}° / ${min}°</span><span class="weather-mini-rain">💧 ${rain}%</span></div>`;
+        return \`<div class="weather-day-mini \${i===0?'today':''}"><strong>\${L.week[dt.getDay()]}</strong><span class="weather-mini-icon" aria-hidden="true">\${emoji}</span><span class="weather-mini-temp">\${max}° / \${min}°</span><span class="weather-mini-rain">💧 \${rain}%</span></div>\`;
       }).join('');
       loading.style.display='none';
     })
     .catch(()=>{
       loading.className='weather-error-state';
-      loading.textContent='Não foi possível carregar a previsão agora. Consulte a pousada para verificar as condições do rio e do clima.';
+      loading.textContent=L.error;
       if(currentDetails)currentDetails.innerHTML='';
     });
 }
@@ -334,6 +769,55 @@ async function loadCmsPageContent(){
           if(quote&&item.text)quote.textContent='“'+item.text+'”';
           if(name&&item.name)name.textContent=item.name;
         });
+      }
+      return;
+    }
+
+    if(page==='valores.html'){
+      const response=await fetch('content/valores.json',{cache:'no-store'});
+      if(!response.ok)return;
+      const data=await response.json();
+      const copy=data[lang]||data.pt||{};
+      const hero=copy.hero||{};
+      const heroBox=document.querySelector('.values-hero');
+      if(heroBox){
+        if(data.heroImage)heroBox.style.setProperty('--values-hero-image',\`url('\${data.heroImage}')\`);
+        const eyebrow=heroBox.querySelector('.eyebrow');
+        const title=heroBox.querySelector('h1');
+        const desc=heroBox.querySelector('p');
+        if(eyebrow&&hero.eyebrow)eyebrow.textContent=hero.eyebrow;
+        if(title&&hero.title)title.textContent=hero.title;
+        if(desc&&hero.description)desc.textContent=hero.description;
+      }
+      const groups=[...document.querySelectorAll('.price-group')];
+      (copy.groups||[]).slice(0,groups.length).forEach((group,i)=>{
+        const el=groups[i];
+        const heading=el.querySelector('.price-group-title');
+        if(heading&&group.title)heading.textContent=group.title;
+        const cards=[...el.querySelectorAll('.price-card')];
+        (group.cards||[]).slice(0,cards.length).forEach((card,j)=>{
+          const h=cards[j].querySelector('h3');
+          const p=cards[j].querySelector('p');
+          const price=cards[j].querySelector('.price');
+          if(h&&card.title)h.textContent=card.title;
+          if(p&&card.description)p.textContent=card.description;
+          if(price&&card.price)price.textContent=card.price;
+        });
+      });
+      const fine=document.querySelector('.fineprint');
+      if(fine&&copy.fineprint)fine.textContent=copy.fineprint;
+      const cta=copy.cta||{};
+      const ctaBox=document.querySelector('.cta-band');
+      if(ctaBox){
+        const h=ctaBox.querySelector('h3');
+        const p=ctaBox.querySelector('p');
+        const b=ctaBox.querySelector('.btn');
+        if(h&&cta.title)h.textContent=cta.title;
+        if(p&&cta.text)p.textContent=cta.text;
+        if(b){
+          if(cta.button)b.textContent=cta.button;
+          if(cta.whatsappMessage)b.href=wa(cta.whatsappMessage);
+        }
       }
       return;
     }
