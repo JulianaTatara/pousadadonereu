@@ -60,14 +60,14 @@ content:
     operations:
       delete: false
     fields:
-      - name: hero
-        label: Destaque principal
+      - name: heroMedia
+        label: Mídia do destaque
         type: object
         fields:
           - name: video
             label: Vídeo de fundo (opcional)
             type: file
-            description: Selecione um vídeo para substituir a foto de fundo. Recomendado: MP4, curto, sem áudio e otimizado para web.
+            description: Selecione um vídeo para substituir a foto de fundo. Recomendado: MP4 curto, sem áudio e otimizado para web.
             options:
               categories: [video]
               extensions: [mp4, webm, mov]
@@ -76,85 +76,273 @@ content:
             label: Imagem de capa / alternativa
             type: image
             required: true
-            description: Aparece enquanto o vídeo carrega e também serve como alternativa caso o vídeo não possa ser reproduzido.
-          - name: alt
-            label: Descrição da imagem
-            type: string
-          - name: kickerMain
-            label: Nome acima do título
-            type: string
-          - name: kickerSub
-            label: Localização acima do título
-            type: string
-          - name: title
-            label: Título principal
-            type: string
-            required: true
-          - name: description
-            label: Texto principal
-            type: text
-            required: true
-          - name: accommodationButton
-            label: Texto do botão de acomodações
-            type: string
-          - name: availabilityButton
-            label: Texto do botão de disponibilidade
-            type: string
-          - name: availabilityMessage
-            label: Mensagem automática do WhatsApp
-            type: text
-      - name: features
-        label: Destaques da pousada
-        type: object
-        list:
-          min: 4
-          max: 4
-          collapsible:
-            collapsed: true
-            summary: "{title}"
-        fields:
-          - name: title
-            label: Título
-            type: string
-            required: true
-          - name: subtitle
-            label: Complemento
-            type: string
-            required: true
-      - name: reviews
-        label: Avaliações
+            description: Aparece enquanto o vídeo carrega e serve de alternativa caso o vídeo não possa ser reproduzido.
+      - name: pt
+        label: Português
         type: object
         fields:
-          - name: eyebrow
-            label: Texto pequeno acima do título
-            type: string
-          - name: title
-            label: Título
-            type: string
-          - name: score
-            label: Nota do Google
-            type: string
-          - name: count
-            label: Quantidade de avaliações
-            type: string
-          - name: button
-            label: Texto do botão
-            type: string
-          - name: items
-            label: Avaliações exibidas
+          - name: hero
+            label: Destaque principal
             type: object
-            list:
-              min: 3
-              max: 3
-              collapsible:
-                collapsed: true
-                summary: "{name}"
             fields:
-              - name: name
-                label: Nome
+              - name: alt
+                label: Descrição da imagem
+                type: string
+              - name: kickerMain
+                label: Nome acima do título
+                type: string
+              - name: kickerSub
+                label: Localização acima do título
+                type: string
+              - name: title
+                label: Título principal
                 type: string
                 required: true
-              - name: text
-                label: Avaliação
+              - name: description
+                label: Texto principal
                 type: text
                 required: true
+              - name: accommodationButton
+                label: Texto do botão de acomodações
+                type: string
+              - name: availabilityButton
+                label: Texto do botão de disponibilidade
+                type: string
+              - name: availabilityMessage
+                label: Mensagem automática do WhatsApp
+                type: text
+          - name: features
+            label: Destaques da pousada
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Título
+                type: string
+                required: true
+              - name: subtitle
+                label: Complemento
+                type: string
+                required: true
+          - name: reviews
+            label: Avaliações
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno acima do título
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: score
+                label: Nota do Google
+                type: string
+              - name: count
+                label: Quantidade de avaliações
+                type: string
+              - name: button
+                label: Texto do botão
+                type: string
+              - name: items
+                label: Avaliações exibidas
+                type: object
+                list:
+                  min: 3
+                  max: 3
+                  collapsible:
+                    collapsed: true
+                    summary: "{name}"
+                fields:
+                  - name: name
+                    label: Nome
+                    type: string
+                    required: true
+                  - name: text
+                    label: Avaliação
+                    type: text
+                    required: true
+
+      - name: en
+        label: English
+        type: object
+        fields:
+          - name: hero
+            label: Destaque principal
+            type: object
+            fields:
+              - name: alt
+                label: Descrição da imagem
+                type: string
+              - name: kickerMain
+                label: Nome acima do título
+                type: string
+              - name: kickerSub
+                label: Localização acima do título
+                type: string
+              - name: title
+                label: Título principal
+                type: string
+                required: true
+              - name: description
+                label: Texto principal
+                type: text
+                required: true
+              - name: accommodationButton
+                label: Texto do botão de acomodações
+                type: string
+              - name: availabilityButton
+                label: Texto do botão de disponibilidade
+                type: string
+              - name: availabilityMessage
+                label: Mensagem automática do WhatsApp
+                type: text
+          - name: features
+            label: Destaques da pousada
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Título
+                type: string
+                required: true
+              - name: subtitle
+                label: Complemento
+                type: string
+                required: true
+          - name: reviews
+            label: Avaliações
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno acima do título
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: score
+                label: Nota do Google
+                type: string
+              - name: count
+                label: Quantidade de avaliações
+                type: string
+              - name: button
+                label: Texto do botão
+                type: string
+              - name: items
+                label: Avaliações exibidas
+                type: object
+                list:
+                  min: 3
+                  max: 3
+                  collapsible:
+                    collapsed: true
+                    summary: "{name}"
+                fields:
+                  - name: name
+                    label: Nome
+                    type: string
+                    required: true
+                  - name: text
+                    label: Avaliação
+                    type: text
+                    required: true
+
+      - name: es
+        label: Español
+        type: object
+        fields:
+          - name: hero
+            label: Destaque principal
+            type: object
+            fields:
+              - name: alt
+                label: Descrição da imagem
+                type: string
+              - name: kickerMain
+                label: Nome acima do título
+                type: string
+              - name: kickerSub
+                label: Localização acima do título
+                type: string
+              - name: title
+                label: Título principal
+                type: string
+                required: true
+              - name: description
+                label: Texto principal
+                type: text
+                required: true
+              - name: accommodationButton
+                label: Texto do botão de acomodações
+                type: string
+              - name: availabilityButton
+                label: Texto do botão de disponibilidade
+                type: string
+              - name: availabilityMessage
+                label: Mensagem automática do WhatsApp
+                type: text
+          - name: features
+            label: Destaques da pousada
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Título
+                type: string
+                required: true
+              - name: subtitle
+                label: Complemento
+                type: string
+                required: true
+          - name: reviews
+            label: Avaliações
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno acima do título
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: score
+                label: Nota do Google
+                type: string
+              - name: count
+                label: Quantidade de avaliações
+                type: string
+              - name: button
+                label: Texto do botão
+                type: string
+              - name: items
+                label: Avaliações exibidas
+                type: object
+                list:
+                  min: 3
+                  max: 3
+                  collapsible:
+                    collapsed: true
+                    summary: "{name}"
+                fields:
+                  - name: name
+                    label: Nome
+                    type: string
+                    required: true
+                  - name: text
+                    label: Avaliação
+                    type: text
+                    required: true
