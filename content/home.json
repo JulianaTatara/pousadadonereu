@@ -155,5 +155,56 @@
         }
       ]
     }
+  },
+  "hero": {
+    "video": "",
+    "image": "assets/hero-poster.jpg",
+    "alt": "Rio Palmital visto da proa de uma embarcação ao pôr do sol",
+    "kickerMain": "Pousada do Nereu",
+    "kickerSub": "· Garuva, SC",
+    "title": "Rústico, aconchegante e familiar.",
+    "description": "Natureza, pescaria, conforto e momentos inesquecíveis no coração do paraíso dos robalos.",
+    "accommodationButton": "Ver acomodações →",
+    "availabilityButton": "Consultar disponibilidade",
+    "availabilityMessage": "Olá! Encontrei vocês pelo site da Pousada do Nereu e gostaria de consultar disponibilidade."
+  },
+  "features": [
+    {
+      "title": "Pescaria do robalo",
+      "subtitle": "Experiência local"
+    },
+    {
+      "title": "Natureza exuberante",
+      "subtitle": "Rio, mangue e serra"
+    },
+    {
+      "title": "Comida caseira",
+      "subtitle": "Sabor regional"
+    },
+    {
+      "title": "Ambiente familiar",
+      "subtitle": "Para se sentir em casa"
+    }
+  ],
+  "reviews": {
+    "eyebrow": "Google Reviews",
+    "title": "O que nossos hóspedes dizem",
+    "score": "4,6",
+    "count": "320+ avaliações no Google",
+    "button": "Ver mais avaliações no Google ↗",
+    "items": [
+      {
+        "name": "Juliano Medeiros",
+        "text": "Perfeito para pescar. Os barqueiros são muito bons, experientes e sempre dispostos a ajudar. O Nereu merece destaque: gente finíssima, super prestativo e faz de tudo pra experiência ser a melhor possível. Recomendamos sempre!"
+      },
+      {
+        "name": "Gislaine Piccoli",
+        "text": "Fomos muito bem recebidos, pousada muito limpa com café da manhã bem servido. Adoramos o local, a anfitriã Márcia e seu irmão muito gentis."
+      },
+      {
+        "name": "Luiza",
+        "text": "Eu fui passar o final de semana com o meu pai e com a namorada dele, essa pousada é bem bonita, tranquilo, café da manhã bem gostoso e cheia de pessoas boas. A Márcia foi bem simpática com nós, ela é um amor de pessoa, quero voltar lá de novo e ver de novos os gatinhos. Super recomendo!!!"
+      }
+    ]
   }
 }
