@@ -1,0 +1,246 @@
+{
+  "heroImage": "assets/values-hero-fishing.png",
+  "pt": {
+    "hero": {
+      "eyebrow": "Planeje sua estadia",
+      "title": "Invista na sua pescaria.",
+      "description": "Planeje sua estadia, refeições e pescaria. Consulte disponibilidade e condições diretamente com a pousada."
+    },
+    "groups": [
+      {
+        "title": "Hospedagem",
+        "cards": [
+          {
+            "title": "Hospedagem na pousada",
+            "description": "Por pessoa · quarto com frigobar, televisão e ar-condicionado. Café da manhã incluído.",
+            "price": "R$ 130,00"
+          }
+        ]
+      },
+      {
+        "title": "Alimentação",
+        "cards": [
+          {
+            "title": "Somente café da manhã",
+            "description": "Para quem não está hospedado ou conforme condição da pousada.",
+            "price": "R$ 30,00"
+          },
+          {
+            "title": "Janta",
+            "description": "Comida caseira e feita na hora. Valor por pessoa.",
+            "price": "R$ 70,00"
+          }
+        ]
+      },
+      {
+        "title": "Pescaria",
+        "cards": [
+          {
+            "title": "Barco · 1, 2 ou 3 pessoas",
+            "description": "Piloteiro profissional e 20 L de gasolina.",
+            "price": "R$ 680,00"
+          },
+          {
+            "title": "Barco · 4 pessoas",
+            "description": "Piloteiro profissional e 20 L de gasolina.",
+            "price": "R$ 780,00"
+          },
+          {
+            "title": "Isca viva",
+            "description": "Camarão · cento.",
+            "price": "R$ 40,00"
+          }
+        ]
+      },
+      {
+        "title": "Estrutura",
+        "cards": [
+          {
+            "title": "Rampa para embarcação de fora",
+            "description": "Consulte condições para uso.",
+            "price": "R$ 30,00"
+          },
+          {
+            "title": "Aluguel de casco",
+            "description": "Consulte disponibilidade antes de vir.",
+            "price": "R$ 180,00"
+          },
+          {
+            "title": "Marina",
+            "description": "Vaga para deixar sua embarcação.",
+            "price": "A consultar"
+          }
+        ]
+      }
+    ],
+    "fineprint": "🐾 Para hospedagem com pet de pequeno porte, consulte previamente condições e valor.",
+    "cta": {
+      "title": "Já sabe quando quer vir?",
+      "text": "Fale conosco e consulte disponibilidade para suas datas.",
+      "button": "Consultar pacote no WhatsApp →",
+      "whatsappMessage": "Olá! Vi os valores no site da Pousada do Nereu e gostaria de consultar disponibilidade e valor do seguinte pacote:\n\nData de entrada para pernoite: ____\nData de saída: _____\nNúmero de hóspedes (indique se tiver criança): ____\nJanta todas as noites para todos os hóspedes? ______\n\nVai pescar também? Então preencha as informações abaixo por gentileza:\nBarco para quantos pescadores: ____\nQual o dia para a pescaria: ______\nQuantidade de isca: ____\nPreferência para piloteiro? Qual? _____"
+    }
+  },
+  "en": {
+    "hero": {
+      "eyebrow": "Plan your stay",
+      "title": "Plan your fishing getaway.",
+      "description": "Plan your stay, meals and fishing. Contact the lodge directly to check availability and conditions."
+    },
+    "groups": [
+      {
+        "title": "Accommodation",
+        "cards": [
+          {
+            "title": "Stay at the lodge",
+            "description": "Per person · room with minibar, television and air conditioning. Breakfast included.",
+            "price": "R$ 130.00"
+          }
+        ]
+      },
+      {
+        "title": "Meals",
+        "cards": [
+          {
+            "title": "Breakfast only",
+            "description": "For non-guests or according to lodge availability.",
+            "price": "R$ 30.00"
+          },
+          {
+            "title": "Dinner",
+            "description": "Home-style food prepared fresh. Price per person.",
+            "price": "R$ 70.00"
+          }
+        ]
+      },
+      {
+        "title": "Fishing",
+        "cards": [
+          {
+            "title": "Boat · 1, 2 or 3 people",
+            "description": "Professional boat guide and 20 L of gasoline.",
+            "price": "R$ 680.00"
+          },
+          {
+            "title": "Boat · 4 people",
+            "description": "Professional boat guide and 20 L of gasoline.",
+            "price": "R$ 780.00"
+          },
+          {
+            "title": "Live bait",
+            "description": "Shrimp · per hundred.",
+            "price": "R$ 40.00"
+          }
+        ]
+      },
+      {
+        "title": "Facilities",
+        "cards": [
+          {
+            "title": "Boat ramp for outside boats",
+            "description": "Please contact us for usage conditions.",
+            "price": "R$ 30.00"
+          },
+          {
+            "title": "Hull rental",
+            "description": "Check availability before arriving.",
+            "price": "R$ 180.00"
+          },
+          {
+            "title": "Marina",
+            "description": "Space to keep your boat.",
+            "price": "Contact us"
+          }
+        ]
+      }
+    ],
+    "fineprint": "🐾 For stays with a small pet, please contact us in advance for conditions and pricing.",
+    "cta": {
+      "title": "Already know when you want to come?",
+      "text": "Contact us to check availability for your dates.",
+      "button": "Check package on WhatsApp →",
+      "whatsappMessage": "Hello! I saw the prices on the Pousada do Nereu website and would like to check availability and pricing for the following package:\n\nCheck-in date: ____\nCheck-out date: _____\nNumber of guests (please indicate if there are children): ____\nDinner every night for all guests? ______\n\nWill you also be fishing? Please fill in the details below:\nBoat for how many anglers: ____\nFishing date: ______\nAmount of bait: ____\nPreferred boat guide? Who? _____"
+    }
+  },
+  "es": {
+    "hero": {
+      "eyebrow": "Planifica tu estadía",
+      "title": "Planifica tu escapada de pesca.",
+      "description": "Planifica tu estadía, comidas y pesca. Consulta disponibilidad y condiciones directamente con la posada."
+    },
+    "groups": [
+      {
+        "title": "Hospedaje",
+        "cards": [
+          {
+            "title": "Hospedaje en la posada",
+            "description": "Por persona · habitación con minibar, televisión y aire acondicionado. Desayuno incluido.",
+            "price": "R$ 130,00"
+          }
+        ]
+      },
+      {
+        "title": "Alimentación",
+        "cards": [
+          {
+            "title": "Solo desayuno",
+            "description": "Para quienes no están hospedados o según disponibilidad de la posada.",
+            "price": "R$ 30,00"
+          },
+          {
+            "title": "Cena",
+            "description": "Comida casera preparada al momento. Valor por persona.",
+            "price": "R$ 70,00"
+          }
+        ]
+      },
+      {
+        "title": "Pesca",
+        "cards": [
+          {
+            "title": "Barco · 1, 2 o 3 personas",
+            "description": "Piloto profesional y 20 L de gasolina.",
+            "price": "R$ 680,00"
+          },
+          {
+            "title": "Barco · 4 personas",
+            "description": "Piloto profesional y 20 L de gasolina.",
+            "price": "R$ 780,00"
+          },
+          {
+            "title": "Carnada viva",
+            "description": "Camarón · por ciento.",
+            "price": "R$ 40,00"
+          }
+        ]
+      },
+      {
+        "title": "Estructura",
+        "cards": [
+          {
+            "title": "Rampa para embarcaciones externas",
+            "description": "Consulta las condiciones de uso.",
+            "price": "R$ 30,00"
+          },
+          {
+            "title": "Alquiler de casco",
+            "description": "Consulta disponibilidad antes de venir.",
+            "price": "R$ 180,00"
+          },
+          {
+            "title": "Marina",
+            "description": "Espacio para dejar tu embarcación.",
+            "price": "Consultar"
+          }
+        ]
+      }
+    ],
+    "fineprint": "🐾 Para hospedaje con mascota pequeña, consulta previamente las condiciones y el valor.",
+    "cta": {
+      "title": "¿Ya sabes cuándo quieres venir?",
+      "text": "Contáctanos y consulta disponibilidad para tus fechas.",
+      "button": "Consultar paquete por WhatsApp →",
+      "whatsappMessage": "¡Hola! Vi los precios en el sitio web de Pousada do Nereu y me gustaría consultar disponibilidad y valor para el siguiente paquete:\n\nFecha de entrada: ____\nFecha de salida: _____\nNúmero de huéspedes (indique si hay niños): ____\n¿Cena todas las noches para todos los huéspedes? ______\n\n¿También va a pescar? Complete los datos a continuación:\nBarco para cuántos pescadores: ____\nFecha de pesca: ______\nCantidad de carnada: ____\n¿Preferencia de piloto? ¿Cuál? _____"
+    }
+  }
+}
