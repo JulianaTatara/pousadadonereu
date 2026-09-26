@@ -50,6 +50,81 @@
   </div>
 </div>
 </div></section>
+<style>
+/* Instagram section hotfix: centered copy + feed on the right */
+.gallery-page .instagram-section{padding:44px 0 50px}
+.gallery-page .instagram-section .container{display:flex;justify-content:center}
+.gallery-page .instagram-harmony{
+  width:min(100%,1040px);
+  margin:0 auto;
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(340px,430px) !important;
+  gap:34px !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.gallery-page .instagram-copy-card{
+  min-height:100%;
+  padding:36px 34px;
+  display:flex !important;
+  flex-direction:column;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  border:1px solid #dfd3c3;
+  border-radius:22px;
+  background:rgba(255,253,248,.90);
+  box-shadow:0 14px 34px rgba(18,48,72,.06);
+}
+.gallery-page .instagram-copy-card .eyebrow,
+.gallery-page .instagram-copy-card h2,
+.gallery-page .instagram-copy-card p,
+.gallery-page .instagram-handle{text-align:center !important}
+.gallery-page .instagram-copy-card h2{
+  margin:0 0 16px;
+  font-family:var(--serif);
+  color:var(--navy);
+  font-size:40px;
+  line-height:1.08;
+}
+.gallery-page .instagram-copy-card p{
+  margin:0 auto 18px;
+  max-width:480px;
+  color:#596f80;
+  font-size:17px;
+  line-height:1.65;
+}
+.gallery-page .instagram-handle{margin:0 0 22px;color:var(--navy);font-weight:900}
+.gallery-page .instagram-cta{align-self:center !important}
+.gallery-page .instagram-feed-card{
+  width:100%;
+  max-width:430px;
+  justify-self:end !important;
+  padding:14px;
+  display:flex !important;
+  align-items:flex-start;
+  justify-content:center !important;
+  border:1px solid #dfd3c3;
+  border-radius:22px;
+  background:rgba(255,253,248,.90);
+  box-shadow:0 14px 34px rgba(18,48,72,.06);
+  overflow:hidden;
+}
+.gallery-page .instagram-profile-embed,
+.gallery-page .instagram-profile-embed .instagram-media,
+.gallery-page .instagram-profile-embed iframe{
+  width:100% !important;
+  max-width:400px !important;
+  min-width:0 !important;
+  margin:0 auto !important;
+}
+@media(max-width:900px){
+  .gallery-page .instagram-harmony{grid-template-columns:1fr !important;max-width:620px}
+  .gallery-page .instagram-feed-card{justify-self:center !important;max-width:440px}
+  .gallery-page .instagram-copy-card{padding:28px 22px}
+  .gallery-page .instagram-copy-card h2{font-size:34px}
+}
+</style>
 <section class="section-soft instagram-section"><div class="container"><div class="instagram-harmony">
   <div class="instagram-copy-card">
     <div class="eyebrow">Acompanhe a pousada</div>
