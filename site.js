@@ -233,9 +233,71 @@ function initConditionsWeather(){
     });
 }
 
+async function loadCmsPageContent(){
+  const page=(location.pathname.split('/').pop()||'index.html');
+  if(page!=='index.html')return;
+  try{
+    const response=await fetch('content/home.json',{cache:'no-store'});
+    if(!response.ok)return;
+    const data=await response.json();
+    const hero=data.hero||{};
+    const heroImg=document.querySelector('.hero-media img');
+    if(heroImg){
+      if(hero.image)heroImg.src=hero.image;
+      if(hero.alt)heroImg.alt=hero.alt;
+    }
+    const kickerMain=document.querySelector('.hero-kicker-main');
+    const kickerSub=document.querySelector('.hero-kicker-sub');
+    if(kickerMain&&hero.kickerMain)kickerMain.textContent=hero.kickerMain;
+    if(kickerSub&&hero.kickerSub)kickerSub.textContent=hero.kickerSub;
+    if(lang==='pt'){
+      const title=document.querySelector('.hero h1');
+      const desc=document.querySelector('.hero-content > p');
+      if(title&&hero.title){title.textContent=hero.title;title.dataset.pt=hero.title}
+      if(desc&&hero.description){desc.textContent=hero.description;desc.dataset.pt=hero.description}
+    }
+    const heroButtons=document.querySelectorAll('.hero-buttons .btn');
+    if(heroButtons[0]&&hero.accommodationButton)heroButtons[0].textContent=hero.accommodationButton;
+    if(heroButtons[1]){
+      if(hero.availabilityButton)heroButtons[1].textContent=hero.availabilityButton;
+      if(hero.availabilityMessage)heroButtons[1].href=wa(hero.availabilityMessage);
+    }
+    const features=[...document.querySelectorAll('.feature')];
+    (data.features||[]).slice(0,features.length).forEach((item,i)=>{
+      const strong=features[i].querySelector('strong');
+      const span=features[i].querySelector('span');
+      if(strong&&item.title)strong.textContent=item.title;
+      if(span&&item.subtitle)span.textContent=item.subtitle;
+    });
+    const reviews=data.reviews||{};
+    const reviewSection=[...document.querySelectorAll('section')].find(s=>s.querySelector('.reviews-grid'));
+    if(reviewSection){
+      const eyebrow=reviewSection.querySelector('.section-heading .eyebrow');
+      const heading=reviewSection.querySelector('.section-heading h2');
+      const score=reviewSection.querySelector('.google-score');
+      const summary=reviewSection.querySelector('.google-summary span:last-child');
+      const more=reviewSection.querySelector('.section-heading .btn');
+      if(eyebrow&&reviews.eyebrow)eyebrow.textContent=reviews.eyebrow;
+      if(heading&&reviews.title)heading.textContent=reviews.title;
+      if(score&&reviews.score)score.textContent=reviews.score;
+      if(summary&&reviews.count)summary.innerHTML='<span class="stars">★★★★★</span><br>'+reviews.count;
+      if(more){if(reviews.button)more.textContent=reviews.button;more.href=SITE.reviews}
+      const cards=[...reviewSection.querySelectorAll('.review-card')];
+      (reviews.items||[]).slice(0,cards.length).forEach((item,i)=>{
+        const quote=cards[i].querySelector('blockquote');
+        const name=cards[i].querySelector('.review-name');
+        if(quote&&item.text)quote.textContent='“'+item.text+'”';
+        if(name&&item.name)name.textContent=item.name;
+      });
+    }
+  }catch(error){
+    console.warn('CMS page content unavailable; using built-in page content.',error);
+  }
+}
+
 function bindLightbox(){const box=document.getElementById('lightbox');if(!box)return;const img=box.querySelector('.lightbox-media-wrap img');const count=box.querySelector('.lightbox-count');const prev=box.querySelector('[data-lightbox-nav="prev"]');const next=box.querySelector('[data-lightbox-nav="next"]');let scale=1,groupItems=[],groupIndex=-1;const setScale=value=>{scale=Math.max(1,Math.min(4,value));img.style.transform=`scale(${scale})`};const updateCount=()=>{if(count)count.textContent=groupItems.length?`${groupIndex+1} / ${groupItems.length}`:''};const showItem=index=>{if(!groupItems.length)return;groupIndex=(index+groupItems.length)%groupItems.length;const el=groupItems[groupIndex];img.src=el.dataset.lightbox||el.currentSrc||el.src;img.alt=el.alt||'Imagem ampliada';setScale(1);updateCount()};const openLightbox=(src,alt='Imagem ampliada',sourceEl=null)=>{const group=sourceEl?.dataset.lightboxGroup;if(group){groupItems=[...document.querySelectorAll(`[data-lightbox-group="${CSS.escape(group)}"]`)];groupIndex=Math.max(0,groupItems.indexOf(sourceEl));box.classList.toggle('has-group',groupItems.length>1);showItem(groupIndex)}else{groupItems=[];groupIndex=-1;box.classList.remove('has-group');img.src=src;img.alt=alt;setScale(1);updateCount()}box.classList.add('open')};window.openSiteLightbox=(src,alt='Imagem ampliada')=>openLightbox(src,alt,null);document.querySelectorAll('[data-lightbox]').forEach(el=>el.addEventListener('click',()=>openLightbox(el.dataset.lightbox||el.currentSrc||el.src,el.alt||'Imagem ampliada',el)));prev?.addEventListener('click',e=>{e.stopPropagation();showItem(groupIndex-1)});next?.addEventListener('click',e=>{e.stopPropagation();showItem(groupIndex+1)});box.querySelector('[data-lightbox-action="zoom-in"]')?.addEventListener('click',e=>{e.stopPropagation();setScale(scale+.35)});box.querySelector('[data-lightbox-action="zoom-out"]')?.addEventListener('click',e=>{e.stopPropagation();setScale(scale-.35)});box.addEventListener('click',e=>{if(e.target===box||e.target.matches('button[aria-label="Fechar"]'))box.classList.remove('open')});box.addEventListener('wheel',e=>{if(!box.classList.contains('open'))return;e.preventDefault();setScale(scale+(e.deltaY<0?.2:-.2))},{passive:false});document.addEventListener('keydown',e=>{if(!box.classList.contains('open'))return;if(e.key==='Escape')box.classList.remove('open');if(groupItems.length&&e.key==='ArrowLeft')showItem(groupIndex-1);if(groupItems.length&&e.key==='ArrowRight')showItem(groupIndex+1)})}
 function bindGalleryFilters(){const buttons=[...document.querySelectorAll('[data-gallery-filter]')];if(!buttons.length)return;buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('active'));btn.classList.add('active');const filter=btn.dataset.galleryFilter;document.querySelectorAll('[data-gallery-category]').forEach(item=>{item.style.display=(filter==='all'||item.dataset.galleryCategory===filter)?'':'none'});document.dispatchEvent(new CustomEvent('gallery:filterChanged',{detail:{filter}}))}))}
 function initInteractiveGallery(){const thumbs=[...document.querySelectorAll('.gallery-thumb')];const main=document.querySelector('[data-gallery-main-image]');if(!thumbs.length||!main)return;const title=document.getElementById('galleryCurrentTitle');const caption=document.getElementById('galleryCurrentCaption');const chip=document.getElementById('galleryCurrentCategory');const prev=document.querySelector('.gallery-nav.prev');const next=document.querySelector('.gallery-nav.next');const open=document.querySelector('.gallery-open');const frame=document.getElementById('galleryStageFrame');const thumbTrack=document.getElementById('galleryThumbs');const visible=()=>thumbs.filter(t=>t.style.display!=='none');const activate=thumb=>{if(!thumb)return;thumbs.forEach(t=>t.classList.toggle('active',t===thumb));main.src=thumb.dataset.full||thumb.querySelector('img')?.src||'';main.alt=thumb.dataset.title||thumb.querySelector('span')?.textContent||'Imagem da galeria';if(title)title.textContent=thumb.dataset.title||main.alt;if(caption)caption.textContent=thumb.dataset.caption||'';if(chip)chip.textContent=(thumb.dataset.title||'Galeria').toUpperCase();thumb.scrollIntoView({behavior:'smooth',inline:'nearest',block:'nearest'});if(thumbTrack){thumbTrack.scrollTop=0}};const currentVisible=()=>visible();const currentIndex=()=>currentVisible().findIndex(t=>t.classList.contains('active'));thumbs.forEach(t=>t.addEventListener('click',()=>activate(t)));prev?.addEventListener('click',e=>{e.stopPropagation();const list=currentVisible();if(!list.length)return;let idx=currentIndex();idx=idx<=0?list.length-1:idx-1;activate(list[idx])});next?.addEventListener('click',e=>{e.stopPropagation();const list=currentVisible();if(!list.length)return;let idx=currentIndex();idx=idx>=list.length-1?0:idx+1;activate(list[idx])});open?.addEventListener('click',e=>{e.stopPropagation();window.openSiteLightbox?.(main.src,main.alt)});frame?.addEventListener('click',e=>{if(e.target.closest('.gallery-nav')||e.target.closest('.gallery-open'))return;window.openSiteLightbox?.(main.src,main.alt)});document.addEventListener('gallery:filterChanged',()=>{const list=currentVisible();if(thumbTrack)thumbTrack.scrollTo({left:0,behavior:'smooth'});if(list.length)activate(list[0])});activate(thumbs.find(t=>t.classList.contains('active'))||thumbs[0])}
 function initRoomFilters(){const buttons=[...document.querySelectorAll('[data-room-filter]')];const cards=[...document.querySelectorAll('[data-room-card]')];if(!buttons.length||!cards.length)return;const empty=document.getElementById('roomsEmptyState');const apply=filter=>{let shown=0;cards.forEach(card=>{const cap=card.dataset.capacity;const isDouble=card.dataset.double==='true';const show=filter==='all'||filter===`capacity-${cap}`||(filter==='double-bed'&&isDouble);card.hidden=!show;if(show)shown++});if(empty)empty.hidden=shown!==0};buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');apply(btn.dataset.roomFilter)}));apply('all')}
 function animateStats(){const els=[...document.querySelectorAll('[data-count]')];if(!els.length)return;const obs=new IntersectionObserver(entries=>entries.forEach(en=>{if(!en.isIntersecting)return;const el=en.target,target=+el.dataset.count;const dur=900,t0=performance.now();function frame(t){const p=Math.min(1,(t-t0)/dur);el.textContent=Math.round(target*(1-Math.pow(1-p,3)))+(el.dataset.suffix||'');if(p<1)requestAnimationFrame(frame)}requestAnimationFrame(frame);obs.unobserve(el)}),{threshold:.45});els.forEach(el=>obs.observe(el))}
-document.addEventListener('DOMContentLoaded',async()=>{await loadCmsSiteConfig();renderShell();});
+document.addEventListener('DOMContentLoaded',async()=>{await loadCmsSiteConfig();renderShell();await loadCmsPageContent();});
