@@ -632,7 +632,7 @@ function initConditionsWeather(){
   const currentDetails=document.getElementById('weatherCurrentDetails');
   if(!list||!loading)return;
   const lat='-26.1157',lon='-48.8358';
-  const url=\`https://api.open-meteo.com/v1/forecast?latitude=\${lat}&longitude=\${lon}&current=temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=America%2FSao_Paulo&forecast_days=7\`;
+  const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=America%2FSao_Paulo&forecast_days=7`;
   const labels={
     pt:{weather:{0:'Céu limpo',1:'Sol entre nuvens',2:'Parcialmente nublado',3:'Nublado',45:'Neblina',48:'Neblina',51:'Garoa fraca',53:'Garoa',55:'Garoa intensa',56:'Garoa gelada',57:'Garoa gelada',61:'Chuva fraca',63:'Chuva',65:'Chuva forte',66:'Chuva gelada',67:'Chuva gelada',71:'Neve fraca',73:'Neve',75:'Neve forte',77:'Granizo leve',80:'Pancadas isoladas',81:'Pancadas de chuva',82:'Pancadas fortes',85:'Aguaceiros de neve',86:'Aguaceiros de neve',95:'Trovoadas',96:'Trovoadas com granizo',99:'Trovoadas fortes'},week:['dom','seg','ter','qua','qui','sex','sáb'],rain:'Chuva',humidity:'Umidade',wind:'Vento',varied:'Tempo variado',error:'Não foi possível carregar a previsão agora. Consulte a pousada para verificar as condições do rio e do clima.'},
     en:{weather:{0:'Clear sky',1:'Mostly sunny',2:'Partly cloudy',3:'Cloudy',45:'Fog',48:'Fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',56:'Freezing drizzle',57:'Freezing drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',66:'Freezing rain',67:'Freezing rain',71:'Light snow',73:'Snow',75:'Heavy snow',77:'Snow grains',80:'Light showers',81:'Rain showers',82:'Heavy showers',85:'Snow showers',86:'Snow showers',95:'Thunderstorms',96:'Thunderstorms with hail',99:'Severe thunderstorms'},week:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],rain:'Rain',humidity:'Humidity',wind:'Wind',varied:'Variable weather',error:'The forecast could not be loaded right now. Contact the lodge to check river and weather conditions.'},
@@ -646,9 +646,9 @@ function initConditionsWeather(){
       const current=data.current||{};
       const curEmoji=emojiMap[current.weather_code]||'🌤️';
       const curLabel=L.weather[current.weather_code]||L.varied;
-      if(currentTemp)currentTemp.textContent=\`\${Math.round(current.temperature_2m ?? 0)}°\`;
+      if(currentTemp)currentTemp.textContent=`${Math.round(current.temperature_2m ?? 0)}°`;
       if(currentIcon)currentIcon.textContent=curEmoji;
-      if(currentDetails)currentDetails.innerHTML=\`<span>\${curLabel}</span><span>\${L.rain}: \${Math.round(current.precipitation ?? 0)} mm</span><span>\${L.humidity}: \${Math.round(current.relative_humidity_2m ?? 0)}%</span><span>\${L.wind}: \${Math.round(current.wind_speed_10m ?? 0)} km/h</span>\`;
+      if(currentDetails)currentDetails.innerHTML=`<span>${curLabel}</span><span>${L.rain}: ${Math.round(current.precipitation ?? 0)} mm</span><span>${L.humidity}: ${Math.round(current.relative_humidity_2m ?? 0)}%</span><span>${L.wind}: ${Math.round(current.wind_speed_10m ?? 0)} km/h</span>`;
       const d=data.daily||{};
       const times=d.time||[];
       list.innerHTML=times.map((time,i)=>{
@@ -657,7 +657,7 @@ function initConditionsWeather(){
         const max=Math.round(d.temperature_2m_max?.[i] ?? 0);
         const min=Math.round(d.temperature_2m_min?.[i] ?? 0);
         const rain=Math.round(d.precipitation_probability_max?.[i] ?? 0);
-        return \`<div class="weather-day-mini \${i===0?'today':''}"><strong>\${L.week[dt.getDay()]}</strong><span class="weather-mini-icon" aria-hidden="true">\${emoji}</span><span class="weather-mini-temp">\${max}° / \${min}°</span><span class="weather-mini-rain">💧 \${rain}%</span></div>\`;
+        return `<div class="weather-day-mini ${i===0?'today':''}"><strong>${L.week[dt.getDay()]}</strong><span class="weather-mini-icon" aria-hidden="true">${emoji}</span><span class="weather-mini-temp">${max}° / ${min}°</span><span class="weather-mini-rain">💧 ${rain}%</span></div>`;
       }).join('');
       loading.style.display='none';
     })
@@ -781,7 +781,7 @@ async function loadCmsPageContent(){
       const hero=copy.hero||{};
       const heroBox=document.querySelector('.values-hero');
       if(heroBox){
-        if(data.heroImage)heroBox.style.setProperty('--values-hero-image',\`url('\${data.heroImage}')\`);
+        if(data.heroImage)heroBox.style.setProperty('--values-hero-image',`url('${data.heroImage}')`);
         const eyebrow=heroBox.querySelector('.eyebrow');
         const title=heroBox.querySelector('h1');
         const desc=heroBox.querySelector('p');
