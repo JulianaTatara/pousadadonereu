@@ -1765,3 +1765,107 @@ section{padding:58px 0}.section-soft{background:rgba(250,246,238,.78)}.section-s
     text-align:justify;
   }
 }
+
+
+/* Instagram profile embed — balanced editorial layout */
+.instagram-section{padding:44px 0 50px}
+.instagram-harmony{
+  display:grid;
+  grid-template-columns:minmax(320px,.92fr) minmax(340px,.78fr);
+  gap:34px;
+  align-items:stretch;
+  max-width:1080px;
+  margin:0 auto;
+}
+.instagram-copy-card,
+.instagram-feed-card{
+  border:1px solid #dfd3c3;
+  border-radius:22px;
+  background:rgba(255,253,248,.86);
+  box-shadow:0 14px 34px rgba(18,48,72,.06);
+}
+.instagram-copy-card{
+  padding:34px 36px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+}
+.instagram-copy-card .eyebrow{margin-bottom:12px}
+.instagram-copy-card h2{
+  margin:0 0 16px;
+  font-family:var(--serif);
+  color:var(--navy);
+  font-size:40px;
+  line-height:1.08;
+  max-width:520px;
+}
+.instagram-copy-card p{
+  margin:0 0 18px;
+  color:#596f80;
+  font-size:17px;
+  line-height:1.65;
+  max-width:520px;
+}
+.instagram-handle{
+  color:var(--navy);
+  font-weight:900;
+  font-size:15px;
+  margin:0 0 22px;
+}
+.instagram-cta{align-self:flex-start}
+.instagram-feed-card{
+  padding:18px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  overflow:hidden;
+}
+.instagram-profile-embed{
+  width:100%;
+  max-width:430px;
+  margin:0 auto;
+  overflow:hidden;
+}
+.instagram-profile-embed .instagram-media{
+  width:100% !important;
+  max-width:430px !important;
+  min-width:0 !important;
+  margin:0 auto !important;
+  border:0 !important;
+  border-radius:14px !important;
+  box-shadow:none !important;
+  background:#fff !important;
+}
+.instagram-profile-embed iframe{
+  width:100% !important;
+  max-width:430px !important;
+  min-width:0 !important;
+  margin:0 auto !important;
+}
+.instagram-profile-embed .instagram-media>a{
+  display:block;
+  padding:24px;
+  text-align:center;
+  color:var(--navy);
+  font-weight:800;
+}
+
+@media(max-width:900px){
+  .instagram-harmony{grid-template-columns:1fr;max-width:620px;gap:20px}
+  .instagram-copy-card{text-align:center;align-items:center;padding:28px 24px}
+  .instagram-copy-card h2{font-size:34px}
+  .instagram-copy-card p{font-size:16px}
+  .instagram-cta{align-self:center}
+  .instagram-feed-card{padding:14px}
+  .instagram-profile-embed,
+  .instagram-profile-embed .instagram-media,
+  .instagram-profile-embed iframe{max-width:440px !important}
+}
+@media(max-width:520px){
+  .instagram-section{padding:30px 0 36px}
+  .instagram-copy-card{padding:24px 18px}
+  .instagram-copy-card h2{font-size:30px}
+  .instagram-feed-card{padding:10px}
+  .instagram-profile-embed{max-width:100%}
+}
