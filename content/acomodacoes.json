@@ -1,141 +1,308 @@
 {
-  "hero": {
-    "eyebrow": "Conforto simples e acolhedor",
-    "title": "Você vai sentir-se em casa.",
-    "description": "Quartos com Wi‑Fi, banheiro privativo, televisão, ar-condicionado, frigobar, toalhas e sabonete.",
-    "ctaText": "Consultar acomodação pelo WhatsApp",
-    "ctaNote": "Resposta rápida para datas e número de hóspedes.",
-    "whatsappMessage": "Olá! Gostaria de consultar acomodação para ___ pessoas nas datas ___."
+  "pt": {
+    "hero": {
+      "eyebrow": "Conforto simples e acolhedor",
+      "title": "Você vai sentir-se em casa.",
+      "description": "Quartos com Wi‑Fi, banheiro privativo, televisão, ar-condicionado, frigobar, toalhas e sabonete.",
+      "ctaText": "Consultar acomodação pelo WhatsApp",
+      "ctaNote": "Resposta rápida para datas e número de hóspedes.",
+      "whatsappMessage": "Olá! Gostaria de consultar acomodação para ___ pessoas nas datas ___."
+    },
+    "filters": {
+      "label": "Filtrar acomodações",
+      "all": "Todos os quartos",
+      "capacity": "Capacidade máx.",
+      "doubleBed": "Cama de casal",
+      "empty": "Nenhum quarto corresponde a este filtro.",
+      "maxChip": "Máx.",
+      "doubleBedChip": "Cama de casal"
+    },
+    "petNote": {
+      "title": "Pet de pequeno porte permitido em todas as acomodações.",
+      "text": "Consulte previamente as condições para hospedagem com animal."
+    },
+    "finalCta": {
+      "title": "Quer consultar uma acomodação?",
+      "text": "Abra o WhatsApp com a mensagem pronta e preencha apenas pessoas e datas.",
+      "button": "Consultar acomodação →"
+    }
+  },
+  "en": {
+    "hero": {
+      "eyebrow": "Simple and welcoming comfort",
+      "title": "You’ll feel right at home.",
+      "description": "Rooms with Wi‑Fi, private bathroom, television, air conditioning, minibar, towels and soap.",
+      "ctaText": "Ask about accommodations on WhatsApp",
+      "ctaNote": "Quick response for dates and number of guests.",
+      "whatsappMessage": "Hello! I would like to check accommodation for ___ guests on the dates ___."
+    },
+    "filters": {
+      "label": "Filter accommodations",
+      "all": "All rooms",
+      "capacity": "Max. capacity",
+      "doubleBed": "Double bed",
+      "empty": "No room matches this filter.",
+      "maxChip": "Max.",
+      "doubleBedChip": "Double bed"
+    },
+    "petNote": {
+      "title": "Small pets are allowed in all accommodations.",
+      "text": "Please contact us in advance to confirm the conditions for staying with a pet."
+    },
+    "finalCta": {
+      "title": "Want to check an accommodation?",
+      "text": "Open WhatsApp with a ready-made message and fill in only the number of guests and dates.",
+      "button": "Check accommodation →"
+    }
+  },
+  "es": {
+    "hero": {
+      "eyebrow": "Confort sencillo y acogedor",
+      "title": "Te sentirás como en casa.",
+      "description": "Habitaciones con Wi‑Fi, baño privado, televisión, aire acondicionado, minibar, toallas y jabón.",
+      "ctaText": "Consultar alojamiento por WhatsApp",
+      "ctaNote": "Respuesta rápida para fechas y número de huéspedes.",
+      "whatsappMessage": "¡Hola! Me gustaría consultar alojamiento para ___ huéspedes en las fechas ___."
+    },
+    "filters": {
+      "label": "Filtrar alojamientos",
+      "all": "Todas las habitaciones",
+      "capacity": "Capacidad máx.",
+      "doubleBed": "Cama doble",
+      "empty": "Ninguna habitación corresponde a este filtro.",
+      "maxChip": "Máx.",
+      "doubleBedChip": "Cama doble"
+    },
+    "petNote": {
+      "title": "Se permiten mascotas pequeñas en todos los alojamientos.",
+      "text": "Consulte previamente las condiciones para hospedarse con una mascota."
+    },
+    "finalCta": {
+      "title": "¿Quieres consultar un alojamiento?",
+      "text": "Abre WhatsApp con el mensaje listo y completa solamente el número de huéspedes y las fechas.",
+      "button": "Consultar alojamiento →"
+    }
   },
   "rooms": [
     {
-      "name": "Quarto 1",
       "capacity": 3,
       "doubleBed": false,
-      "description": "Capacidade máxima: 3 hóspedes",
       "images": [
         "assets/room-1.jpg",
         "assets/room-2.jpg",
         "assets/room-3.jpg",
         "assets/room-4.jpg"
-      ]
+      ],
+      "pt": {
+        "name": "Quarto 1",
+        "description": "Capacidade máxima: 3 hóspedes"
+      },
+      "en": {
+        "name": "Room 1",
+        "description": "Maximum capacity: 3 guests"
+      },
+      "es": {
+        "name": "Habitación 1",
+        "description": "Capacidad máxima: 3 huéspedes"
+      }
     },
     {
-      "name": "Quarto 2",
       "capacity": 3,
       "doubleBed": false,
-      "description": "Capacidade máxima: 3 hóspedes",
       "images": [
         "assets/room-2.jpg",
         "assets/room-3.jpg",
         "assets/room-4.jpg",
         "assets/room-5.jpg"
-      ]
+      ],
+      "pt": {
+        "name": "Quarto 2",
+        "description": "Capacidade máxima: 3 hóspedes"
+      },
+      "en": {
+        "name": "Room 2",
+        "description": "Maximum capacity: 3 guests"
+      },
+      "es": {
+        "name": "Habitación 2",
+        "description": "Capacidad máxima: 3 huéspedes"
+      }
     },
     {
-      "name": "Quarto 3",
       "capacity": 4,
       "doubleBed": false,
-      "description": "Capacidade máxima: 4 hóspedes",
       "images": [
         "assets/room-3.jpg",
         "assets/room-4.jpg",
         "assets/room-5.jpg",
         "assets/room-6.jpg"
-      ]
+      ],
+      "pt": {
+        "name": "Quarto 3",
+        "description": "Capacidade máxima: 4 hóspedes"
+      },
+      "en": {
+        "name": "Room 3",
+        "description": "Maximum capacity: 4 guests"
+      },
+      "es": {
+        "name": "Habitación 3",
+        "description": "Capacidad máxima: 4 huéspedes"
+      }
     },
     {
-      "name": "Quarto 4",
       "capacity": 2,
       "doubleBed": false,
-      "description": "Capacidade máxima: 2 hóspedes · duas camas de solteiro",
       "images": [
         "assets/room-4.jpg",
         "assets/room-5.jpg",
         "assets/room-6.jpg",
         "assets/room-7.jpg"
-      ]
+      ],
+      "pt": {
+        "name": "Quarto 4",
+        "description": "Capacidade máxima: 2 hóspedes · duas camas de solteiro"
+      },
+      "en": {
+        "name": "Room 4",
+        "description": "Maximum capacity: 2 guests · two single beds"
+      },
+      "es": {
+        "name": "Habitación 4",
+        "description": "Capacidad máxima: 2 huéspedes · dos camas individuales"
+      }
     },
     {
-      "name": "Quarto 5",
       "capacity": 4,
       "doubleBed": false,
-      "description": "Capacidade máxima: 4 hóspedes",
       "images": [
         "assets/room-5.jpg",
         "assets/room-6.jpg",
         "assets/room-7.jpg",
         "assets/room-8.jpg"
-      ]
+      ],
+      "pt": {
+        "name": "Quarto 5",
+        "description": "Capacidade máxima: 4 hóspedes"
+      },
+      "en": {
+        "name": "Room 5",
+        "description": "Maximum capacity: 4 guests"
+      },
+      "es": {
+        "name": "Habitación 5",
+        "description": "Capacidad máxima: 4 huéspedes"
+      }
     },
     {
-      "name": "Quarto 6",
       "capacity": 4,
       "doubleBed": true,
-      "description": "Capacidade máxima: 4 hóspedes · opção com cama de casal",
       "images": [
         "assets/room-6.jpg",
         "assets/room-7.jpg",
         "assets/room-8.jpg",
         "assets/room-9.jpg"
-      ]
+      ],
+      "pt": {
+        "name": "Quarto 6",
+        "description": "Capacidade máxima: 4 hóspedes · opção com cama de casal"
+      },
+      "en": {
+        "name": "Room 6",
+        "description": "Maximum capacity: 4 guests · option with a double bed"
+      },
+      "es": {
+        "name": "Habitación 6",
+        "description": "Capacidad máxima: 4 huéspedes · opción con cama doble"
+      }
     },
     {
-      "name": "Quarto 7",
       "capacity": 5,
       "doubleBed": false,
-      "description": "Capacidade máxima: 5 hóspedes",
       "images": [
         "assets/room-7.jpg",
         "assets/room-8.jpg",
         "assets/room-9.jpg",
         "assets/room-10.jpg"
-      ]
+      ],
+      "pt": {
+        "name": "Quarto 7",
+        "description": "Capacidade máxima: 5 hóspedes"
+      },
+      "en": {
+        "name": "Room 7",
+        "description": "Maximum capacity: 5 guests"
+      },
+      "es": {
+        "name": "Habitación 7",
+        "description": "Capacidad máxima: 5 huéspedes"
+      }
     },
     {
-      "name": "Quarto 8",
       "capacity": 6,
       "doubleBed": true,
-      "description": "Capacidade máxima: 6 hóspedes · uma cama de casal",
       "images": [
         "assets/room-8.jpg",
         "assets/room-9.jpg",
         "assets/room-10.jpg",
         "assets/room-1.jpg"
-      ]
+      ],
+      "pt": {
+        "name": "Quarto 8",
+        "description": "Capacidade máxima: 6 hóspedes · uma cama de casal"
+      },
+      "en": {
+        "name": "Room 8",
+        "description": "Maximum capacity: 6 guests · one double bed"
+      },
+      "es": {
+        "name": "Habitación 8",
+        "description": "Capacidad máxima: 6 huéspedes · una cama doble"
+      }
     },
     {
-      "name": "Quarto 9",
       "capacity": 5,
       "doubleBed": true,
-      "description": "Capacidade máxima: 5 hóspedes · uma cama de casal",
       "images": [
         "assets/room-9.jpg",
         "assets/room-10.jpg",
         "assets/room-1.jpg",
         "assets/room-2.jpg"
-      ]
+      ],
+      "pt": {
+        "name": "Quarto 9",
+        "description": "Capacidade máxima: 5 hóspedes · uma cama de casal"
+      },
+      "en": {
+        "name": "Room 9",
+        "description": "Maximum capacity: 5 guests · one double bed"
+      },
+      "es": {
+        "name": "Habitación 9",
+        "description": "Capacidad máxima: 5 huéspedes · una cama doble"
+      }
     },
     {
-      "name": "Quarto 10",
       "capacity": 2,
       "doubleBed": true,
-      "description": "Capacidade máxima: 2 hóspedes · uma cama de casal",
       "images": [
         "assets/room-10.jpg",
         "assets/room-1.jpg",
         "assets/room-2.jpg",
         "assets/room-3.jpg"
-      ]
+      ],
+      "pt": {
+        "name": "Quarto 10",
+        "description": "Capacidade máxima: 2 hóspedes · uma cama de casal"
+      },
+      "en": {
+        "name": "Room 10",
+        "description": "Maximum capacity: 2 guests · one double bed"
+      },
+      "es": {
+        "name": "Habitación 10",
+        "description": "Capacidad máxima: 2 huéspedes · una cama doble"
+      }
     }
-  ],
-  "petNote": {
-    "title": "Pet de pequeno porte permitido em todas as acomodações.",
-    "text": "Consulte previamente as condições para hospedagem com animal."
-  },
-  "finalCta": {
-    "title": "Quer consultar uma acomodação?",
-    "text": "Abra o WhatsApp com a mensagem pronta e preencha apenas pessoas e datas.",
-    "button": "Consultar acomodação →"
-  }
+  ]
 }
