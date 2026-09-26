@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Condições | Pousada do Nereu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="moon-page-v23 conditions-page-v24">
+  <div data-shell="header"></div>
+  <main>
+    <section class="moon-title-section conditions-hero-v24">
+      <div class="container">
+        <div class="moon-title-box">
+          <div class="eyebrow">Tempo, lua e maré</div>
+          <h1>Conheça as condições climáticas e ambientais para sua pescaria</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="conditions-weather-section compact-weather-v24">
+      <div class="container conditions-weather-grid">
+        <div class="conditions-explainer-card compact-explainer-v24">
+          <div class="eyebrow">Previsão da semana</div>
+          <h2>Planeje sua pescaria com o clima em mente</h2>
+          <p>Veja a previsão da semana. Mesmo com chuva, pode sair peixe — então consulte a pousada para entender as condições do rio nos dias em que você pretende pescar.</p>
+        </div>
+
+        <div class="conditions-weather-card compact-weather-card-v24" id="conditionsWeatherCard">
+          <div class="weather-current-strip" id="weatherCurrentStrip">
+            <div class="weather-current-place">
+              <span class="weather-current-icon" id="weatherCurrentIcon">🌤️</span>
+              <div>
+                <span class="weather-current-label">Garuva, SC</span>
+                <strong id="weatherCurrentTemp">--°</strong>
+              </div>
+            </div>
+            <div class="weather-current-details" id="weatherCurrentDetails">
+              <span>Carregando previsão...</span>
+            </div>
+          </div>
+          <div class="weather-loading-state" id="weatherLoadingState">Carregando previsão da semana...</div>
+          <div class="weather-week-strip" id="weatherWeekList" aria-live="polite"></div>
+          <div class="weather-api-footnote">Previsão automática para Garuva/SC.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="moon-content-section conditions-moon-section">
+      <div class="container">
+        <div class="conditions-section-intro">
+          <div class="eyebrow">Fases da lua</div>
+          <h2>Veja como a lua pode influenciar</h2>
+          <p>Essas referências seguem o conhecimento e a experiência de anos do Nereu, acompanhando a pescaria na região.</p>
+        </div>
+
+        <div class="moon-layout-v23">
+          <aside class="moon-legend-card">
+            <div class="eyebrow">Experiência local</div>
+            <h2>Legenda das luas</h2>
+
+            <div class="moon-legend-list" aria-label="Legenda das fases da lua">
+              <div class="moon-legend-item">
+                <span class="moon-swatch moon-new"></span>
+                <div>
+                  <strong>Lua nova</strong>
+                  <span>Condição intermediária</span>
+                </div>
+              </div>
+
+              <div class="moon-legend-item best-phase">
+                <span class="moon-best-badge">Maiores chances de pegar peixe</span>
+                <span class="moon-swatch moon-waxing"></span>
+                <div>
+                  <strong>Lua crescente</strong>
+                  <span>Costuma ser favorável</span>
+                </div>
+              </div>
+
+              <div class="moon-legend-item">
+                <span class="moon-swatch moon-full"></span>
+                <div>
+                  <strong>Lua cheia</strong>
+                  <span>Costuma ser menos favorável</span>
+                </div>
+              </div>
+
+              <div class="moon-legend-item best-phase">
+                <span class="moon-best-badge">Maiores chances de pegar peixe</span>
+                <span class="moon-swatch moon-waning"></span>
+                <div>
+                  <strong>Lua minguante</strong>
+                  <span>Costuma ser favorável</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="moon-local-note">
+              <strong>Conhecimento de quem pesca aqui há anos.</strong>
+              <p>Estas referências são baseadas no conhecimento e na experiência de muitos anos de Nereu, proprietário da pousada, acompanhando a pesca no Rio Palmital e na região.</p>
+              <p class="moon-note-small">As condições reais também podem variar com maré, chuva, vento, horário e outros fatores do dia.</p>
+            </div>
+          </aside>
+
+          <div class="moon-calendar-card">
+            <div class="moon-calendar-heading">
+              <div>
+                <div class="eyebrow">Calendário lunar</div>
+                <h2>2026–2027</h2>
+              </div>
+              <div class="moon-calendar-tools">
+                <span class="moon-calendar-hint moon-calendar-hint-desktop">Role para baixo ↓</span>
+                <span class="moon-calendar-hint moon-calendar-hint-mobile">Dê zoom no mês que você tem interesse em ir pescar</span>
+                <div class="moon-calendar-zoom-buttons" aria-label="Controles de zoom do calendário lunar">
+                  <button type="button" class="moon-calendar-zoom-btn" data-calendar-zoom="out" aria-label="Diminuir zoom">−</button>
+                  <button type="button" class="moon-calendar-zoom-btn moon-calendar-zoom-reset" data-calendar-zoom="reset" aria-label="Voltar ao tamanho original">100%</button>
+                  <button type="button" class="moon-calendar-zoom-btn" data-calendar-zoom="in" aria-label="Aumentar zoom">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="moon-calendar-scroll" tabindex="0" aria-label="Calendário lunar 2026 e 2027 com rolagem vertical e zoom interno">
+              <div class="moon-calendar-zoom-stage">
+                <img src="assets/calendario-lunar-2026-2027.png" alt="Calendário lunar de outubro de 2026 a dezembro de 2027">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tides-section-v23">
+      <div class="container">
+        <div class="tides-card-v23">
+          <div class="tides-copy-v23">
+            <div class="eyebrow">Além da lua</div>
+            <h2>Marés</h2>
+            <p>A maré também pode influenciar a pescaria, alterando o nível da água, a força da corrente e a movimentação dos peixes no estuário. O melhor momento depende da combinação das condições do dia e do ponto de pesca.</p>
+          </div>
+          <a class="btn btn-primary moon-nereu-cta" target="_blank" href="https://wa.me/5547999846109?text=Ol%C3%A1%20Seu%20Nereu%2C%20tudo%20bem%3F%20Peguei%20seu%20contato%20pelo%20site%20da%20pousada%20e%20gostaria%20de%20entender%20melhor%20sobre%20o%20tempo%20por%20a%C3%AD%2C%20a%20mar%C3%A9%20e%20a%20lua%20para%20minha%20pr%C3%B3xima%20pescaria">Clique aqui para conversar com o Nereu e entender as condições para sua pescaria →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-shell="footer"></div>
+  <script src="site.js"></script>
+</body>
+</html>
