@@ -1,6 +1,6 @@
 {
   "heroMedia": {
-    "video": "",
+    "video": "assets/Video pagina principal .MOV",
     "image": "assets/hero-poster.jpg"
   },
   "pt": {
@@ -157,7 +157,7 @@
     }
   },
   "hero": {
-    "video": "",
+    "video": "assets/Video pagina principal .MOV",
     "image": "assets/hero-poster.jpg",
     "alt": "Rio Palmital visto da proa de uma embarcação ao pôr do sol",
     "kickerMain": "Pousada do Nereu",
