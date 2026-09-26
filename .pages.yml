@@ -1,0 +1,53 @@
+media:
+  input: assets
+  output: /assets
+  categories: [image]
+  rename: safe
+
+content:
+  - name: site
+    label: Configurações gerais
+    type: file
+    path: content/site.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: phone
+        label: WhatsApp da Marcia (somente números)
+        type: string
+        required: true
+      - name: phoneDisplay
+        label: Telefone da Marcia (como aparece no site)
+        type: string
+        required: true
+      - name: nereuPhone
+        label: WhatsApp do Nereu (somente números)
+        type: string
+        required: true
+      - name: nereuPhoneDisplay
+        label: Telefone do Nereu (como aparece no site)
+        type: string
+        required: true
+      - name: address
+        label: Endereço
+        type: text
+        required: true
+      - name: instagram
+        label: Instagram
+        type: string
+        required: true
+      - name: facebook
+        label: Facebook
+        type: string
+        required: true
+      - name: maps
+        label: Link para traçar rota
+        type: string
+        required: true
+      - name: reviews
+        label: Link das avaliações no Google
+        type: string
+      - name: tides
+        label: Link externo de marés
+        type: string
