@@ -1,53 +1,159 @@
 {
-  "hero": {
-    "image": "assets/hero-poster.jpg",
-    "alt": "Rio Palmital visto da proa de uma embarcação ao pôr do sol",
-    "kickerMain": "Pousada do Nereu",
-    "kickerSub": "· Garuva, SC",
-    "title": "Rústico, aconchegante e familiar.",
-    "description": "Natureza, pescaria, conforto e momentos inesquecíveis no coração do paraíso dos robalos.",
-    "accommodationButton": "Ver acomodações →",
-    "availabilityButton": "Consultar disponibilidade",
-    "availabilityMessage": "Olá! Encontrei vocês pelo site da Pousada do Nereu e gostaria de consultar disponibilidade.",
-    "video": ""
+  "heroMedia": {
+    "video": "",
+    "image": "assets/hero-poster.jpg"
   },
-  "features": [
-    {
-      "title": "Pescaria do robalo",
-      "subtitle": "Experiência local"
+  "pt": {
+    "hero": {
+      "alt": "Rio Palmital visto da proa de uma embarcação ao pôr do sol",
+      "kickerMain": "Pousada do Nereu",
+      "kickerSub": "· Garuva, SC",
+      "title": "Rústico, aconchegante e familiar.",
+      "description": "Natureza, pescaria, conforto e momentos inesquecíveis no coração do paraíso dos robalos.",
+      "accommodationButton": "Ver acomodações →",
+      "availabilityButton": "Consultar disponibilidade",
+      "availabilityMessage": "Olá! Encontrei vocês pelo site da Pousada do Nereu e gostaria de consultar disponibilidade."
     },
-    {
-      "title": "Natureza exuberante",
-      "subtitle": "Rio, mangue e serra"
-    },
-    {
-      "title": "Comida caseira",
-      "subtitle": "Sabor regional"
-    },
-    {
-      "title": "Ambiente familiar",
-      "subtitle": "Para se sentir em casa"
-    }
-  ],
-  "reviews": {
-    "eyebrow": "Google Reviews",
-    "title": "O que nossos hóspedes dizem",
-    "score": "4,6",
-    "count": "320+ avaliações no Google",
-    "button": "Ver mais avaliações no Google ↗",
-    "items": [
+    "features": [
       {
-        "name": "Juliano Medeiros",
-        "text": "Perfeito para pescar. Os barqueiros são muito bons, experientes e sempre dispostos a ajudar. O Nereu merece destaque: gente finíssima, super prestativo e faz de tudo pra experiência ser a melhor possível. Recomendamos sempre!"
+        "title": "Pescaria do robalo",
+        "subtitle": "Experiência local"
       },
       {
-        "name": "Gislaine Piccoli",
-        "text": "Fomos muito bem recebidos, pousada muito limpa com café da manhã bem servido. Adoramos o local, a anfitriã Márcia e seu irmão muito gentis."
+        "title": "Natureza exuberante",
+        "subtitle": "Rio, mangue e serra"
       },
       {
-        "name": "Luiza",
-        "text": "Eu fui passar o final de semana com o meu pai e com a namorada dele, essa pousada é bem bonita, tranquilo, café da manhã bem gostoso e cheia de pessoas boas. A Márcia foi bem simpática com nós, ela é um amor de pessoa, quero voltar lá de novo e ver de novos os gatinhos. Super recomendo!!!"
+        "title": "Comida caseira",
+        "subtitle": "Sabor regional"
+      },
+      {
+        "title": "Ambiente familiar",
+        "subtitle": "Para se sentir em casa"
       }
-    ]
+    ],
+    "reviews": {
+      "eyebrow": "Google Reviews",
+      "title": "O que nossos hóspedes dizem",
+      "score": "4,6",
+      "count": "320+ avaliações no Google",
+      "button": "Ver mais avaliações no Google ↗",
+      "items": [
+        {
+          "name": "Juliano Medeiros",
+          "text": "Perfeito para pescar. Os barqueiros são muito bons, experientes e sempre dispostos a ajudar. O Nereu merece destaque: gente finíssima, super prestativo e faz de tudo pra experiência ser a melhor possível. Recomendamos sempre!"
+        },
+        {
+          "name": "Gislaine Piccoli",
+          "text": "Fomos muito bem recebidos, pousada muito limpa com café da manhã bem servido. Adoramos o local, a anfitriã Márcia e seu irmão muito gentis."
+        },
+        {
+          "name": "Luiza",
+          "text": "Eu fui passar o final de semana com o meu pai e com a namorada dele, essa pousada é bem bonita, tranquilo, café da manhã bem gostoso e cheia de pessoas boas. A Márcia foi bem simpática com nós, ela é um amor de pessoa, quero voltar lá de novo e ver de novos os gatinhos. Super recomendo!!!"
+        }
+      ]
+    }
+  },
+  "en": {
+    "hero": {
+      "alt": "View of the Palmital River from the bow of a boat at sunset",
+      "kickerMain": "Pousada do Nereu",
+      "kickerSub": "· Garuva, SC",
+      "title": "Rustic, welcoming and family-run.",
+      "description": "Nature, fishing, comfort and unforgettable moments in the heart of snook country.",
+      "accommodationButton": "View accommodations →",
+      "availabilityButton": "Check availability",
+      "availabilityMessage": "Hello! I found Pousada do Nereu through the website and would like to check availability."
+    },
+    "features": [
+      {
+        "title": "Snook fishing",
+        "subtitle": "Local experience"
+      },
+      {
+        "title": "Abundant nature",
+        "subtitle": "River, mangroves and mountains"
+      },
+      {
+        "title": "Home-style food",
+        "subtitle": "Regional flavors"
+      },
+      {
+        "title": "Family atmosphere",
+        "subtitle": "Feel at home"
+      }
+    ],
+    "reviews": {
+      "eyebrow": "Google Reviews",
+      "title": "What our guests say",
+      "score": "4.6",
+      "count": "320+ Google reviews",
+      "button": "See more reviews on Google ↗",
+      "items": [
+        {
+          "name": "Juliano Medeiros",
+          "text": "Perfect for fishing. The boat guides are very good, experienced and always willing to help. Nereu deserves special mention: a great person, very helpful, and he does everything he can to make the experience the best possible. We always recommend it!"
+        },
+        {
+          "name": "Gislaine Piccoli",
+          "text": "We were very well received. The guesthouse was very clean and breakfast was generous. We loved the place, and Márcia and her brother were very kind."
+        },
+        {
+          "name": "Luiza",
+          "text": "I spent the weekend there with my father and his girlfriend. The guesthouse is beautiful and peaceful, breakfast is very tasty and everyone is so nice. Márcia was very friendly to us; she is lovely. I want to go back again and see the cats. I definitely recommend it!"
+        }
+      ]
+    }
+  },
+  "es": {
+    "hero": {
+      "alt": "Vista del río Palmital desde la proa de una embarcación al atardecer",
+      "kickerMain": "Pousada do Nereu",
+      "kickerSub": "· Garuva, SC",
+      "title": "Rústico, acogedor y familiar.",
+      "description": "Naturaleza, pesca, confort y momentos inolvidables en el corazón del paraíso del róbalo.",
+      "accommodationButton": "Ver alojamientos →",
+      "availabilityButton": "Consultar disponibilidad",
+      "availabilityMessage": "¡Hola! Encontré la Pousada do Nereu a través del sitio web y me gustaría consultar disponibilidad."
+    },
+    "features": [
+      {
+        "title": "Pesca de róbalo",
+        "subtitle": "Experiencia local"
+      },
+      {
+        "title": "Naturaleza exuberante",
+        "subtitle": "Río, manglar y montañas"
+      },
+      {
+        "title": "Comida casera",
+        "subtitle": "Sabores regionales"
+      },
+      {
+        "title": "Ambiente familiar",
+        "subtitle": "Para sentirse como en casa"
+      }
+    ],
+    "reviews": {
+      "eyebrow": "Google Reviews",
+      "title": "Lo que dicen nuestros huéspedes",
+      "score": "4,6",
+      "count": "320+ reseñas en Google",
+      "button": "Ver más reseñas en Google ↗",
+      "items": [
+        {
+          "name": "Juliano Medeiros",
+          "text": "Perfecto para pescar. Los guías de las embarcaciones son muy buenos, experimentados y siempre dispuestos a ayudar. Nereu merece una mención especial: excelente persona, muy atento y hace todo lo posible para que la experiencia sea la mejor. ¡Siempre lo recomendamos!"
+        },
+        {
+          "name": "Gislaine Piccoli",
+          "text": "Nos recibieron muy bien. La posada estaba muy limpia y el desayuno muy bien servido. Nos encantó el lugar, y Márcia y su hermano fueron muy amables."
+        },
+        {
+          "name": "Luiza",
+          "text": "Pasé el fin de semana allí con mi padre y su pareja. La posada es muy bonita y tranquila, el desayuno es muy rico y todos son muy agradables. Márcia fue muy simpática con nosotros; es un amor. Quiero volver y ver a los gatitos otra vez. ¡La recomiendo totalmente!"
+        }
+      ]
+    }
   }
 }
