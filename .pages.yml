@@ -633,3 +633,214 @@ content:
               - name: description
                 label: Descripción
                 type: text
+
+  - name: values
+    label: Valores
+    type: file
+    path: content/valores.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: heroImage
+        label: Imagem do topo
+        type: image
+        required: true
+      - name: pt
+        label: Português
+        type: object
+        fields:
+          - name: hero
+            label: Topo da página
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+          - name: groups
+            label: Grupos de preços
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Título do grupo
+                type: string
+              - name: cards
+                label: Itens
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    label: Título
+                    type: string
+                  - name: description
+                    label: Descrição
+                    type: text
+                  - name: price
+                    label: Valor
+                    type: string
+          - name: fineprint
+            label: Aviso de pet
+            type: text
+          - name: cta
+            label: Chamada final
+            type: object
+            fields:
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: button
+                label: Botão
+                type: string
+              - name: whatsappMessage
+                label: Mensagem automática do WhatsApp
+                type: text
+      - name: en
+        label: English
+        type: object
+        fields:
+          - name: hero
+            label: Page header
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: groups
+            label: Price groups
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Group title
+                type: string
+              - name: cards
+                label: Items
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    label: Title
+                    type: string
+                  - name: description
+                    label: Description
+                    type: text
+                  - name: price
+                    label: Price
+                    type: string
+          - name: fineprint
+            label: Pet notice
+            type: text
+          - name: cta
+            label: Final call to action
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: text
+                label: Text
+                type: text
+              - name: button
+                label: Button
+                type: string
+              - name: whatsappMessage
+                label: WhatsApp automatic message
+                type: text
+      - name: es
+        label: Español
+        type: object
+        fields:
+          - name: hero
+            label: Encabezado
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descripción
+                type: text
+          - name: groups
+            label: Grupos de precios
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Título del grupo
+                type: string
+              - name: cards
+                label: Ítems
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    label: Título
+                    type: string
+                  - name: description
+                    label: Descripción
+                    type: text
+                  - name: price
+                    label: Precio
+                    type: string
+          - name: fineprint
+            label: Aviso de mascota
+            type: text
+          - name: cta
+            label: Llamada final
+            type: object
+            fields:
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: button
+                label: Botón
+                type: string
+              - name: whatsappMessage
+                label: Mensaje automático de WhatsApp
+                type: text
