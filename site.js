@@ -1,4 +1,4 @@
-const SITE = {
+let SITE = {
   phone: '5547999753651',
   phoneDisplay: '(47) 99975-3651',
   nereuPhone: '5547999846109',
@@ -11,6 +11,16 @@ const SITE = {
   reviews: 'https://www.google.com/search?q=Pousada+do+Nereu+Garuva+avalia%C3%A7%C3%B5es',
   tides: 'https://tabuademares.com/br/santa-catarina/joinville'
 };
+async function loadCmsSiteConfig(){
+  try{
+    const response=await fetch('content/site.json',{cache:'no-store'});
+    if(!response.ok)return;
+    const data=await response.json();
+    SITE={...SITE,...data};
+  }catch(error){
+    console.warn('CMS site settings unavailable; using built-in defaults.',error);
+  }
+}
 const NAV = [
   {href:'index.html',pt:'Início',en:'Home',es:'Inicio'},
   {href:'a-pousada.html',pt:'A Pousada',en:'The Lodge',es:'La Posada',children:[
@@ -228,4 +238,4 @@ function bindGalleryFilters(){const buttons=[...document.querySelectorAll('[data
 function initInteractiveGallery(){const thumbs=[...document.querySelectorAll('.gallery-thumb')];const main=document.querySelector('[data-gallery-main-image]');if(!thumbs.length||!main)return;const title=document.getElementById('galleryCurrentTitle');const caption=document.getElementById('galleryCurrentCaption');const chip=document.getElementById('galleryCurrentCategory');const prev=document.querySelector('.gallery-nav.prev');const next=document.querySelector('.gallery-nav.next');const open=document.querySelector('.gallery-open');const frame=document.getElementById('galleryStageFrame');const thumbTrack=document.getElementById('galleryThumbs');const visible=()=>thumbs.filter(t=>t.style.display!=='none');const activate=thumb=>{if(!thumb)return;thumbs.forEach(t=>t.classList.toggle('active',t===thumb));main.src=thumb.dataset.full||thumb.querySelector('img')?.src||'';main.alt=thumb.dataset.title||thumb.querySelector('span')?.textContent||'Imagem da galeria';if(title)title.textContent=thumb.dataset.title||main.alt;if(caption)caption.textContent=thumb.dataset.caption||'';if(chip)chip.textContent=(thumb.dataset.title||'Galeria').toUpperCase();thumb.scrollIntoView({behavior:'smooth',inline:'nearest',block:'nearest'});if(thumbTrack){thumbTrack.scrollTop=0}};const currentVisible=()=>visible();const currentIndex=()=>currentVisible().findIndex(t=>t.classList.contains('active'));thumbs.forEach(t=>t.addEventListener('click',()=>activate(t)));prev?.addEventListener('click',e=>{e.stopPropagation();const list=currentVisible();if(!list.length)return;let idx=currentIndex();idx=idx<=0?list.length-1:idx-1;activate(list[idx])});next?.addEventListener('click',e=>{e.stopPropagation();const list=currentVisible();if(!list.length)return;let idx=currentIndex();idx=idx>=list.length-1?0:idx+1;activate(list[idx])});open?.addEventListener('click',e=>{e.stopPropagation();window.openSiteLightbox?.(main.src,main.alt)});frame?.addEventListener('click',e=>{if(e.target.closest('.gallery-nav')||e.target.closest('.gallery-open'))return;window.openSiteLightbox?.(main.src,main.alt)});document.addEventListener('gallery:filterChanged',()=>{const list=currentVisible();if(thumbTrack)thumbTrack.scrollTo({left:0,behavior:'smooth'});if(list.length)activate(list[0])});activate(thumbs.find(t=>t.classList.contains('active'))||thumbs[0])}
 function initRoomFilters(){const buttons=[...document.querySelectorAll('[data-room-filter]')];const cards=[...document.querySelectorAll('[data-room-card]')];if(!buttons.length||!cards.length)return;const empty=document.getElementById('roomsEmptyState');const apply=filter=>{let shown=0;cards.forEach(card=>{const cap=card.dataset.capacity;const isDouble=card.dataset.double==='true';const show=filter==='all'||filter===`capacity-${cap}`||(filter==='double-bed'&&isDouble);card.hidden=!show;if(show)shown++});if(empty)empty.hidden=shown!==0};buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');apply(btn.dataset.roomFilter)}));apply('all')}
 function animateStats(){const els=[...document.querySelectorAll('[data-count]')];if(!els.length)return;const obs=new IntersectionObserver(entries=>entries.forEach(en=>{if(!en.isIntersecting)return;const el=en.target,target=+el.dataset.count;const dur=900,t0=performance.now();function frame(t){const p=Math.min(1,(t-t0)/dur);el.textContent=Math.round(target*(1-Math.pow(1-p,3)))+(el.dataset.suffix||'');if(p<1)requestAnimationFrame(frame)}requestAnimationFrame(frame);obs.unobserve(el)}),{threshold:.45});els.forEach(el=>obs.observe(el))}
-document.addEventListener('DOMContentLoaded',renderShell);
+document.addEventListener('DOMContentLoaded',async()=>{await loadCmsSiteConfig();renderShell();});
