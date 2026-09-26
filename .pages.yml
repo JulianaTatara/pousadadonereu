@@ -51,3 +51,101 @@ content:
       - name: tides
         label: Link externo de marés
         type: string
+
+  - name: home
+    label: Página inicial
+    type: file
+    path: content/home.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: hero
+        label: Destaque principal
+        type: object
+        fields:
+          - name: image
+            label: Imagem principal
+            type: image
+            required: true
+          - name: alt
+            label: Descrição da imagem
+            type: string
+          - name: kickerMain
+            label: Nome acima do título
+            type: string
+          - name: kickerSub
+            label: Localização acima do título
+            type: string
+          - name: title
+            label: Título principal
+            type: string
+            required: true
+          - name: description
+            label: Texto principal
+            type: text
+            required: true
+          - name: accommodationButton
+            label: Texto do botão de acomodações
+            type: string
+          - name: availabilityButton
+            label: Texto do botão de disponibilidade
+            type: string
+          - name: availabilityMessage
+            label: Mensagem automática do WhatsApp
+            type: text
+      - name: features
+        label: Destaques da pousada
+        type: object
+        list:
+          min: 4
+          max: 4
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Título
+            type: string
+            required: true
+          - name: subtitle
+            label: Complemento
+            type: string
+            required: true
+      - name: reviews
+        label: Avaliações
+        type: object
+        fields:
+          - name: eyebrow
+            label: Texto pequeno acima do título
+            type: string
+          - name: title
+            label: Título
+            type: string
+          - name: score
+            label: Nota do Google
+            type: string
+          - name: count
+            label: Quantidade de avaliações
+            type: string
+          - name: button
+            label: Texto do botão
+            type: string
+          - name: items
+            label: Avaliações exibidas
+            type: object
+            list:
+              min: 3
+              max: 3
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - name: name
+                label: Nome
+                type: string
+                required: true
+              - name: text
+                label: Avaliação
+                type: text
+                required: true
