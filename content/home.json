@@ -8,13 +8,26 @@
     "description": "Natureza, pescaria, conforto e momentos inesquecíveis no coração do paraíso dos robalos.",
     "accommodationButton": "Ver acomodações →",
     "availabilityButton": "Consultar disponibilidade",
-    "availabilityMessage": "Olá! Encontrei vocês pelo site da Pousada do Nereu e gostaria de consultar disponibilidade."
+    "availabilityMessage": "Olá! Encontrei vocês pelo site da Pousada do Nereu e gostaria de consultar disponibilidade.",
+    "video": ""
   },
   "features": [
-    {"title": "Pescaria do robalo", "subtitle": "Experiência local"},
-    {"title": "Natureza exuberante", "subtitle": "Rio, mangue e serra"},
-    {"title": "Comida caseira", "subtitle": "Sabor regional"},
-    {"title": "Ambiente familiar", "subtitle": "Para se sentir em casa"}
+    {
+      "title": "Pescaria do robalo",
+      "subtitle": "Experiência local"
+    },
+    {
+      "title": "Natureza exuberante",
+      "subtitle": "Rio, mangue e serra"
+    },
+    {
+      "title": "Comida caseira",
+      "subtitle": "Sabor regional"
+    },
+    {
+      "title": "Ambiente familiar",
+      "subtitle": "Para se sentir em casa"
+    }
   ],
   "reviews": {
     "eyebrow": "Google Reviews",
