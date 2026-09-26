@@ -346,3 +346,290 @@ content:
                     label: Avaliação
                     type: text
                     required: true
+
+  - name: accommodations
+    label: Acomodações
+    type: file
+    path: content/acomodacoes.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: pt
+        label: Português
+        type: object
+        fields:
+          - name: hero
+            label: Topo da página
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+              - name: ctaText
+                label: Texto do botão principal
+                type: string
+              - name: ctaNote
+                label: Texto abaixo do botão
+                type: string
+              - name: whatsappMessage
+                label: Mensagem automática do WhatsApp
+                type: text
+          - name: filters
+            label: Filtros
+            type: object
+            fields:
+              - name: label
+                label: Título dos filtros
+                type: string
+              - name: all
+                label: Todos os quartos
+                type: string
+              - name: capacity
+                label: Prefixo de capacidade
+                type: string
+              - name: doubleBed
+                label: Filtro cama de casal
+                type: string
+              - name: empty
+                label: Mensagem sem resultados
+                type: string
+              - name: maxChip
+                label: Texto do selo de capacidade
+                type: string
+              - name: doubleBedChip
+                label: Texto do selo cama de casal
+                type: string
+          - name: petNote
+            label: Aviso de pet
+            type: object
+            fields:
+              - name: title
+                label: Destaque
+                type: string
+              - name: text
+                label: Complemento
+                type: text
+          - name: finalCta
+            label: Chamada final
+            type: object
+            fields:
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: button
+                label: Botão
+                type: string
+      - name: en
+        label: English
+        type: object
+        fields:
+          - name: hero
+            label: Page header
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+              - name: ctaText
+                label: Main button text
+                type: string
+              - name: ctaNote
+                label: Text below button
+                type: string
+              - name: whatsappMessage
+                label: WhatsApp automatic message
+                type: text
+          - name: filters
+            label: Filters
+            type: object
+            fields:
+              - name: label
+                label: Filters title
+                type: string
+              - name: all
+                label: All rooms
+                type: string
+              - name: capacity
+                label: Capacity prefix
+                type: string
+              - name: doubleBed
+                label: Double bed filter
+                type: string
+              - name: empty
+                label: No results message
+                type: string
+              - name: maxChip
+                label: Capacity chip
+                type: string
+              - name: doubleBedChip
+                label: Double bed chip
+                type: string
+          - name: petNote
+            label: Pet notice
+            type: object
+            fields:
+              - name: title
+                label: Highlight
+                type: string
+              - name: text
+                label: Additional text
+                type: text
+          - name: finalCta
+            label: Final call to action
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: text
+                label: Text
+                type: text
+              - name: button
+                label: Button
+                type: string
+      - name: es
+        label: Español
+        type: object
+        fields:
+          - name: hero
+            label: Encabezado
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descripción
+                type: text
+              - name: ctaText
+                label: Texto del botón principal
+                type: string
+              - name: ctaNote
+                label: Texto debajo del botón
+                type: string
+              - name: whatsappMessage
+                label: Mensaje automático de WhatsApp
+                type: text
+          - name: filters
+            label: Filtros
+            type: object
+            fields:
+              - name: label
+                label: Título de filtros
+                type: string
+              - name: all
+                label: Todas las habitaciones
+                type: string
+              - name: capacity
+                label: Prefijo de capacidad
+                type: string
+              - name: doubleBed
+                label: Filtro cama doble
+                type: string
+              - name: empty
+                label: Mensaje sin resultados
+                type: string
+              - name: maxChip
+                label: Sello de capacidad
+                type: string
+              - name: doubleBedChip
+                label: Sello cama doble
+                type: string
+          - name: petNote
+            label: Aviso de mascota
+            type: object
+            fields:
+              - name: title
+                label: Destaque
+                type: string
+              - name: text
+                label: Complemento
+                type: text
+          - name: finalCta
+            label: Llamada final
+            type: object
+            fields:
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: button
+                label: Botón
+                type: string
+      - name: rooms
+        label: Quartos e fotos
+        type: object
+        list:
+          min: 10
+          max: 10
+          collapsible:
+            collapsed: true
+            summary: "{pt.name}"
+        fields:
+          - name: capacity
+            label: Capacidade máxima
+            type: number
+            required: true
+          - name: doubleBed
+            label: Tem cama de casal
+            type: boolean
+          - name: images
+            label: Fotos
+            type: image
+            options:
+              multiple:
+                max: 4
+              unique: true
+              categories: [image]
+              rename: safe
+          - name: pt
+            label: Português
+            type: object
+            fields:
+              - name: name
+                label: Nome do quarto
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+          - name: en
+            label: English
+            type: object
+            fields:
+              - name: name
+                label: Room name
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: es
+            label: Español
+            type: object
+            fields:
+              - name: name
+                label: Nombre de la habitación
+                type: string
+              - name: description
+                label: Descripción
+                type: text
