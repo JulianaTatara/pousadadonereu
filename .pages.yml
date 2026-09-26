@@ -1,7 +1,7 @@
 media:
   input: assets
   output: /assets
-  categories: [image]
+  categories: [image, video]
   rename: safe
 
 content:
@@ -64,10 +64,19 @@ content:
         label: Destaque principal
         type: object
         fields:
+          - name: video
+            label: Vídeo de fundo (opcional)
+            type: file
+            description: Selecione um vídeo para substituir a foto de fundo. Recomendado: MP4, curto, sem áudio e otimizado para web.
+            options:
+              categories: [video]
+              extensions: [mp4, webm, mov]
+              rename: safe
           - name: image
-            label: Imagem principal
+            label: Imagem de capa / alternativa
             type: image
             required: true
+            description: Aparece enquanto o vídeo carrega e também serve como alternativa caso o vídeo não possa ser reproduzido.
           - name: alt
             label: Descrição da imagem
             type: string
