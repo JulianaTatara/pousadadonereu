@@ -234,7 +234,8 @@ function initConditionsWeather(){
 }
 
 async function loadCmsPageContent(){
-  const page=(location.pathname.split('/').pop()||'index.html');
+  let page=(location.pathname.split('/').pop()||'index.html');
+  if(page && !page.includes('.')) page += '.html';
   try{
     if(page==='index.html'){
       const response=await fetch('content/home.json',{cache:'no-store'});
