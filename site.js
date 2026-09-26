@@ -240,16 +240,19 @@ async function loadCmsPageContent(){
     const response=await fetch('content/home.json',{cache:'no-store'});
     if(!response.ok)return;
     const data=await response.json();
-    const hero=data.hero||{};
+    const media=data.heroMedia||{};
+    const copy=data[lang]||data.pt||{};
+    const hero=copy.hero||{};
+
     const heroMedia=document.querySelector('.hero-media');
     const heroImg=heroMedia?.querySelector('img');
     if(heroImg){
-      if(hero.image)heroImg.src=hero.image;
+      if(media.image)heroImg.src=media.image;
       if(hero.alt)heroImg.alt=hero.alt;
     }
     if(heroMedia){
       let heroVideo=heroMedia.querySelector('video[data-cms-hero-video]');
-      if(hero.video){
+      if(media.video){
         if(!heroVideo){
           heroVideo=document.createElement('video');
           heroVideo.setAttribute('data-cms-hero-video','');
@@ -261,8 +264,8 @@ async function loadCmsPageContent(){
           heroVideo.setAttribute('aria-hidden','true');
           heroMedia.insertBefore(heroVideo,heroMedia.firstChild);
         }
-        heroVideo.src=hero.video;
-        if(hero.image)heroVideo.poster=hero.image;
+        heroVideo.src=media.video;
+        if(media.image)heroVideo.poster=media.image;
         heroVideo.style.display='';
         if(heroImg)heroImg.style.display='none';
         const playPromise=heroVideo.play();
@@ -273,34 +276,41 @@ async function loadCmsPageContent(){
           });
         }
       }else{
-        if(heroVideo){heroVideo.pause();heroVideo.removeAttribute('src');heroVideo.load();heroVideo.style.display='none'}
+        if(heroVideo){
+          heroVideo.pause();
+          heroVideo.removeAttribute('src');
+          heroVideo.load();
+          heroVideo.style.display='none';
+        }
         if(heroImg)heroImg.style.display='';
       }
     }
+
     const kickerMain=document.querySelector('.hero-kicker-main');
     const kickerSub=document.querySelector('.hero-kicker-sub');
+    const title=document.querySelector('.hero h1');
+    const desc=document.querySelector('.hero-content > p');
     if(kickerMain&&hero.kickerMain)kickerMain.textContent=hero.kickerMain;
     if(kickerSub&&hero.kickerSub)kickerSub.textContent=hero.kickerSub;
-    if(lang==='pt'){
-      const title=document.querySelector('.hero h1');
-      const desc=document.querySelector('.hero-content > p');
-      if(title&&hero.title){title.textContent=hero.title;title.dataset.pt=hero.title}
-      if(desc&&hero.description){desc.textContent=hero.description;desc.dataset.pt=hero.description}
-    }
+    if(title&&hero.title)title.textContent=hero.title;
+    if(desc&&hero.description)desc.textContent=hero.description;
+
     const heroButtons=document.querySelectorAll('.hero-buttons .btn');
     if(heroButtons[0]&&hero.accommodationButton)heroButtons[0].textContent=hero.accommodationButton;
     if(heroButtons[1]){
       if(hero.availabilityButton)heroButtons[1].textContent=hero.availabilityButton;
       if(hero.availabilityMessage)heroButtons[1].href=wa(hero.availabilityMessage);
     }
+
     const features=[...document.querySelectorAll('.feature')];
-    (data.features||[]).slice(0,features.length).forEach((item,i)=>{
+    (copy.features||[]).slice(0,features.length).forEach((item,i)=>{
       const strong=features[i].querySelector('strong');
       const span=features[i].querySelector('span');
       if(strong&&item.title)strong.textContent=item.title;
       if(span&&item.subtitle)span.textContent=item.subtitle;
     });
-    const reviews=data.reviews||{};
+
+    const reviews=copy.reviews||{};
     const reviewSection=[...document.querySelectorAll('section')].find(s=>s.querySelector('.reviews-grid'));
     if(reviewSection){
       const eyebrow=reviewSection.querySelector('.section-heading .eyebrow');
@@ -312,7 +322,10 @@ async function loadCmsPageContent(){
       if(heading&&reviews.title)heading.textContent=reviews.title;
       if(score&&reviews.score)score.textContent=reviews.score;
       if(summary&&reviews.count)summary.innerHTML='<span class="stars">★★★★★</span><br>'+reviews.count;
-      if(more){if(reviews.button)more.textContent=reviews.button;more.href=SITE.reviews}
+      if(more){
+        if(reviews.button)more.textContent=reviews.button;
+        more.href=SITE.reviews;
+      }
       const cards=[...reviewSection.querySelectorAll('.review-card')];
       (reviews.items||[]).slice(0,cards.length).forEach((item,i)=>{
         const quote=cards[i].querySelector('blockquote');
