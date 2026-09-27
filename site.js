@@ -692,25 +692,40 @@ async function loadCmsPageContent(){
           if(!heroVideo){
             heroVideo=document.createElement('video');
             heroVideo.setAttribute('data-cms-hero-video','');
+            heroVideo.setAttribute('autoplay','');
+            heroVideo.setAttribute('muted','');
+            heroVideo.setAttribute('loop','');
+            heroVideo.setAttribute('playsinline','');
+            heroVideo.setAttribute('webkit-playsinline','');
+            heroVideo.setAttribute('aria-hidden','true');
             heroVideo.autoplay=true;
             heroVideo.muted=true;
+            heroVideo.defaultMuted=true;
             heroVideo.loop=true;
             heroVideo.playsInline=true;
-            heroVideo.preload='metadata';
-            heroVideo.setAttribute('aria-hidden','true');
+            heroVideo.preload='auto';
             heroMedia.insertBefore(heroVideo,heroMedia.firstChild);
           }
           heroVideo.src=media.video;
           if(media.image)heroVideo.poster=media.image;
           heroVideo.style.display='';
-          if(heroImg)heroImg.style.display='none';
-          const playPromise=heroVideo.play();
-          if(playPromise&&typeof playPromise.catch==='function'){
-            playPromise.catch(()=>{
-              heroVideo.style.display='none';
-              if(heroImg)heroImg.style.display='';
-            });
-          }
+          if(heroImg)heroImg.style.display='';
+
+          const tryHeroPlay=()=>{
+            heroVideo.muted=true;
+            heroVideo.defaultMuted=true;
+            const p=heroVideo.play();
+            if(p&&typeof p.catch==='function')p.catch(()=>{});
+          };
+
+          heroVideo.addEventListener('loadeddata',tryHeroPlay,{once:true});
+          heroVideo.addEventListener('canplay',tryHeroPlay,{once:true});
+          window.addEventListener('pageshow',tryHeroPlay,{once:true});
+          document.addEventListener('visibilitychange',()=>{
+            if(!document.hidden)tryHeroPlay();
+          });
+          document.addEventListener('touchstart',tryHeroPlay,{once:true,passive:true});
+          tryHeroPlay();
         }else{
           if(heroVideo){
             heroVideo.pause();
