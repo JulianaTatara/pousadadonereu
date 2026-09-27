@@ -2010,3 +2010,10 @@ section{padding:58px 0}.section-soft{background:rgba(250,246,238,.78)}.section-s
   object-position:center;
   background:#e7f4fb;
 }
+
+
+/* Preserve paragraph spacing from CMS on Sobre Nós */
+.about-page .about-person-body p,
+.about-person-card .about-person-body p{
+  white-space:pre-line;
+}
