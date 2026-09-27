@@ -844,3 +844,448 @@ content:
               - name: whatsappMessage
                 label: Mensaje automático de WhatsApp
                 type: text
+
+  - name: lodgeHub
+    label: A Pousada
+    type: file
+    path: content/a-pousada.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: media
+        label: Imagens
+        type: object
+        fields:
+          - name: aboutImage
+            label: Imagem Sobre a Pousada
+            type: image
+          - name: ownersImage
+            label: Imagem Sobre Nós
+            type: image
+          - name: galleryImage
+            label: Imagem Galeria
+            type: image
+          - name: faunaImage
+            label: Imagem Fauna
+            type: image
+      - name: pt
+        label: Português
+        type: object
+        fields:
+          - name: hero
+            label: Topo
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+          - name: cards
+            label: Cartões
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+              - name: button
+                label: Texto do link
+                type: string
+      - name: en
+        label: English
+        type: object
+        fields:
+          - name: hero
+            label: Header
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: cards
+            label: Cards
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+              - name: button
+                label: Link text
+                type: string
+      - name: es
+        label: Español
+        type: object
+        fields:
+          - name: hero
+            label: Encabezado
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descripción
+                type: text
+          - name: cards
+            label: Tarjetas
+            type: object
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descripción
+                type: text
+              - name: button
+                label: Texto del enlace
+                type: string
+
+  - name: aboutLodge
+    label: Sobre a Pousada
+    type: file
+    path: content/sobre.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: media
+        label: Imagens
+        type: object
+        fields:
+          - name: storyImage
+            label: Imagem da história
+            type: image
+      - name: stats
+        label: Números
+        type: object
+        fields:
+          - name: capacity
+            label: Lotação máxima
+            type: number
+          - name: rooms
+            label: Quartos
+            type: number
+          - name: boats
+            label: Barcos
+            type: number
+          - name: days
+            label: Dias por ano
+            type: number
+      - name: pt
+        label: Português
+        type: object
+        fields:
+          - name: hero
+            label: Topo
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+          - name: statLabels
+            label: Legendas dos números
+            type: string
+            list: true
+          - name: story
+            label: História
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: paragraphs
+                label: Parágrafos
+                type: text
+                list: true
+      - name: en
+        label: English
+        type: object
+        fields:
+          - name: hero
+            label: Header
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: statLabels
+            label: Stat labels
+            type: string
+            list: true
+          - name: story
+            label: Story
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: paragraphs
+                label: Paragraphs
+                type: text
+                list: true
+      - name: es
+        label: Español
+        type: object
+        fields:
+          - name: hero
+            label: Encabezado
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descripción
+                type: text
+          - name: statLabels
+            label: Leyendas de números
+            type: string
+            list: true
+          - name: story
+            label: Historia
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: paragraphs
+                label: Párrafos
+                type: text
+                list: true
+
+  - name: owners
+    label: Sobre Nós
+    type: file
+    path: content/sobre-nos.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: media
+        label: Fotos
+        type: object
+        fields:
+          - name: nereuImage
+            label: Foto do Nereu
+            type: image
+          - name: marciaImage
+            label: Foto da Marcia
+            type: image
+      - name: pt
+        label: Português
+        type: object
+        fields:
+          - name: hero
+            label: Topo
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+          - name: nereu
+            label: Nereu
+            type: object
+            fields:
+              - name: badge
+                label: Cargo
+                type: string
+              - name: noteTop
+                label: Nota linha 1
+                type: string
+              - name: noteBottom
+                label: Nota linha 2
+                type: string
+              - name: name
+                label: Nome
+                type: string
+              - name: text
+                label: Texto
+                type: text
+          - name: marcia
+            label: Marcia
+            type: object
+            fields:
+              - name: badge
+                label: Cargo
+                type: string
+              - name: photoLabel
+                label: Texto da foto
+                type: string
+              - name: name
+                label: Nome
+                type: string
+              - name: text
+                label: Texto
+                type: text
+      - name: en
+        label: English
+        type: object
+        fields:
+          - name: hero
+            label: Header
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: nereu
+            label: Nereu
+            type: object
+            fields:
+              - name: badge
+                label: Role
+                type: string
+              - name: noteTop
+                label: Note line 1
+                type: string
+              - name: noteBottom
+                label: Note line 2
+                type: string
+              - name: name
+                label: Name
+                type: string
+              - name: text
+                label: Text
+                type: text
+          - name: marcia
+            label: Marcia
+            type: object
+            fields:
+              - name: badge
+                label: Role
+                type: string
+              - name: photoLabel
+                label: Photo label
+                type: string
+              - name: name
+                label: Name
+                type: string
+              - name: text
+                label: Text
+                type: text
+      - name: es
+        label: Español
+        type: object
+        fields:
+          - name: hero
+            label: Encabezado
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descripción
+                type: text
+          - name: nereu
+            label: Nereu
+            type: object
+            fields:
+              - name: badge
+                label: Cargo
+                type: string
+              - name: noteTop
+                label: Nota línea 1
+                type: string
+              - name: noteBottom
+                label: Nota línea 2
+                type: string
+              - name: name
+                label: Nombre
+                type: string
+              - name: text
+                label: Texto
+                type: text
+          - name: marcia
+            label: Marcia
+            type: object
+            fields:
+              - name: badge
+                label: Cargo
+                type: string
+              - name: photoLabel
+                label: Texto de la foto
+                type: string
+              - name: name
+                label: Nombre
+                type: string
+              - name: text
+                label: Texto
+                type: text
