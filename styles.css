@@ -1909,3 +1909,31 @@ section{padding:58px 0}.section-soft{background:rgba(250,246,238,.78)}.section-s
     box-shadow:0 0 0 1px rgba(0,0,0,.08);
   }
 }
+
+
+/* Gallery hero readability: dark overlay + remove decorative left bubble */
+.gallery-page .gallery-hero{
+  position:relative;
+  overflow:hidden;
+}
+.gallery-page .gallery-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.42);
+  z-index:0;
+  pointer-events:none;
+}
+.gallery-page .gallery-hero > .container{
+  position:relative;
+  z-index:1;
+}
+.gallery-page .gallery-hero::after{
+  content:none !important;
+  display:none !important;
+}
+.gallery-page .gallery-hero .container::before,
+.gallery-page .gallery-hero .container::after{
+  content:none !important;
+  display:none !important;
+}
