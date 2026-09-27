@@ -903,7 +903,7 @@ async function loadCmsPageContent(){
 
       const heroBox=document.querySelector('.gallery-hero');
       if(heroBox){
-        if(data.media?.heroImage)heroBox.style.setProperty('--gallery-hero-image',\`url('\${data.media.heroImage}')\`);
+        if(data.media?.heroImage)heroBox.style.setProperty('--gallery-hero-image',`url('${data.media.heroImage}')`);
         if(data.media?.heroBlur!=null)heroBox.style.setProperty('--gallery-hero-blur',String(data.media.heroBlur)+'px');
         const eyebrow=heroBox.querySelector('.eyebrow');
         const title=heroBox.querySelector('h1');
