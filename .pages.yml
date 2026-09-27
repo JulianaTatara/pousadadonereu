@@ -1533,3 +1533,442 @@ content:
                   - name: caption
                     label: Leyenda
                     type: text
+
+  - name: faunaPage
+    label: Fauna
+    type: file
+    path: content/fauna-page.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: media
+        label: Imagem do topo
+        type: object
+        fields:
+          - name: heroImage
+            label: Imagem
+            type: image
+      - name: pt
+        label: Português
+        type: object
+        fields:
+          - name: hero
+            label: Topo da página
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+          - name: overviewLeft
+            label: Bloco biodiversidade
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: tags
+                label: Etiquetas
+                type: string
+                list: true
+              - name: fineprint
+                label: Observação
+                type: text
+          - name: overviewRight
+            label: Bloco pesca local
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: tags
+                label: Etiquetas
+                type: string
+                list: true
+          - name: speciesHeading
+            label: Título das espécies
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: note
+                label: Observação
+                type: string
+      - name: en
+        label: English
+        type: object
+        fields:
+          - name: hero
+            label: Page header
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: overviewLeft
+            label: Biodiversity block
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: text
+                label: Text
+                type: text
+              - name: tags
+                label: Tags
+                type: string
+                list: true
+              - name: fineprint
+                label: Note
+                type: text
+          - name: overviewRight
+            label: Local fishing block
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: text
+                label: Text
+                type: text
+              - name: tags
+                label: Tags
+                type: string
+                list: true
+          - name: speciesHeading
+            label: Species heading
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: note
+                label: Note
+                type: string
+      - name: es
+        label: Español
+        type: object
+        fields:
+          - name: hero
+            label: Encabezado
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descripción
+                type: text
+          - name: overviewLeft
+            label: Bloque biodiversidad
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: tags
+                label: Etiquetas
+                type: string
+                list: true
+              - name: fineprint
+                label: Observación
+                type: text
+          - name: overviewRight
+            label: Bloque pesca local
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: tags
+                label: Etiquetas
+                type: string
+                list: true
+          - name: speciesHeading
+            label: Título de especies
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: note
+                label: Observación
+                type: string
+      - name: species
+        label: Espécies
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{pt.name}"
+        fields:
+          - name: image
+            label: Foto
+            type: image
+          - name: scientificName
+            label: Nome científico
+            type: string
+          - name: maxSize
+            label: Tamanho máximo
+            type: string
+          - name: maxWeight
+            label: Peso máximo
+            type: string
+          - name: legalMinimum
+            label: Mínimo legal
+            type: string
+          - name: pt
+            label: Português
+            type: object
+            fields:
+              - name: name
+                label: Nome
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+          - name: en
+            label: English
+            type: object
+            fields:
+              - name: name
+                label: Name
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: es
+            label: Español
+            type: object
+            fields:
+              - name: name
+                label: Nombre
+                type: string
+              - name: description
+                label: Descripción
+                type: text
+
+  - name: marinaPage
+    label: Marina
+    type: file
+    path: content/marina-page.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: media
+        label: Foto da marina
+        type: object
+        fields:
+          - name: stageImage
+            label: Imagem
+            type: image
+          - name: stageImageAlt
+            label: Descrição da imagem
+            type: string
+      - name: pt
+        label: Português
+        type: object
+        fields:
+          - name: hero
+            label: Topo da página
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+          - name: stage
+            label: Conteúdo principal
+            type: object
+            fields:
+              - name: note
+                label: Texto sobre a foto
+                type: string
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: button
+                label: Texto do botão
+                type: string
+          - name: cards
+            label: Caixas
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+      - name: en
+        label: English
+        type: object
+        fields:
+          - name: hero
+            label: Page header
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: stage
+            label: Main content
+            type: object
+            fields:
+              - name: note
+                label: Image note
+                type: string
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: text
+                label: Text
+                type: text
+              - name: button
+                label: Button text
+                type: string
+          - name: cards
+            label: Cards
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: text
+                label: Text
+                type: text
+      - name: es
+        label: Español
+        type: object
+        fields:
+          - name: hero
+            label: Encabezado
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descripción
+                type: text
+          - name: stage
+            label: Contenido principal
+            type: object
+            fields:
+              - name: note
+                label: Texto sobre la foto
+                type: string
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: button
+                label: Texto del botón
+                type: string
+          - name: cards
+            label: Cajas
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
