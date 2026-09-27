@@ -773,6 +773,125 @@ async function loadCmsPageContent(){
       return;
     }
 
+    if(page==='a-pousada.html'){
+      const response=await fetch('content/a-pousada.json',{cache:'no-store'});
+      if(!response.ok)return;
+      const data=await response.json();
+      const copy=data[lang]||data.pt||{};
+      const hero=copy.hero||{};
+      const heroBox=document.querySelector('.page-hero');
+      if(heroBox){
+        const eyebrow=heroBox.querySelector('.eyebrow');
+        const title=heroBox.querySelector('h1');
+        const desc=heroBox.querySelector('p');
+        if(eyebrow&&hero.eyebrow)eyebrow.textContent=hero.eyebrow;
+        if(title&&hero.title)title.textContent=hero.title;
+        if(desc&&hero.description)desc.textContent=hero.description;
+      }
+      const cards=[...document.querySelectorAll('.hub-card')];
+      const images=[data.media?.aboutImage,data.media?.ownersImage,data.media?.galleryImage,data.media?.faunaImage];
+      (copy.cards||[]).slice(0,cards.length).forEach((card,i)=>{
+        const h=cards[i].querySelector('h2');
+        const p=cards[i].querySelector('p');
+        const b=cards[i].querySelector('strong');
+        const img=cards[i].querySelector('img');
+        if(h&&card.title)h.textContent=card.title;
+        if(p&&card.description)p.textContent=card.description;
+        if(b&&card.button)b.textContent=card.button;
+        if(img&&images[i])img.src=images[i];
+      });
+      return;
+    }
+
+    if(page==='sobre.html'){
+      const response=await fetch('content/sobre.json',{cache:'no-store'});
+      if(!response.ok)return;
+      const data=await response.json();
+      const copy=data[lang]||data.pt||{};
+      const hero=copy.hero||{};
+      const heroBox=document.querySelector('.page-hero');
+      if(heroBox){
+        const eyebrow=heroBox.querySelector('.eyebrow');
+        const title=heroBox.querySelector('h1');
+        const desc=heroBox.querySelector('p');
+        if(eyebrow&&hero.eyebrow)eyebrow.textContent=hero.eyebrow;
+        if(title&&hero.title)title.textContent=hero.title;
+        if(desc&&hero.description)desc.textContent=hero.description;
+      }
+      const values=[data.stats?.capacity,data.stats?.rooms,data.stats?.boats,data.stats?.days];
+      const statEls=[...document.querySelectorAll('.stat')];
+      statEls.forEach((el,i)=>{
+        const n=el.querySelector('[data-count]');
+        const labelEl=el.querySelector('.stat-label');
+        if(n&&values[i]!=null)n.dataset.count=String(values[i]);
+        if(labelEl&&copy.statLabels?.[i])labelEl.textContent=copy.statLabels[i];
+      });
+      const story=copy.story||{};
+      const storyBox=document.querySelector('.story-section');
+      if(storyBox){
+        const img=storyBox.querySelector('.story-photo img');
+        const eyebrow=storyBox.querySelector('.eyebrow');
+        const title=storyBox.querySelector('h2');
+        const prose=storyBox.querySelector('.prose');
+        if(img&&data.media?.storyImage)img.src=data.media.storyImage;
+        if(eyebrow&&story.eyebrow)eyebrow.textContent=story.eyebrow;
+        if(title&&story.title)title.textContent=story.title;
+        const ps=[...prose?.querySelectorAll('p')||[]];
+        (story.paragraphs||[]).slice(0,ps.length).forEach((p,i)=>ps[i].textContent=p);
+      }
+      return;
+    }
+
+    if(page==='sobre-nos.html'){
+      const response=await fetch('content/sobre-nos.json',{cache:'no-store'});
+      if(!response.ok)return;
+      const data=await response.json();
+      const copy=data[lang]||data.pt||{};
+      const hero=copy.hero||{};
+      const heroBox=document.querySelector('.page-hero');
+      if(heroBox){
+        const eyebrow=heroBox.querySelector('.eyebrow');
+        const title=heroBox.querySelector('h1');
+        const desc=heroBox.querySelector('p');
+        if(eyebrow&&hero.eyebrow)eyebrow.textContent=hero.eyebrow;
+        if(title&&hero.title)title.textContent=hero.title;
+        if(desc&&hero.description)desc.textContent=hero.description;
+      }
+      const cards=[...document.querySelectorAll('.about-person-card')];
+      if(cards[0]){
+        const c=copy.nereu||{};
+        const img=cards[0].querySelector('img');
+        const badge=cards[0].querySelector('.owner-badge');
+        const h=cards[0].querySelector('h2');
+        const p=cards[0].querySelector('.about-person-body p');
+        const noteStrong=cards[0].querySelector('.fisher-note strong');
+        const noteSpan=cards[0].querySelector('.fisher-note span');
+        if(img&&data.media?.nereuImage)img.src=data.media.nereuImage;
+        if(badge&&c.badge)badge.textContent=c.badge;
+        if(h&&c.name)h.textContent=c.name;
+        if(p&&c.text)p.textContent=c.text;
+        if(noteStrong&&c.noteTop)noteStrong.textContent=c.noteTop;
+        if(noteSpan&&c.noteBottom)noteSpan.textContent=c.noteBottom;
+      }
+      if(cards[1]){
+        const c=copy.marcia||{};
+        const badge=cards[1].querySelector('.owner-badge');
+        const h=cards[1].querySelector('h2');
+        const p=cards[1].querySelector('.about-person-body p');
+        const placeholder=cards[1].querySelector('.about-person-photo.placeholder');
+        const labelEl=cards[1].querySelector('.placeholder-label');
+        if(badge&&c.badge)badge.textContent=c.badge;
+        if(h&&c.name)h.textContent=c.name;
+        if(p&&c.text)p.textContent=c.text;
+        if(labelEl&&c.photoLabel)labelEl.textContent=c.photoLabel;
+        if(data.media?.marciaImage&&placeholder){
+          placeholder.classList.remove('placeholder');
+          placeholder.innerHTML='<img src="'+data.media.marciaImage+'" alt="'+(c.photoLabel||c.name||'Marcia')+'">';
+        }
+      }
+      return;
+    }
+
     if(page==='valores.html'){
       const response=await fetch('content/valores.json',{cache:'no-store'});
       if(!response.ok)return;
