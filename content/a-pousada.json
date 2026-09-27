@@ -1,9 +1,9 @@
 {
   "media": {
-    "aboutImage": "assets/hero-poster.jpg",
-    "ownersImage": "assets/nereu.jpg",
-    "galleryImage": "assets/hero-poster.jpg",
-    "faunaImage": "assets/hero-poster.jpg"
+    "aboutImage": "/assets/beira-do-rio-9-1.jpg",
+    "ownersImage": "/assets/img-7999.jpg",
+    "galleryImage": "/assets/galeria-hero-rio-palmital-1.jpg",
+    "faunaImage": "/assets/20200402171643000ios.jpg"
   },
   "pt": {
     "hero": {
