@@ -1,0 +1,568 @@
+{
+  "media": {
+    "heroImage": "assets/hero-poster.jpg",
+    "heroBlur": 8
+  },
+  "pt": {
+    "hero": {
+      "eyebrow": "Conheça antes de chegar",
+      "title": "Galeria",
+      "description": "Explore momentos, sabores e cantinhos da pousada."
+    },
+    "gallery": {
+      "eyebrow": "Áreas e experiências",
+      "all": "Tudo",
+      "thumbsNote": "Miniaturas por localização · role a barra para o lado",
+      "hint": "Clique para ampliar · use as setas para navegar"
+    },
+    "instagram": {
+      "eyebrow": "Acompanhe a pousada",
+      "title": "Você já conferiu nosso Instagram?",
+      "text": "Nos siga na nossa página única e oficial e acompanhe nossos posts e stories mais recentes.",
+      "handle": "@pousadadonereu",
+      "button": "Ver no Instagram ↗"
+    }
+  },
+  "en": {
+    "hero": {
+      "eyebrow": "Take a look before you arrive",
+      "title": "Gallery",
+      "description": "Explore moments, flavors and corners of the lodge."
+    },
+    "gallery": {
+      "eyebrow": "Areas and experiences",
+      "all": "All",
+      "thumbsNote": "Thumbnails by area · scroll sideways",
+      "hint": "Click to enlarge · use the arrows to navigate"
+    },
+    "instagram": {
+      "eyebrow": "Follow the lodge",
+      "title": "Have you checked out our Instagram?",
+      "text": "Follow our one and only official page and keep up with our latest posts and stories.",
+      "handle": "@pousadadonereu",
+      "button": "View on Instagram ↗"
+    }
+  },
+  "es": {
+    "hero": {
+      "eyebrow": "Conoce el lugar antes de llegar",
+      "title": "Galería",
+      "description": "Explora momentos, sabores y rincones de la posada."
+    },
+    "gallery": {
+      "eyebrow": "Áreas y experiencias",
+      "all": "Todo",
+      "thumbsNote": "Miniaturas por área · desliza hacia un lado",
+      "hint": "Haz clic para ampliar · usa las flechas para navegar"
+    },
+    "instagram": {
+      "eyebrow": "Sigue la posada",
+      "title": "¿Ya viste nuestro Instagram?",
+      "text": "Síguenos en nuestra única página oficial y acompaña nuestras publicaciones e historias más recientes.",
+      "handle": "@pousadadonereu",
+      "button": "Ver en Instagram ↗"
+    }
+  },
+  "categories": [
+    {
+      "slug": "beira-do-rio",
+      "pt": {
+        "name": "Beira do rio"
+      },
+      "en": {
+        "name": "Riverside"
+      },
+      "es": {
+        "name": "Orilla del río"
+      },
+      "photos": [
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "vista do Rio Palmital e da margem da pousada."
+          },
+          "en": {
+            "caption": "view of the Palmital River and the lodge riverbank."
+          },
+          "es": {
+            "caption": "vista del río Palmital y de la orilla de la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "vista do Rio Palmital e da margem da pousada."
+          },
+          "en": {
+            "caption": "view of the Palmital River and the lodge riverbank."
+          },
+          "es": {
+            "caption": "vista del río Palmital y de la orilla de la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "vista do Rio Palmital e da margem da pousada."
+          },
+          "en": {
+            "caption": "view of the Palmital River and the lodge riverbank."
+          },
+          "es": {
+            "caption": "vista del río Palmital y de la orilla de la posada."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "marina",
+      "pt": {
+        "name": "Marina"
+      },
+      "en": {
+        "name": "Marina"
+      },
+      "es": {
+        "name": "Marina"
+      },
+      "photos": [
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "estrutura da marina e ponto de saída para a pescaria."
+          },
+          "en": {
+            "caption": "marina facilities and fishing departure point."
+          },
+          "es": {
+            "caption": "estructura de la marina y punto de salida para pescar."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "estrutura da marina e ponto de saída para a pescaria."
+          },
+          "en": {
+            "caption": "marina facilities and fishing departure point."
+          },
+          "es": {
+            "caption": "estructura de la marina y punto de salida para pescar."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "estrutura da marina e ponto de saída para a pescaria."
+          },
+          "en": {
+            "caption": "marina facilities and fishing departure point."
+          },
+          "es": {
+            "caption": "estructura de la marina y punto de salida para pescar."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "varanda",
+      "pt": {
+        "name": "Varanda"
+      },
+      "en": {
+        "name": "Veranda"
+      },
+      "es": {
+        "name": "Terraza"
+      },
+      "photos": [
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "área de varanda e convivência da pousada."
+          },
+          "en": {
+            "caption": "veranda and common area of the lodge."
+          },
+          "es": {
+            "caption": "terraza y área de convivencia de la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "área de varanda e convivência da pousada."
+          },
+          "en": {
+            "caption": "veranda and common area of the lodge."
+          },
+          "es": {
+            "caption": "terraza y área de convivencia de la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "área de varanda e convivência da pousada."
+          },
+          "en": {
+            "caption": "veranda and common area of the lodge."
+          },
+          "es": {
+            "caption": "terraza y área de convivencia de la posada."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cafe-da-manha",
+      "pt": {
+        "name": "Café da manhã"
+      },
+      "en": {
+        "name": "Breakfast"
+      },
+      "es": {
+        "name": "Desayuno"
+      },
+      "photos": [
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "detalhes do café da manhã servido na pousada."
+          },
+          "en": {
+            "caption": "details of the breakfast served at the lodge."
+          },
+          "es": {
+            "caption": "detalles del desayuno servido en la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "detalhes do café da manhã servido na pousada."
+          },
+          "en": {
+            "caption": "details of the breakfast served at the lodge."
+          },
+          "es": {
+            "caption": "detalles del desayuno servido en la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "detalhes do café da manhã servido na pousada."
+          },
+          "en": {
+            "caption": "details of the breakfast served at the lodge."
+          },
+          "es": {
+            "caption": "detalles del desayuno servido en la posada."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "janta",
+      "pt": {
+        "name": "Janta"
+      },
+      "en": {
+        "name": "Dinner"
+      },
+      "es": {
+        "name": "Cena"
+      },
+      "photos": [
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "refeições caseiras e momentos à mesa."
+          },
+          "en": {
+            "caption": "home-style meals and moments around the table."
+          },
+          "es": {
+            "caption": "comidas caseras y momentos alrededor de la mesa."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "refeições caseiras e momentos à mesa."
+          },
+          "en": {
+            "caption": "home-style meals and moments around the table."
+          },
+          "es": {
+            "caption": "comidas caseras y momentos alrededor de la mesa."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "refeições caseiras e momentos à mesa."
+          },
+          "en": {
+            "caption": "home-style meals and moments around the table."
+          },
+          "es": {
+            "caption": "comidas caseras y momentos alrededor de la mesa."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "refeitorio",
+      "pt": {
+        "name": "Refeitório"
+      },
+      "en": {
+        "name": "Dining room"
+      },
+      "es": {
+        "name": "Comedor"
+      },
+      "photos": [
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "ambiente do refeitório da pousada."
+          },
+          "en": {
+            "caption": "the lodge dining room."
+          },
+          "es": {
+            "caption": "el comedor de la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "ambiente do refeitório da pousada."
+          },
+          "en": {
+            "caption": "the lodge dining room."
+          },
+          "es": {
+            "caption": "el comedor de la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "ambiente do refeitório da pousada."
+          },
+          "en": {
+            "caption": "the lodge dining room."
+          },
+          "es": {
+            "caption": "el comedor de la posada."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "churrasqueira",
+      "pt": {
+        "name": "Churrasqueira"
+      },
+      "en": {
+        "name": "Barbecue area"
+      },
+      "es": {
+        "name": "Parrilla"
+      },
+      "photos": [
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "área da churrasqueira e encontros em grupo."
+          },
+          "en": {
+            "caption": "barbecue area and group gatherings."
+          },
+          "es": {
+            "caption": "zona de parrilla y reuniones en grupo."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "área da churrasqueira e encontros em grupo."
+          },
+          "en": {
+            "caption": "barbecue area and group gatherings."
+          },
+          "es": {
+            "caption": "zona de parrilla y reuniones en grupo."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "área da churrasqueira e encontros em grupo."
+          },
+          "en": {
+            "caption": "barbecue area and group gatherings."
+          },
+          "es": {
+            "caption": "zona de parrilla y reuniones en grupo."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sinuca",
+      "pt": {
+        "name": "Sinuca"
+      },
+      "en": {
+        "name": "Pool table"
+      },
+      "es": {
+        "name": "Billar"
+      },
+      "photos": [
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "espaço de convivência com mesa de sinuca."
+          },
+          "en": {
+            "caption": "common area with a pool table."
+          },
+          "es": {
+            "caption": "área de convivencia con mesa de billar."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "espaço de convivência com mesa de sinuca."
+          },
+          "en": {
+            "caption": "common area with a pool table."
+          },
+          "es": {
+            "caption": "área de convivencia con mesa de billar."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "espaço de convivência com mesa de sinuca."
+          },
+          "en": {
+            "caption": "common area with a pool table."
+          },
+          "es": {
+            "caption": "área de convivencia con mesa de billar."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "estacionamento",
+      "pt": {
+        "name": "Estacionamento"
+      },
+      "en": {
+        "name": "Parking"
+      },
+      "es": {
+        "name": "Estacionamiento"
+      },
+      "photos": [
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "área de estacionamento da pousada."
+          },
+          "en": {
+            "caption": "the lodge parking area."
+          },
+          "es": {
+            "caption": "el estacionamiento de la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "área de estacionamento da pousada."
+          },
+          "en": {
+            "caption": "the lodge parking area."
+          },
+          "es": {
+            "caption": "el estacionamiento de la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "área de estacionamento da pousada."
+          },
+          "en": {
+            "caption": "the lodge parking area."
+          },
+          "es": {
+            "caption": "el estacionamiento de la posada."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "lago",
+      "pt": {
+        "name": "Lago"
+      },
+      "en": {
+        "name": "Lake"
+      },
+      "es": {
+        "name": "Lago"
+      },
+      "photos": [
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "lago e área externa da pousada."
+          },
+          "en": {
+            "caption": "the lake and outdoor area of the lodge."
+          },
+          "es": {
+            "caption": "el lago y la zona exterior de la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "lago e área externa da pousada."
+          },
+          "en": {
+            "caption": "the lake and outdoor area of the lodge."
+          },
+          "es": {
+            "caption": "el lago y la zona exterior de la posada."
+          }
+        },
+        {
+          "image": "assets/hero-poster.jpg",
+          "pt": {
+            "caption": "lago e área externa da pousada."
+          },
+          "en": {
+            "caption": "the lake and outdoor area of the lodge."
+          },
+          "es": {
+            "caption": "el lago y la zona exterior de la posada."
+          }
+        }
+      ]
+    }
+  ]
+}
