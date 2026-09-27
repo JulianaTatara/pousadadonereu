@@ -1971,3 +1971,31 @@ section{padding:58px 0}.section-soft{background:rgba(250,246,238,.78)}.section-s
   position:relative !important;
   z-index:2 !important;
 }
+
+
+/* Gallery thumbnail sizing fix — keep all cards inside the 3-row scroller */
+.gallery-page .gallery-thumbs{
+  height:520px !important;
+  grid-template-rows:repeat(3,minmax(0,1fr)) !important;
+  align-items:stretch !important;
+}
+.gallery-page .gallery-thumb{
+  height:auto !important;
+  min-height:0 !important;
+  overflow:hidden !important;
+  grid-template-rows:minmax(0,1fr) auto !important;
+}
+.gallery-page .gallery-thumb img{
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  max-height:100% !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+@media(max-width:1120px){
+  .gallery-page .gallery-thumbs{height:450px !important}
+}
+@media(max-width:700px){
+  .gallery-page .gallery-thumbs{height:390px !important}
+}
