@@ -1,0 +1,74 @@
+{
+  "media": {
+    "storyImage": "assets/hero-poster.jpg"
+  },
+  "stats": {
+    "capacity": 38,
+    "rooms": 10,
+    "boats": 6,
+    "days": 365
+  },
+  "pt": {
+    "hero": {
+      "eyebrow": "Nossa história",
+      "title": "Sobre a Pousada",
+      "description": "Uma pousada clássica da região, conhecida pela pesca do robalo e pelo jeito simples, acolhedor e familiar de receber."
+    },
+    "statLabels": [
+      "Lotação máxima",
+      "Quartos",
+      "Barcos",
+      "Atendemos o ano todo"
+    ],
+    "story": {
+      "eyebrow": "Desde 1998",
+      "title": "Uma pousada que nasceu da pesca",
+      "paragraphs": [
+        "Às margens do Rio Palmital, a Pousada do Nereu foi inaugurada em novembro de 1998 para receber apaixonados pela pesca do robalo. Com o tempo, tornou-se ponto conhecido por pescadores de diferentes partes do Brasil e países vizinhos.",
+        "A proposta permanece simples: hospedagem acolhedora, comida caseira, apoio à pescaria e contato direto com a natureza da região da Baía da Babitonga."
+      ]
+    }
+  },
+  "en": {
+    "hero": {
+      "eyebrow": "Our story",
+      "title": "About the Lodge",
+      "description": "A classic lodge in the region, known for snook fishing and its simple, warm, family-style hospitality."
+    },
+    "statLabels": [
+      "Maximum capacity",
+      "Rooms",
+      "Boats",
+      "Open year-round"
+    ],
+    "story": {
+      "eyebrow": "Since 1998",
+      "title": "A lodge born from fishing",
+      "paragraphs": [
+        "On the banks of the Palmital River, Pousada do Nereu opened in November 1998 to welcome people passionate about snook fishing. Over time, it became a well-known destination for anglers from different parts of Brazil and neighboring countries.",
+        "The idea remains simple: welcoming accommodation, home-style food, fishing support and direct contact with the nature of the Babitonga Bay region."
+      ]
+    }
+  },
+  "es": {
+    "hero": {
+      "eyebrow": "Nuestra historia",
+      "title": "Sobre la Posada",
+      "description": "Una posada clásica de la región, conocida por la pesca del róbalo y por su forma sencilla, acogedora y familiar de recibir."
+    },
+    "statLabels": [
+      "Capacidad máxima",
+      "Habitaciones",
+      "Barcos",
+      "Abierto todo el año"
+    ],
+    "story": {
+      "eyebrow": "Desde 1998",
+      "title": "Una posada que nació de la pesca",
+      "paragraphs": [
+        "A orillas del río Palmital, Pousada do Nereu abrió en noviembre de 1998 para recibir a apasionados por la pesca del róbalo. Con el tiempo, se convirtió en un destino conocido por pescadores de distintas partes de Brasil y de países vecinos.",
+        "La propuesta sigue siendo sencilla: hospedaje acogedor, comida casera, apoyo para la pesca y contacto directo con la naturaleza de la región de la Bahía de Babitonga."
+      ]
+    }
+  }
+}
