@@ -1,7 +1,6 @@
 {
   "media": {
-    "nereuImage": "assets/nereu.jpg",
-    "marciaImage": ""
+    "nereuImage": "/assets/nereu.jpg"
   },
   "pt": {
     "hero": {
@@ -14,13 +13,13 @@
       "noteTop": "De pescador",
       "noteBottom": "para pescador",
       "name": "Nereu",
-      "text": "Nereu é um dos proprietários da pousada e uma referência da casa na pesca do robalo. A relação com o rio, a pescaria e os hóspedes faz parte da identidade construída pela pousada ao longo dos anos."
+      "text": "Muito antes de existir a pousada, Nereu já passava seus dias pescando e conhecendo o Rio Palmital. Com o tempo, aprendeu seus canais, marés, manguezais e os lugares onde o robalo costuma aparecer, um conhecimento construído ao longo de muitos anos de convivência com o rio.\n\nFoi dessa paixão pela pesca que surgiu a ideia de criar um lugar pensado especialmente para outros pescadores. Em novembro de 1998, nasceu a Pousada do Nereu, às margens do Palmital.\n\nDesde então, seu nome ficou ligado não apenas à pousada, mas também a uma forma muito particular de receber quem chega para pescar: com simplicidade, conhecimento da região e aquela conversa de pescador que só quem vive o rio conhece.\n\nMais de duas décadas depois, o Rio Palmital continua fazendo parte de sua rotina e da história que deu origem à pousada."
     },
     "marcia": {
       "badge": "Proprietária",
       "photoLabel": "Foto de Marcia",
       "name": "Marcia",
-      "text": "Marcia também é proprietária da Pousada do Nereu e faz parte da história e da rotina da casa. Este espaço está preparado para receber sua foto e um texto mais completo sobre sua trajetória na pousada."
+      "text": "Marcia passou a fazer parte da rotina da Pousada do Nereu por volta de 2007 e, desde então, se tornou uma presença essencial no dia a dia do lugar.\n\nAo longo dos anos, esteve envolvida em diferentes partes da rotina da pousada: do atendimento aos hóspedes à organização dos quartos, café da manhã e refeições. Quando é preciso, ela está sempre pronta para resolver o que aparecer, sem tempo ruim.\n\nSeu jeito atencioso e próximo também se tornou uma das marcas da pousada. Muitos hóspedes acabam sendo recebidos com tanta amizade e cuidado que deixam de se sentir apenas clientes e passam a se sentir em casa.\n\nAo lado de Nereu, Marcia ajudou a construir o ambiente simples, acolhedor e familiar que faz parte da identidade da Pousada do Nereu até hoje."
     }
   },
   "en": {
@@ -34,13 +33,13 @@
       "noteTop": "From angler",
       "noteBottom": "to angler",
       "name": "Nereu",
-      "text": "Nereu is one of the lodge owners and a key reference for snook fishing. His connection with the river, fishing and guests is part of the identity the lodge has built over the years."
+      "text": "Long before the lodge existed, Nereu Rubens Tatara was already spending his days fishing and getting to know the Palmital River. Over time, he learned its channels, tides, mangroves and the places where snook are usually found, knowledge built through many years of living closely with the river.\n\nIt was from this passion for fishing that the idea of creating a place especially for other anglers began to take shape. In November 1998, Pousada do Nereu was founded on the banks of the Palmital River.\n\nSince then, his name has become connected not only to the lodge, but also to a very particular way of welcoming those who come to fish: with simplicity, knowledge of the region and the kind of fishing stories and conversations that only someone who truly knows the river can share.\n\nMore than two decades later, the Palmital River remains part of his daily life and of the story that gave rise to the lodge."
     },
     "marcia": {
       "badge": "Owner",
       "photoLabel": "Photo of Marcia",
       "name": "Marcia",
-      "text": "Marcia is also an owner of Pousada do Nereu and is part of the lodge’s history and daily routine. This space is ready for her photo and a fuller text about her journey at the lodge."
+      "text": "Marcia became part of the daily life of Pousada do Nereu around 2007 and, since then, has become an essential presence in the routine of the lodge.\n\nOver the years, she has been involved in many different parts of the day-to-day work: from welcoming guests to helping with rooms, breakfast and meals. Whenever something needs to be done, she is always ready to step in and help, no matter what.\n\nHer warm and attentive way of treating people has also become one of the lodge’s trademarks. Many guests are welcomed with such friendship and care that they stop feeling like customers and start feeling at home.\n\nAlongside Nereu, Marcia has helped shape the simple, welcoming and familiar atmosphere that remains part of the identity of Pousada do Nereu today."
     }
   },
   "es": {
@@ -54,13 +53,13 @@
       "noteTop": "De pescador",
       "noteBottom": "para pescador",
       "name": "Nereu",
-      "text": "Nereu es uno de los propietarios de la posada y una referencia de la casa en la pesca del róbalo. Su relación con el río, la pesca y los huéspedes forma parte de la identidad construida por la posada a lo largo de los años."
+      "text": "Mucho antes de que existiera la posada, Nereu Rubens Tatara ya pasaba sus días pescando y conociendo el río Palmital. Con el tiempo, aprendió sus canales, mareas, manglares y los lugares donde suele encontrarse el róbalo, un conocimiento construido a lo largo de muchos años de convivencia con el río.\n\nDe esa pasión por la pesca nació la idea de crear un lugar pensado especialmente para otros pescadores. En noviembre de 1998, nació Pousada do Nereu, a orillas del río Palmital.\n\nDesde entonces, su nombre quedó ligado no solo a la posada, sino también a una forma muy particular de recibir a quienes llegan para pescar: con sencillez, conocimiento de la región y esas historias y conversaciones de pescador que solo alguien que realmente conoce el río puede compartir.\n\nMás de dos décadas después, el río Palmital sigue formando parte de su vida cotidiana y de la historia que dio origen a la posada."
     },
     "marcia": {
       "badge": "Propietaria",
       "photoLabel": "Foto de Marcia",
       "name": "Marcia",
-      "text": "Marcia también es propietaria de Pousada do Nereu y forma parte de la historia y de la rutina de la casa. Este espacio está preparado para recibir su foto y un texto más completo sobre su trayectoria en la posada."
+      "text": "Marcia comenzó a formar parte de la rutina de Pousada do Nereu alrededor de 2007 y, desde entonces, se convirtió en una presencia esencial en el día a día de la posada.\n\nA lo largo de los años, ha participado en diferentes aspectos de la rutina, desde la atención a los huéspedes hasta la organización de las habitaciones, el desayuno y las comidas. Siempre que hace falta, está dispuesta a ayudar y a resolver lo que sea necesario.\n\nSu forma cercana y atenta de recibir a las personas también se ha convertido en una de las características de la posada. Muchos huéspedes son recibidos con tanta amistad y cuidado que dejan de sentirse simplemente clientes y comienzan a sentirse como en casa.\n\nJunto a Nereu, Marcia ha ayudado a construir el ambiente sencillo, acogedor y familiar que sigue formando parte de la identidad de Pousada do Nereu hasta hoy."
     }
   }
 }
