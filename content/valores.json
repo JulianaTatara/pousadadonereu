@@ -1,5 +1,5 @@
 {
-  "heroImage": "assets/values-hero-fishing.png",
+  "heroImage": "/assets/values-hero-fishing.png",
   "pt": {
     "hero": {
       "eyebrow": "Planeje sua estadia",
@@ -48,7 +48,7 @@
           {
             "title": "Isca viva",
             "description": "Camarão · cento.",
-            "price": "R$ 40,00"
+            "price": "R$ 150,00"
           }
         ]
       },
@@ -57,13 +57,13 @@
         "cards": [
           {
             "title": "Rampa para embarcação de fora",
-            "description": "Consulte condições para uso.",
-            "price": "R$ 30,00"
+            "description": "Consulte condições para uso. Se for cliente pernoitando, a rampa estará incluída.",
+            "price": "R$ 50,00"
           },
           {
             "title": "Aluguel de casco",
             "description": "Consulte disponibilidade antes de vir.",
-            "price": "R$ 180,00"
+            "price": "R$ 200,00"
           },
           {
             "title": "Marina",
@@ -129,7 +129,7 @@
           {
             "title": "Live bait",
             "description": "Shrimp · per hundred.",
-            "price": "R$ 40.00"
+            "price": "R$ 150.00"
           }
         ]
       },
@@ -138,13 +138,13 @@
         "cards": [
           {
             "title": "Boat ramp for outside boats",
-            "description": "Please contact us for usage conditions.",
-            "price": "R$ 30.00"
+            "description": "Please contact us for usage conditions. If it is for clients staying overnight, the ramp is included.",
+            "price": "R$ 50.00"
           },
           {
             "title": "Hull rental",
             "description": "Check availability before arriving.",
-            "price": "R$ 180.00"
+            "price": "R$200.00"
           },
           {
             "title": "Marina",
@@ -210,7 +210,7 @@
           {
             "title": "Carnada viva",
             "description": "Camarón · por ciento.",
-            "price": "R$ 40,00"
+            "price": "R$ 150,00"
           }
         ]
       },
@@ -219,13 +219,13 @@
         "cards": [
           {
             "title": "Rampa para embarcaciones externas",
-            "description": "Consulta las condiciones de uso.",
-            "price": "R$ 30,00"
+            "description": "Consulta las condiciones de uso. Si usted es un huésped que pernocta, la rampa estará incluida.",
+            "price": "R$ 50,00"
           },
           {
             "title": "Alquiler de casco",
             "description": "Consulta disponibilidad antes de venir.",
-            "price": "R$ 180,00"
+            "price": "R$ 200,00"
           },
           {
             "title": "Marina",
