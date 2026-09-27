@@ -88,9 +88,9 @@
       "capacity": 3,
       "doubleBed": false,
       "images": [
-        "assets/quarto-1/quarto-1-01.jpg",
-        "assets/quarto-1/quarto-1-02.jpg",
-        "assets/quarto-1/quarto-1-03.jpg"
+        "/assets/quarto-1/quarto-1-02.jpg",
+        "/assets/quarto-1/quarto-1-03.jpg",
+        "/assets/quarto-1/quarto-1-01.jpg"
       ],
       "pt": {
         "name": "Quarto 1",
@@ -109,10 +109,10 @@
       "capacity": 3,
       "doubleBed": false,
       "images": [
-        "assets/quarto-2/quarto-2-01.jpg",
-        "assets/quarto-2/quarto-2-02.jpg",
-        "assets/quarto-2/quarto-2-03.jpg",
-        "assets/quarto-2/quarto-2-04.jpg"
+        "/assets/quarto-2/quarto-2-02.jpg",
+        "/assets/quarto-2/quarto-2-03.jpg",
+        "/assets/quarto-2/quarto-2-04.jpg",
+        "/assets/quarto-2/quarto-2-01.jpg"
       ],
       "pt": {
         "name": "Quarto 2",
@@ -131,10 +131,10 @@
       "capacity": 4,
       "doubleBed": false,
       "images": [
-        "assets/quarto-3/quarto-3-01.jpg",
-        "assets/quarto-3/quarto-3-02.jpg",
-        "assets/quarto-3/quarto-3-03.jpg",
-        "assets/quarto-3/quarto-3-04.jpg"
+        "/assets/quarto-3/quarto-3-02.jpg",
+        "/assets/quarto-3/quarto-3-03.jpg",
+        "/assets/quarto-3/quarto-3-04.jpg",
+        "/assets/quarto-3/quarto-3-01.jpg"
       ],
       "pt": {
         "name": "Quarto 3",
@@ -153,10 +153,10 @@
       "capacity": 2,
       "doubleBed": false,
       "images": [
-        "assets/quarto-4/quarto-4-01.jpg",
-        "assets/quarto-4/quarto-4-02.jpg",
-        "assets/quarto-4/quarto-4-03.jpg",
-        "assets/quarto-4/quarto-4-04.jpg"
+        "/assets/quarto-4/quarto-4-01.jpg",
+        "/assets/quarto-4/quarto-4-02.jpg",
+        "/assets/quarto-4/quarto-4-03.jpg",
+        "/assets/quarto-4/quarto-4-04.jpg"
       ],
       "pt": {
         "name": "Quarto 4",
@@ -175,11 +175,11 @@
       "capacity": 4,
       "doubleBed": false,
       "images": [
-        "assets/quarto-5/quarto-5-01.jpg",
-        "assets/quarto-5/quarto-5-02.jpg",
-        "assets/quarto-5/quarto-5-03.jpg",
-        "assets/quarto-5/quarto-5-04.jpg",
-        "assets/quarto-5/quarto-5-05.jpg"
+        "/assets/quarto-5/quarto-5-01.jpg",
+        "/assets/quarto-5/quarto-5-02.jpg",
+        "/assets/quarto-5/quarto-5-03.jpg",
+        "/assets/quarto-5/quarto-5-04.jpg",
+        "/assets/quarto-5/quarto-5-05.jpg"
       ],
       "pt": {
         "name": "Quarto 5",
@@ -198,13 +198,12 @@
       "capacity": 4,
       "doubleBed": true,
       "images": [
-        "assets/quarto-6/quarto-6-01.jpg",
-        "assets/quarto-6/quarto-6-02.jpg",
-        "assets/quarto-6/quarto-6-03.jpg",
-        "assets/quarto-6/quarto-6-04.jpg",
-        "assets/quarto-6/quarto-6-05.jpg",
-        "assets/quarto-6/quarto-6-06.jpg",
-        "assets/quarto-6/quarto-6-07.jpg"
+        "/assets/quarto-6/quarto-6-01.jpg",
+        "/assets/quarto-6/quarto-6-02.jpg",
+        "/assets/quarto-6/quarto-6-03.jpg",
+        "/assets/quarto-6/quarto-6-04.jpg",
+        "/assets/quarto-6/quarto-6-06.jpg",
+        "/assets/quarto-6/quarto-6-07.jpg"
       ],
       "pt": {
         "name": "Quarto 6",
@@ -223,10 +222,10 @@
       "capacity": 5,
       "doubleBed": false,
       "images": [
-        "assets/quarto-7/quarto-7-01.jpg",
-        "assets/quarto-7/quarto-7-02.jpg",
-        "assets/quarto-7/quarto-7-03.jpg",
-        "assets/quarto-7/quarto-7-04.jpg"
+        "/assets/quarto-7/quarto-7-02.jpg",
+        "/assets/quarto-7/quarto-7-03.jpg",
+        "/assets/quarto-7/quarto-7-04.jpg",
+        "/assets/quarto-7/quarto-7-01.jpg"
       ],
       "pt": {
         "name": "Quarto 7",
@@ -245,10 +244,10 @@
       "capacity": 6,
       "doubleBed": true,
       "images": [
-        "assets/quarto-8/quarto-8-01.jpg",
-        "assets/quarto-8/quarto-8-02.jpg",
-        "assets/quarto-8/quarto-8-03.jpg",
-        "assets/quarto-8/quarto-8-04.jpg"
+        "/assets/quarto-8/quarto-8-02.jpg",
+        "/assets/quarto-8/quarto-8-03.jpg",
+        "/assets/quarto-8/quarto-8-04.jpg",
+        "/assets/quarto-8/quarto-8-01.jpg"
       ],
       "pt": {
         "name": "Quarto 8",
@@ -267,10 +266,10 @@
       "capacity": 5,
       "doubleBed": true,
       "images": [
-        "assets/quarto-9/quarto-9-01.jpg",
-        "assets/quarto-9/quarto-9-02.jpg",
-        "assets/quarto-9/quarto-9-03.jpg",
-        "assets/quarto-9/quarto-9-04.jpg"
+        "/assets/quarto-9/quarto-9-01.jpg",
+        "/assets/quarto-9/quarto-9-04.jpg",
+        "/assets/quarto-9/quarto-9-02.jpg",
+        "/assets/quarto-9/quarto-9-03.jpg"
       ],
       "pt": {
         "name": "Quarto 9",
@@ -289,11 +288,11 @@
       "capacity": 2,
       "doubleBed": true,
       "images": [
-        "assets/quarto-10/quarto-10-01.jpg",
-        "assets/quarto-10/quarto-10-02.jpg",
-        "assets/quarto-10/quarto-10-03.jpg",
-        "assets/quarto-10/quarto-10-04.jpg",
-        "assets/quarto-10/quarto-10-05.jpg"
+        "/assets/quarto-10/quarto-10-01.jpg",
+        "/assets/quarto-10/quarto-10-03.jpg",
+        "/assets/quarto-10/quarto-10-04.jpg",
+        "/assets/quarto-10/quarto-10-05.jpg",
+        "/assets/quarto-10/quarto-10-02.jpg"
       ],
       "pt": {
         "name": "Quarto 10",
