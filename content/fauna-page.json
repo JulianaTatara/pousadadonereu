@@ -103,7 +103,7 @@
   },
   "species": [
     {
-      "image": "/assets/centropomusparallelus-1.jpg",
+      "image": "/assets/robalo-peva-centropomus-parallelus.jpg",
       "scientificName": "Centropomus parallelus",
       "maxSize": "até 72 cm",
       "maxWeight": "até 5 kg",
@@ -122,7 +122,7 @@
       }
     },
     {
-      "image": "/assets/centropomusundecimalis-1.jpg",
+      "image": "/assets/robalo-flecha-centropomus-undecimalis.jpg",
       "scientificName": "Centropomus undecimalis",
       "maxSize": "até 140 cm",
       "maxWeight": "até 24,3 kg",
@@ -159,7 +159,7 @@
       }
     },
     {
-      "image": "/assets/corvina.jpg",
+      "image": "/assets/corvina-1.jpg",
       "scientificName": "Micropogonias furnieri",
       "maxSize": "até 90 cm",
       "maxWeight": "até 4,8 kg",
@@ -177,7 +177,7 @@
       }
     },
     {
-      "image": "/assets/peixe-espada.jpg",
+      "image": "/assets/peixe-espada-1.jpg",
       "scientificName": "Trichiurus lepturus",
       "maxSize": "até 234 cm",
       "maxWeight": "até 5 kg",
@@ -195,7 +195,7 @@
       }
     },
     {
-      "image": "/assets/linguado-1.jpg",
+      "image": "/assets/linguado-2.jpg",
       "scientificName": "Paralichthys brasiliensis — referência",
       "maxSize": "até 100 cm",
       "maxWeight": "até 12 kg",
