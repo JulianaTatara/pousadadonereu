@@ -999,6 +999,129 @@ async function loadCmsPageContent(){
       return;
     }
 
+
+    if(page==='fauna.html'){
+      const response=await fetch('content/fauna-page.json',{cache:'no-store'});
+      if(!response.ok)return;
+      const data=await response.json();
+      const copy=data[lang]||data.pt||{};
+      const hero=copy.hero||{};
+      const heroBox=document.querySelector('.fauna-hero');
+      if(heroBox){
+        if(data.media?.heroImage)heroBox.style.backgroundImage='url("'+data.media.heroImage+'")';
+        const eyebrow=heroBox.querySelector('.eyebrow');
+        const title=heroBox.querySelector('h1');
+        const desc=heroBox.querySelector('p');
+        if(eyebrow&&hero.eyebrow)eyebrow.textContent=hero.eyebrow;
+        if(title&&hero.title)title.textContent=hero.title;
+        if(desc&&hero.description)desc.textContent=hero.description;
+      }
+
+      const quickCards=[...document.querySelectorAll('.fauna-quick-card')];
+      const quickData=[copy.overviewLeft||{},copy.overviewRight||{}];
+      quickCards.forEach((card,i)=>{
+        const c=quickData[i]||{};
+        const eyebrow=card.querySelector('.eyebrow');
+        const title=card.querySelector('h2');
+        const textEl=card.querySelector('.fauna-quick-copy>p:not(.fauna-fineprint)');
+        const tags=card.querySelector('.fauna-tags');
+        const fine=card.querySelector('.fauna-fineprint');
+        if(eyebrow&&c.eyebrow)eyebrow.textContent=c.eyebrow;
+        if(title&&c.title)title.textContent=c.title;
+        if(textEl&&c.text)textEl.textContent=c.text;
+        if(tags&&Array.isArray(c.tags)){
+          tags.innerHTML='';
+          c.tags.forEach(t=>{const s=document.createElement('span');s.textContent=t;tags.appendChild(s)});
+        }
+        if(fine&&c.fineprint)fine.textContent=c.fineprint;
+      });
+
+      const heading=copy.speciesHeading||{};
+      const headingBox=document.querySelector('.fauna-fish-heading');
+      if(headingBox){
+        const eyebrow=headingBox.querySelector('.eyebrow');
+        const title=headingBox.querySelector('h2');
+        const note=headingBox.querySelector('.right-note');
+        if(eyebrow&&heading.eyebrow)eyebrow.textContent=heading.eyebrow;
+        if(title&&heading.title)title.textContent=heading.title;
+        if(note&&heading.note)note.textContent=heading.note;
+      }
+
+      const fishCards=[...document.querySelectorAll('.fish-card')];
+      (data.species||[]).slice(0,fishCards.length).forEach((sp,i)=>{
+        const local=sp[lang]||sp.pt||{};
+        const card=fishCards[i];
+        const imgBox=card.querySelector('.fish-image');
+        const title=card.querySelector('h3');
+        const latin=card.querySelector('.latin');
+        const desc=card.querySelector('.fish-body>p');
+        const strongs=[...card.querySelectorAll('.fish-metric strong')];
+        const legal=card.querySelector('.legal-metric');
+        if(sp.image&&imgBox)imgBox.innerHTML='<img src="'+sp.image+'" alt="'+(local.name||sp.scientificName||'Peixe')+'">';
+        if(title&&local.name)title.textContent=local.name;
+        if(latin&&sp.scientificName)latin.textContent=sp.scientificName;
+        if(desc&&local.description)desc.textContent=local.description;
+        if(strongs[0]&&sp.maxSize)strongs[0].textContent=sp.maxSize;
+        if(strongs[1]&&sp.maxWeight)strongs[1].textContent=sp.maxWeight;
+        if(legal){
+          const legalStrong=legal.querySelector('strong');
+          if(sp.legalMinimum){
+            legal.style.display='';
+            if(legalStrong)legalStrong.textContent=sp.legalMinimum;
+          }else{
+            legal.style.display='none';
+          }
+        }
+      });
+      return;
+    }
+
+    if(page==='marina.html'){
+      const response=await fetch('content/marina-page.json',{cache:'no-store'});
+      if(!response.ok)return;
+      const data=await response.json();
+      const copy=data[lang]||data.pt||{};
+      const hero=copy.hero||{};
+      const stage=copy.stage||{};
+      const heroBox=document.querySelector('.page-hero');
+      if(heroBox){
+        const eyebrow=heroBox.querySelector('.eyebrow');
+        const title=heroBox.querySelector('h1');
+        const desc=heroBox.querySelector('p');
+        if(eyebrow&&hero.eyebrow)eyebrow.textContent=hero.eyebrow;
+        if(title&&hero.title)title.textContent=hero.title;
+        if(desc&&hero.description)desc.textContent=hero.description;
+      }
+      const stageBox=document.querySelector('.marina-stage');
+      if(stageBox){
+        const img=stageBox.querySelector('.marina-photo img');
+        const note=stageBox.querySelector('.marina-photo-note');
+        const eyebrow=stageBox.querySelector('.marina-copy .eyebrow');
+        const title=stageBox.querySelector('.marina-copy h2');
+        const textEl=stageBox.querySelector('.marina-copy>p');
+        const button=stageBox.querySelector('.marina-cta');
+        if(img&&data.media?.stageImage)img.src=data.media.stageImage;
+        if(img&&data.media?.stageImageAlt)img.alt=data.media.stageImageAlt;
+        if(note&&stage.note)note.textContent=stage.note;
+        if(eyebrow&&stage.eyebrow)eyebrow.textContent=stage.eyebrow;
+        if(title&&stage.title)title.textContent=stage.title;
+        if(textEl&&stage.text)textEl.textContent=stage.text;
+        if(button&&stage.button){
+          const tail=button.querySelector('.marina-cta-mobile-tail');
+          button.childNodes[0].nodeValue=stage.button+' ';
+          if(tail)button.appendChild(tail);
+        }
+        const cards=[...stageBox.querySelectorAll('.marina-mini-card')];
+        (copy.cards||[]).slice(0,cards.length).forEach((item,i)=>{
+          const strong=cards[i].querySelector('strong');
+          const span=cards[i].querySelector('span');
+          if(strong&&item.title)strong.textContent=item.title;
+          if(span&&item.text)span.textContent=item.text;
+        });
+      }
+      return;
+    }
+
     if(page==='valores.html'){
       const response=await fetch('content/valores.json',{cache:'no-store'});
       if(!response.ok)return;
