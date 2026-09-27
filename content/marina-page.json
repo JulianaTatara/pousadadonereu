@@ -1,0 +1,90 @@
+{
+  "media": {
+    "stageImage": "assets/hero-poster.jpg",
+    "stageImageAlt": "Rio Palmital e embarcação"
+  },
+  "pt": {
+    "hero": {
+      "eyebrow": "À beira do Rio Palmital",
+      "title": "Marina",
+      "description": "Estrutura para quem chega com embarcação ou quer deixar o barco próximo do ponto de partida da pescaria."
+    },
+    "stage": {
+      "note": "Acesso direto ao rio",
+      "eyebrow": "Seu barco perto da água",
+      "title": "Seu ponto de partida no rio.",
+      "text": "A marina dá apoio a quem chega com embarcação e quer manter o barco próximo do acesso ao Rio Palmital. Consulte disponibilidade, período e condições diretamente com a pousada.",
+      "button": "Quero deixar meu barco com vocês"
+    },
+    "cards": [
+      {
+        "title": "Rampa",
+        "text": "Mais praticidade para embarque e desembarque."
+      },
+      {
+        "title": "Acesso ao rio",
+        "text": "Saída próxima para começar a pescaria."
+      },
+      {
+        "title": "Vagas sob consulta",
+        "text": "Consulte período e condições diretamente com a pousada."
+      }
+    ]
+  },
+  "en": {
+    "hero": {
+      "eyebrow": "On the banks of the Palmital River",
+      "title": "Marina",
+      "description": "Facilities for guests arriving with a boat or wanting to keep it close to the fishing departure point."
+    },
+    "stage": {
+      "note": "Direct river access",
+      "eyebrow": "Your boat close to the water",
+      "title": "Your starting point on the river.",
+      "text": "The marina supports guests arriving with their own boat and who want to keep it close to the Palmital River access. Check availability, period and conditions directly with the lodge.",
+      "button": "I want to keep my boat with you"
+    },
+    "cards": [
+      {
+        "title": "Ramp",
+        "text": "More convenience for launching and retrieving your boat."
+      },
+      {
+        "title": "River access",
+        "text": "A nearby departure point to start your fishing day."
+      },
+      {
+        "title": "Spaces on request",
+        "text": "Check dates and conditions directly with the lodge."
+      }
+    ]
+  },
+  "es": {
+    "hero": {
+      "eyebrow": "A orillas del río Palmital",
+      "title": "Marina",
+      "description": "Estructura para quienes llegan con embarcación o quieren dejarla cerca del punto de salida de pesca."
+    },
+    "stage": {
+      "note": "Acceso directo al río",
+      "eyebrow": "Tu embarcación cerca del agua",
+      "title": "Tu punto de partida en el río.",
+      "text": "La marina ofrece apoyo a quienes llegan con embarcación y desean mantenerla cerca del acceso al río Palmital. Consulte disponibilidad, período y condiciones directamente con la posada.",
+      "button": "Quiero dejar mi embarcación con ustedes"
+    },
+    "cards": [
+      {
+        "title": "Rampa",
+        "text": "Más practicidad para botar y retirar la embarcación."
+      },
+      {
+        "title": "Acceso al río",
+        "text": "Salida cercana para comenzar la jornada de pesca."
+      },
+      {
+        "title": "Espacios bajo consulta",
+        "text": "Consulte fechas y condiciones directamente con la posada."
+      }
+    ]
+  }
+}
