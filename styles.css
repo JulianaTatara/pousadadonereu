@@ -202,7 +202,7 @@ section{padding:58px 0}.section-soft{background:rgba(250,246,238,.78)}.section-s
 
 .gallery-page .page-hero.photo-hero.gallery-hero{min-height:360px;justify-content:center;text-align:center;background:none;position:relative;isolation:isolate}
 .gallery-page .gallery-hero::before{content:'';position:absolute;inset:0;background-image:var(--gallery-hero-image);background-size:cover;background-position:center 58%;filter:blur(var(--gallery-hero-blur,8px));transform:scale(1.08);z-index:0}
-.gallery-page .gallery-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,44,72,.48),rgba(6,44,72,.28) 44%,rgba(242,235,221,.22) 100%),radial-gradient(circle at 74% 34%,rgba(255,244,214,.62) 0,rgba(255,244,214,.18) 16%,rgba(255,244,214,0) 34%);z-index:1;display:block}
+.gallery-page .gallery-hero::after{content:'';position:absolute;inset:0;width:auto;height:auto;right:0;bottom:0;border:0;border-radius:0;transform:none;background:linear-gradient(180deg,rgba(3,24,40,.62),rgba(3,24,40,.52) 48%,rgba(3,24,40,.58) 100%);z-index:1;display:block}
 .gallery-page .gallery-hero .container{position:relative;z-index:2;max-width:900px}
 .gallery-page .gallery-hero .eyebrow{justify-content:center;color:#eff8ff;font-size:14px}
 .gallery-page .gallery-hero h1{font-size:54px;color:#fff;margin:0 auto 12px;text-align:center}
