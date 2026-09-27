@@ -1937,3 +1937,37 @@ section{padding:58px 0}.section-soft{background:rgba(250,246,238,.78)}.section-s
   content:none !important;
   display:none !important;
 }
+
+
+/* Gallery hero final fix: keep CMS image visible, add dark curtain, no decorative bubble */
+.gallery-page .page-hero.photo-hero.gallery-hero::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  display:block !important;
+  background-image:var(--gallery-hero-image) !important;
+  background-size:cover !important;
+  background-position:center 58% !important;
+  filter:blur(var(--gallery-hero-blur,8px)) !important;
+  transform:scale(1.08) !important;
+  z-index:0 !important;
+  pointer-events:none !important;
+}
+.gallery-page .page-hero.photo-hero.gallery-hero::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  border:0 !important;
+  border-radius:0 !important;
+  transform:none !important;
+  background:rgba(3,24,40,.46) !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+.gallery-page .page-hero.photo-hero.gallery-hero > .container{
+  position:relative !important;
+  z-index:2 !important;
+}
