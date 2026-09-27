@@ -2017,3 +2017,17 @@ section{padding:58px 0}.section-soft{background:rgba(250,246,238,.78)}.section-s
 .about-person-card .about-person-body p{
   white-space:pre-line;
 }
+
+
+/* Contact — three direct contact cards, responsive */
+.contact-page-v22 .whatsapp-pair-v22{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.contact-page-v22 .fixed-phone-action-v22{
+  text-decoration:none;
+}
+@media(max-width:760px){
+  .contact-page-v22 .whatsapp-pair-v22{
+    grid-template-columns:1fr;
+  }
+}
