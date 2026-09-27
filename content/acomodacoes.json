@@ -153,7 +153,10 @@
       "capacity": 2,
       "doubleBed": false,
       "images": [
-        "assets/quarto-4/quarto-4-01.jpg"
+        "assets/quarto-4/quarto-4-01.jpg",
+        "assets/quarto-4/quarto-4-02.jpg",
+        "assets/quarto-4/quarto-4-03.jpg",
+        "assets/quarto-4/quarto-4-04.jpg"
       ],
       "pt": {
         "name": "Quarto 4",
@@ -171,7 +174,13 @@
     {
       "capacity": 4,
       "doubleBed": false,
-      "images": [],
+      "images": [
+        "assets/quarto-5/quarto-5-01.jpg",
+        "assets/quarto-5/quarto-5-02.jpg",
+        "assets/quarto-5/quarto-5-03.jpg",
+        "assets/quarto-5/quarto-5-04.jpg",
+        "assets/quarto-5/quarto-5-05.jpg"
+      ],
       "pt": {
         "name": "Quarto 5",
         "description": "Capacidade máxima: 4 hóspedes"
