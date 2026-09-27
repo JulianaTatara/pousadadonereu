@@ -68,7 +68,7 @@ content:
           - name: video
             label: Vídeo de fundo (opcional)
             type: file
-            description: Selecione um vídeo para substituir a foto de fundo. Recomendado: MP4 curto, sem áudio e otimizado para web.
+            description: "Selecione um vídeo para substituir a foto de fundo. Recomendado: MP4 curto, sem áudio e otimizado para web."
             options:
               categories: [video]
               extensions: [mp4, webm, mov]
