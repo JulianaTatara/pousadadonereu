@@ -1753,10 +1753,7 @@ content:
       - name: species
         label: Espécies
         type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{pt.name}"
+        list: true
         fields:
           - name: image
             label: Foto
