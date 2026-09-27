@@ -1,0 +1,95 @@
+{
+  "media": {
+    "aboutImage": "assets/hero-poster.jpg",
+    "ownersImage": "assets/nereu.jpg",
+    "galleryImage": "assets/hero-poster.jpg",
+    "faunaImage": "assets/hero-poster.jpg"
+  },
+  "pt": {
+    "hero": {
+      "eyebrow": "Conheça a Pousada do Nereu",
+      "title": "A Pousada",
+      "description": "História, pessoas, paisagens e a biodiversidade que fazem parte de um lugar marcado pela pesca do robalo e pela hospitalidade familiar."
+    },
+    "cards": [
+      {
+        "title": "Sobre a Pousada",
+        "description": "Conheça a história, a estrutura e os números da Pousada do Nereu.",
+        "button": "Conhecer →"
+      },
+      {
+        "title": "Sobre Nós",
+        "description": "Conheça um pouco mais sobre os proprietários.",
+        "button": "Conhecer →"
+      },
+      {
+        "title": "Galeria",
+        "description": "Veja áreas, rio, marina e momentos de pesca.",
+        "button": "Explorar →"
+      },
+      {
+        "title": "Fauna",
+        "description": "Descubra os peixes e a biodiversidade ligados ao Ecossistema Babitonga.",
+        "button": "Explorar →"
+      }
+    ]
+  },
+  "en": {
+    "hero": {
+      "eyebrow": "Discover Pousada do Nereu",
+      "title": "The Lodge",
+      "description": "History, people, landscapes and biodiversity come together in a place shaped by snook fishing and family hospitality."
+    },
+    "cards": [
+      {
+        "title": "About the Lodge",
+        "description": "Discover the history, facilities and key facts about Pousada do Nereu.",
+        "button": "Discover →"
+      },
+      {
+        "title": "About Us",
+        "description": "Learn a little more about the owners.",
+        "button": "Discover →"
+      },
+      {
+        "title": "Gallery",
+        "description": "See the lodge areas, river, marina and fishing moments.",
+        "button": "Explore →"
+      },
+      {
+        "title": "Wildlife",
+        "description": "Discover the fish and biodiversity connected to the Babitonga ecosystem.",
+        "button": "Explore →"
+      }
+    ]
+  },
+  "es": {
+    "hero": {
+      "eyebrow": "Conoce Pousada do Nereu",
+      "title": "La Posada",
+      "description": "Historia, personas, paisajes y biodiversidad forman parte de un lugar marcado por la pesca del róbalo y la hospitalidad familiar."
+    },
+    "cards": [
+      {
+        "title": "Sobre la Posada",
+        "description": "Conoce la historia, la estructura y los datos principales de Pousada do Nereu.",
+        "button": "Conocer →"
+      },
+      {
+        "title": "Sobre Nosotros",
+        "description": "Conoce un poco más a los propietarios.",
+        "button": "Conocer →"
+      },
+      {
+        "title": "Galería",
+        "description": "Descubre las áreas, el río, la marina y momentos de pesca.",
+        "button": "Explorar →"
+      },
+      {
+        "title": "Fauna",
+        "description": "Descubre los peces y la biodiversidad vinculados al ecosistema Babitonga.",
+        "button": "Explorar →"
+      }
+    ]
+  }
+}
