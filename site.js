@@ -892,6 +892,113 @@ async function loadCmsPageContent(){
       return;
     }
 
+    if(page==='galeria.html'){
+      const response=await fetch('content/galeria.json',{cache:'no-store'});
+      if(!response.ok)return;
+      const data=await response.json();
+      const copy=data[lang]||data.pt||{};
+      const hero=copy.hero||{};
+      const galleryCopy=copy.gallery||{};
+      const insta=copy.instagram||{};
+
+      const heroBox=document.querySelector('.gallery-hero');
+      if(heroBox){
+        if(data.media?.heroImage)heroBox.style.setProperty('--gallery-hero-image',\`url('\${data.media.heroImage}')\`);
+        if(data.media?.heroBlur!=null)heroBox.style.setProperty('--gallery-hero-blur',String(data.media.heroBlur)+'px');
+        const eyebrow=heroBox.querySelector('.eyebrow');
+        const title=heroBox.querySelector('h1');
+        const desc=heroBox.querySelector('p');
+        if(eyebrow&&hero.eyebrow)eyebrow.textContent=hero.eyebrow;
+        if(title&&hero.title)title.textContent=hero.title;
+        if(desc&&hero.description)desc.textContent=hero.description;
+      }
+
+      const lead=document.querySelector('.gallery-lead .eyebrow');
+      if(lead&&galleryCopy.eyebrow)lead.textContent=galleryCopy.eyebrow;
+
+      const categories=(data.categories||[]).filter(cat=>(cat.photos||[]).length);
+      const filterBox=document.querySelector('.gallery-filter');
+      if(filterBox){
+        filterBox.innerHTML='';
+        const allBtn=document.createElement('button');
+        allBtn.className='active';
+        allBtn.dataset.galleryFilter='all';
+        allBtn.textContent=galleryCopy.all||'Tudo';
+        filterBox.appendChild(allBtn);
+        categories.forEach(cat=>{
+          const c=cat[lang]||cat.pt||{};
+          const btn=document.createElement('button');
+          btn.dataset.galleryFilter=cat.slug;
+          btn.textContent=c.name||cat.slug;
+          filterBox.appendChild(btn);
+        });
+      }
+
+      const thumbsNote=document.querySelector('.gallery-thumbs-note');
+      if(thumbsNote&&galleryCopy.thumbsNote)thumbsNote.textContent=galleryCopy.thumbsNote;
+
+      const thumbs=document.getElementById('galleryThumbs');
+      let first=null;
+      if(thumbs){
+        thumbs.innerHTML='';
+        let slide=0;
+        categories.forEach(cat=>{
+          const catCopy=cat[lang]||cat.pt||{};
+          (cat.photos||[]).forEach((photo,index)=>{
+            if(!photo.image)return;
+            const photoCopy=photo[lang]||photo.pt||{};
+            const btn=document.createElement('button');
+            btn.type='button';
+            btn.className='gallery-thumb'+(slide===0?' active':'');
+            btn.dataset.gallerySlide=String(slide);
+            btn.dataset.galleryCategory=cat.slug||'';
+            btn.dataset.full=photo.image;
+            btn.dataset.title=catCopy.name||cat.slug||'Galeria';
+            btn.dataset.caption=photoCopy.caption||'';
+            btn.innerHTML='<img src="'+photo.image+'" alt="'+(catCopy.name||'Galeria')+' — '+(index+1)+'"><span></span>';
+            btn.querySelector('span').textContent=catCopy.name||cat.slug||'Galeria';
+            thumbs.appendChild(btn);
+            if(!first)first={photo,photoCopy,catCopy};
+            slide++;
+          });
+        });
+      }
+
+      const main=document.getElementById('galleryMainImage');
+      const currentCategory=document.getElementById('galleryCurrentCategory');
+      const currentTitle=document.getElementById('galleryCurrentTitle');
+      const currentCaption=document.getElementById('galleryCurrentCaption');
+      if(first){
+        if(main){main.src=first.photo.image;main.alt=first.catCopy.name||'Galeria'}
+        if(currentCategory)currentCategory.textContent=(first.catCopy.name||'Galeria').toUpperCase();
+        if(currentTitle)currentTitle.textContent=first.catCopy.name||'Galeria';
+        if(currentCaption)currentCaption.textContent=first.photoCopy.caption||'';
+      }
+      const hint=document.querySelector('.gallery-stage-hint');
+      if(hint&&galleryCopy.hint)hint.textContent=galleryCopy.hint;
+
+      const instaBox=document.querySelector('.instagram-copy-card');
+      if(instaBox){
+        const eyebrow=instaBox.querySelector('.eyebrow');
+        const title=instaBox.querySelector('h2');
+        const textEl=instaBox.querySelector('p');
+        const handle=instaBox.querySelector('.instagram-handle');
+        const button=instaBox.querySelector('.instagram-cta');
+        if(eyebrow&&insta.eyebrow)eyebrow.textContent=insta.eyebrow;
+        if(title&&insta.title)title.textContent=insta.title;
+        if(textEl&&insta.text)textEl.textContent=insta.text;
+        if(handle&&insta.handle)handle.textContent=insta.handle;
+        if(button){
+          if(insta.button)button.textContent=insta.button;
+          button.href=SITE.instagram;
+        }
+      }
+
+      bindGalleryFilters();
+      initInteractiveGallery();
+      return;
+    }
+
     if(page==='valores.html'){
       const response=await fetch('content/valores.json',{cache:'no-store'});
       if(!response.ok)return;
