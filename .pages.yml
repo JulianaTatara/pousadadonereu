@@ -1291,3 +1291,244 @@ content:
               - name: text
                 label: Texto
                 type: text
+
+  - name: galleryPage
+    label: Galeria
+    type: file
+    path: content/galeria.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: media
+        label: Imagem do topo
+        type: object
+        fields:
+          - name: heroImage
+            label: Imagem
+            type: image
+          - name: heroBlur
+            label: Desfoque da imagem
+            type: number
+      - name: pt
+        label: Português
+        type: object
+        fields:
+          - name: hero
+            label: Topo da página
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descrição
+                type: text
+          - name: gallery
+            label: Textos da galeria
+            type: object
+            fields:
+              - name: eyebrow
+                label: Título pequeno
+                type: string
+              - name: all
+                label: Botão "Tudo"
+                type: string
+              - name: thumbsNote
+                label: Texto sobre miniaturas
+                type: string
+              - name: hint
+                label: Instrução sobre a foto grande
+                type: string
+          - name: instagram
+            label: Bloco do Instagram
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeno
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: handle
+                label: Usuário
+                type: string
+              - name: button
+                label: Botão
+                type: string
+      - name: en
+        label: English
+        type: object
+        fields:
+          - name: hero
+            label: Page header
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: gallery
+            label: Gallery text
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small title
+                type: string
+              - name: all
+                label: All button
+                type: string
+              - name: thumbsNote
+                label: Thumbnail note
+                type: string
+              - name: hint
+                label: Main image hint
+                type: string
+          - name: instagram
+            label: Instagram block
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small text
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: text
+                label: Text
+                type: text
+              - name: handle
+                label: Handle
+                type: string
+              - name: button
+                label: Button
+                type: string
+      - name: es
+        label: Español
+        type: object
+        fields:
+          - name: hero
+            label: Encabezado
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: description
+                label: Descripción
+                type: text
+          - name: gallery
+            label: Textos de la galería
+            type: object
+            fields:
+              - name: eyebrow
+                label: Título pequeño
+                type: string
+              - name: all
+                label: Botón "Todo"
+                type: string
+              - name: thumbsNote
+                label: Texto de miniaturas
+                type: string
+              - name: hint
+                label: Instrucción de la foto grande
+                type: string
+          - name: instagram
+            label: Bloque de Instagram
+            type: object
+            fields:
+              - name: eyebrow
+                label: Texto pequeño
+                type: string
+              - name: title
+                label: Título
+                type: string
+              - name: text
+                label: Texto
+                type: text
+              - name: handle
+                label: Usuario
+                type: string
+              - name: button
+                label: Botón
+                type: string
+      - name: categories
+        label: Categorias e fotos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{pt.name}"
+        fields:
+          - name: slug
+            label: Identificador interno
+            type: string
+            required: true
+          - name: pt
+            label: Português
+            type: object
+            fields:
+              - name: name
+                label: Nome da categoria
+                type: string
+          - name: en
+            label: English
+            type: object
+            fields:
+              - name: name
+                label: Category name
+                type: string
+          - name: es
+            label: Español
+            type: object
+            fields:
+              - name: name
+                label: Nombre de la categoría
+                type: string
+          - name: photos
+            label: Fotos
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{image}"
+            fields:
+              - name: image
+                label: Imagem
+                type: image
+                required: true
+              - name: pt
+                label: Português
+                type: object
+                fields:
+                  - name: caption
+                    label: Legenda
+                    type: text
+              - name: en
+                label: English
+                type: object
+                fields:
+                  - name: caption
+                    label: Caption
+                    type: text
+              - name: es
+                label: Español
+                type: object
+                fields:
+                  - name: caption
+                    label: Leyenda
+                    type: text
