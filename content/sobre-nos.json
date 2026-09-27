@@ -1,0 +1,66 @@
+{
+  "media": {
+    "nereuImage": "assets/nereu.jpg",
+    "marciaImage": ""
+  },
+  "pt": {
+    "hero": {
+      "eyebrow": "Quem recebe você",
+      "title": "Sobre Nós",
+      "description": "Uma pousada familiar é feita de pessoas. Conheça um pouco de quem faz parte da história e do dia a dia da Pousada do Nereu."
+    },
+    "nereu": {
+      "badge": "Proprietário",
+      "noteTop": "De pescador",
+      "noteBottom": "para pescador",
+      "name": "Nereu",
+      "text": "Nereu é um dos proprietários da pousada e uma referência da casa na pesca do robalo. A relação com o rio, a pescaria e os hóspedes faz parte da identidade construída pela pousada ao longo dos anos."
+    },
+    "marcia": {
+      "badge": "Proprietária",
+      "photoLabel": "Foto de Marcia",
+      "name": "Marcia",
+      "text": "Marcia também é proprietária da Pousada do Nereu e faz parte da história e da rotina da casa. Este espaço está preparado para receber sua foto e um texto mais completo sobre sua trajetória na pousada."
+    }
+  },
+  "en": {
+    "hero": {
+      "eyebrow": "Meet your hosts",
+      "title": "About Us",
+      "description": "A family-run lodge is made by people. Meet some of those who are part of the history and daily life of Pousada do Nereu."
+    },
+    "nereu": {
+      "badge": "Owner",
+      "noteTop": "From angler",
+      "noteBottom": "to angler",
+      "name": "Nereu",
+      "text": "Nereu is one of the lodge owners and a key reference for snook fishing. His connection with the river, fishing and guests is part of the identity the lodge has built over the years."
+    },
+    "marcia": {
+      "badge": "Owner",
+      "photoLabel": "Photo of Marcia",
+      "name": "Marcia",
+      "text": "Marcia is also an owner of Pousada do Nereu and is part of the lodge’s history and daily routine. This space is ready for her photo and a fuller text about her journey at the lodge."
+    }
+  },
+  "es": {
+    "hero": {
+      "eyebrow": "Quién te recibe",
+      "title": "Sobre Nosotros",
+      "description": "Una posada familiar está hecha de personas. Conoce a quienes forman parte de la historia y del día a día de Pousada do Nereu."
+    },
+    "nereu": {
+      "badge": "Propietario",
+      "noteTop": "De pescador",
+      "noteBottom": "para pescador",
+      "name": "Nereu",
+      "text": "Nereu es uno de los propietarios de la posada y una referencia de la casa en la pesca del róbalo. Su relación con el río, la pesca y los huéspedes forma parte de la identidad construida por la posada a lo largo de los años."
+    },
+    "marcia": {
+      "badge": "Propietaria",
+      "photoLabel": "Foto de Marcia",
+      "name": "Marcia",
+      "text": "Marcia también es propietaria de Pousada do Nereu y forma parte de la historia y de la rutina de la casa. Este espacio está preparado para recibir su foto y un texto más completo sobre su trayectoria en la posada."
+    }
+  }
+}
