@@ -1,0 +1,220 @@
+{
+  "media": {
+    "heroImage": "assets/hero-poster.jpg"
+  },
+  "pt": {
+    "hero": {
+      "eyebrow": "Ecossistema Babitonga",
+      "title": "Fauna",
+      "description": "Biodiversidade, manguezal e pesca no Rio Palmital e na Baía da Babitonga."
+    },
+    "overviewLeft": {
+      "eyebrow": "Água, manguezal e biodiversidade",
+      "title": "Um estuário cheio de vida",
+      "text": "O Ecossistema Babitonga reúne ambientes estuarinos e marinhos diversos e funciona como área de alimentação, abrigo e crescimento para muitas espécies de peixes.",
+      "tags": [
+        "Estuário",
+        "Manguezal",
+        "Abrigo e alimentação"
+      ],
+      "fineprint": "Tamanhos e pesos abaixo são referências máximas publicadas para cada espécie e não representam necessariamente exemplares encontrados no Rio Palmital."
+    },
+    "overviewRight": {
+      "eyebrow": "Pesca local",
+      "title": "Robalo no centro da identidade",
+      "text": "Entre as capturas relatadas com mais frequência pela pousada estão robalo-peva, robalo-flecha e pescada-amarela, além de peixe-espada, corvina e linguado.",
+      "tags": [
+        "Robalo-peva",
+        "Robalo-flecha",
+        "Pescada-amarela"
+      ]
+    },
+    "speciesHeading": {
+      "eyebrow": "Espécies",
+      "title": "Peixes da região",
+      "note": "Conheça algumas das espécies relacionadas à pesca local."
+    }
+  },
+  "en": {
+    "hero": {
+      "eyebrow": "Babitonga Ecosystem",
+      "title": "Fauna",
+      "description": "Biodiversity, mangroves and fishing in the Palmital River and Babitonga Bay."
+    },
+    "overviewLeft": {
+      "eyebrow": "Water, mangroves and biodiversity",
+      "title": "An estuary full of life",
+      "text": "The Babitonga Ecosystem brings together diverse estuarine and marine environments and provides feeding, shelter and nursery areas for many fish species.",
+      "tags": [
+        "Estuary",
+        "Mangroves",
+        "Shelter and feeding"
+      ],
+      "fineprint": "The sizes and weights below are published maximum references for each species and do not necessarily represent specimens found in the Palmital River."
+    },
+    "overviewRight": {
+      "eyebrow": "Local fishing",
+      "title": "Snook at the heart of our identity",
+      "text": "Among the catches most frequently reported by the lodge are fat snook, common snook and acoupa weakfish, as well as cutlassfish, whitemouth croaker and flounder.",
+      "tags": [
+        "Fat snook",
+        "Common snook",
+        "Acoupa weakfish"
+      ]
+    },
+    "speciesHeading": {
+      "eyebrow": "Species",
+      "title": "Fish of the region",
+      "note": "Discover some of the species associated with local fishing."
+    }
+  },
+  "es": {
+    "hero": {
+      "eyebrow": "Ecosistema Babitonga",
+      "title": "Fauna",
+      "description": "Biodiversidad, manglar y pesca en el río Palmital y la bahía de Babitonga."
+    },
+    "overviewLeft": {
+      "eyebrow": "Agua, manglar y biodiversidad",
+      "title": "Un estuario lleno de vida",
+      "text": "El Ecosistema Babitonga reúne diversos ambientes estuarinos y marinos y funciona como área de alimentación, refugio y crecimiento para muchas especies de peces.",
+      "tags": [
+        "Estuario",
+        "Manglar",
+        "Refugio y alimentación"
+      ],
+      "fineprint": "Los tamaños y pesos indicados abajo son referencias máximas publicadas para cada especie y no representan necesariamente ejemplares encontrados en el río Palmital."
+    },
+    "overviewRight": {
+      "eyebrow": "Pesca local",
+      "title": "El robalo en el centro de la identidad",
+      "text": "Entre las capturas más mencionadas por la posada están el robalo-peva, el robalo-flecha y la pescada amarilla, además del pez espada, corvina y lenguado.",
+      "tags": [
+        "Robalo-peva",
+        "Robalo-flecha",
+        "Pescada amarilla"
+      ]
+    },
+    "speciesHeading": {
+      "eyebrow": "Especies",
+      "title": "Peces de la región",
+      "note": "Conozca algunas de las especies relacionadas con la pesca local."
+    }
+  },
+  "species": [
+    {
+      "image": "",
+      "scientificName": "Centropomus parallelus",
+      "maxSize": "até 72 cm",
+      "maxWeight": "até 5 kg",
+      "legalMinimum": "30 cm",
+      "pt": {
+        "name": "Robalo-peva",
+        "description": "Espécie estuarina associada a águas costeiras, manguezais e trechos de baixa salinidade."
+      },
+      "en": {
+        "name": "Fat snook",
+        "description": "An estuarine species associated with coastal waters, mangroves and low-salinity stretches."
+      },
+      "es": {
+        "name": "Robalo-peva",
+        "description": "Especie estuarina asociada a aguas costeras, manglares y zonas de baja salinidad."
+      }
+    },
+    {
+      "image": "",
+      "scientificName": "Centropomus undecimalis",
+      "maxSize": "até 140 cm",
+      "maxWeight": "até 24,3 kg",
+      "legalMinimum": "50 cm",
+      "pt": {
+        "name": "Robalo-flecha",
+        "description": "O maior dos robalos da página, encontrado em ambientes costeiros, estuários, lagoas e manguezais."
+      },
+      "en": {
+        "name": "Common snook",
+        "description": "The largest snook listed here, found in coastal waters, estuaries, lagoons and mangroves."
+      },
+      "es": {
+        "name": "Robalo-flecha",
+        "description": "El mayor de los robalos de esta página, encontrado en ambientes costeros, estuarios, lagunas y manglares."
+      }
+    },
+    {
+      "image": "",
+      "scientificName": "Cynoscion acoupa",
+      "maxSize": "até 110 cm",
+      "maxWeight": "até 17 kg",
+      "legalMinimum": "",
+      "pt": {
+        "name": "Pescada-amarela",
+        "description": "Peixe estuarino-marinho que se alimenta principalmente de peixes e crustáceos."
+      },
+      "en": {
+        "name": "Acoupa weakfish",
+        "description": "An estuarine-marine fish that feeds mainly on fish and crustaceans."
+      },
+      "es": {
+        "name": "Pescada amarilla",
+        "description": "Pez estuarino-marino que se alimenta principalmente de peces y crustáceos."
+      }
+    },
+    {
+      "image": "",
+      "scientificName": "Micropogonias furnieri",
+      "maxSize": "até 90 cm",
+      "maxWeight": "até 4,8 kg",
+      "legalMinimum": "",
+      "pt": {
+        "name": "Corvina",
+        "description": "Espécie costeira e estuarina bastante associada a fundos arenosos e lodosos."
+      },
+      "en": {
+        "name": "Whitemouth croaker",
+        "description": "A coastal and estuarine species strongly associated with sandy and muddy bottoms."
+      },
+      "es": {
+        "name": "Corvina",
+        "description": "Especie costera y estuarina muy asociada a fondos arenosos y fangosos."
+      }
+    },
+    {
+      "image": "",
+      "scientificName": "Trichiurus lepturus",
+      "maxSize": "até 234 cm",
+      "maxWeight": "até 5 kg",
+      "legalMinimum": "",
+      "pt": {
+        "name": "Peixe-espada",
+        "description": "Espécie costeira de corpo extremamente alongado, encontrada também em águas salobras."
+      },
+      "en": {
+        "name": "Largehead hairtail",
+        "description": "A coastal species with an extremely elongated body, also found in brackish waters."
+      },
+      "es": {
+        "name": "Pez sable",
+        "description": "Especie costera de cuerpo extremadamente alargado, encontrada también en aguas salobres."
+      }
+    },
+    {
+      "image": "",
+      "scientificName": "Paralichthys brasiliensis — referência",
+      "maxSize": "até 100 cm",
+      "maxWeight": "até 12 kg",
+      "legalMinimum": "",
+      "pt": {
+        "name": "Linguado",
+        "description": "Peixe de fundo encontrado em áreas costeiras, baías e estuários. A espécie capturada localmente deve ser confirmada."
+      },
+      "en": {
+        "name": "Flounder",
+        "description": "A bottom-dwelling fish found in coastal areas, bays and estuaries. The locally caught species should be confirmed."
+      },
+      "es": {
+        "name": "Lenguado",
+        "description": "Pez de fondo encontrado en zonas costeras, bahías y estuarios. La especie capturada localmente debe confirmarse."
+      }
+    }
+  ]
+}
