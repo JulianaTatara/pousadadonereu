@@ -1,6 +1,6 @@
 {
   "media": {
-    "heroImage": "assets/hero-poster.jpg",
+    "heroImage": "/assets/galeria-hero-rio-palmital.jpg",
     "heroBlur": 8
   },
   "pt": {
@@ -77,7 +77,7 @@
       },
       "photos": [
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "vista do Rio Palmital e da margem da pousada."
           },
@@ -89,7 +89,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "vista do Rio Palmital e da margem da pousada."
           },
@@ -101,7 +101,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "vista do Rio Palmital e da margem da pousada."
           },
@@ -127,7 +127,7 @@
       },
       "photos": [
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "estrutura da marina e ponto de saída para a pescaria."
           },
@@ -139,7 +139,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "estrutura da marina e ponto de saída para a pescaria."
           },
@@ -151,7 +151,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "estrutura da marina e ponto de saída para a pescaria."
           },
@@ -177,7 +177,7 @@
       },
       "photos": [
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "área de varanda e convivência da pousada."
           },
@@ -189,7 +189,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "área de varanda e convivência da pousada."
           },
@@ -201,7 +201,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "área de varanda e convivência da pousada."
           },
@@ -227,7 +227,7 @@
       },
       "photos": [
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "detalhes do café da manhã servido na pousada."
           },
@@ -239,7 +239,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "detalhes do café da manhã servido na pousada."
           },
@@ -251,7 +251,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "detalhes do café da manhã servido na pousada."
           },
@@ -277,7 +277,7 @@
       },
       "photos": [
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "refeições caseiras e momentos à mesa."
           },
@@ -289,7 +289,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "refeições caseiras e momentos à mesa."
           },
@@ -301,7 +301,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "refeições caseiras e momentos à mesa."
           },
@@ -327,7 +327,7 @@
       },
       "photos": [
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "ambiente do refeitório da pousada."
           },
@@ -339,7 +339,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "ambiente do refeitório da pousada."
           },
@@ -351,7 +351,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "ambiente do refeitório da pousada."
           },
@@ -377,7 +377,7 @@
       },
       "photos": [
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "área da churrasqueira e encontros em grupo."
           },
@@ -389,7 +389,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "área da churrasqueira e encontros em grupo."
           },
@@ -401,7 +401,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "área da churrasqueira e encontros em grupo."
           },
@@ -427,7 +427,7 @@
       },
       "photos": [
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "espaço de convivência com mesa de sinuca."
           },
@@ -439,7 +439,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "espaço de convivência com mesa de sinuca."
           },
@@ -451,7 +451,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "espaço de convivência com mesa de sinuca."
           },
@@ -477,7 +477,7 @@
       },
       "photos": [
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "área de estacionamento da pousada."
           },
@@ -489,7 +489,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "área de estacionamento da pousada."
           },
@@ -501,7 +501,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "área de estacionamento da pousada."
           },
@@ -527,7 +527,7 @@
       },
       "photos": [
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "lago e área externa da pousada."
           },
@@ -539,7 +539,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "lago e área externa da pousada."
           },
@@ -551,7 +551,7 @@
           }
         },
         {
-          "image": "assets/hero-poster.jpg",
+          "image": "/assets/hero-poster.jpg",
           "pt": {
             "caption": "lago e área externa da pousada."
           },
