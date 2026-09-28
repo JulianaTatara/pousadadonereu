@@ -470,10 +470,10 @@ function applySiteTranslations(){
           form.reset();
           if(status){
             status.textContent=lang==='en'
-              ? 'Message sent successfully. We will get back to you soon.'
+              ? 'Thank you for contacting us! Your message has been sent to our email and we will reply as soon as possible.'
               : lang==='es'
-                ? 'Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.'
-                : 'Mensagem enviada com sucesso. Entraremos em contato em breve.';
+                ? '¡Gracias por ponerte en contacto con nosotros! Tu mensaje fue enviado a nuestro correo electrónico y responderemos lo antes posible.'
+                : 'Obrigado por entrar em contato! Sua mensagem foi enviada para nosso email e responderemos assim que possível.';
             status.classList.add('is-success');
           }
         }catch(error){
