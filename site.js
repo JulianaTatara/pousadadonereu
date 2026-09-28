@@ -434,34 +434,17 @@ function translatedValue(value){
 }
 
 function applySiteTranslations(){
-  if(lang==='pt'){document.documentElement.lang='pt-BR';return}
-  document.documentElement.lang=lang==='en'?'en':'es';
   let page=(location.pathname.split('/').pop()||'index.html');
   if(page&&!page.includes('.'))page+='.html';
-  if(PAGE_TITLES[lang]?.[page])document.title=PAGE_TITLES[lang][page];
-
-  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
-    acceptNode(node){
-      const parent=node.parentElement;
-      if(!parent||['SCRIPT','STYLE','NOSCRIPT'].includes(parent.tagName))return NodeFilter.FILTER_REJECT;
-      return node.nodeValue.trim()?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
-    }
-  });
-  const nodes=[];
-  while(walker.nextNode())nodes.push(walker.currentNode);
-  nodes.forEach(node=>{node.nodeValue=translatedValue(node.nodeValue)});
-
-  document.querySelectorAll('[alt],[aria-label],[title],[placeholder],[data-title],[data-caption]').forEach(el=>{
-    ['alt','aria-label','title','placeholder','data-title','data-caption'].forEach(attr=>{
-      if(el.hasAttribute(attr))el.setAttribute(attr,translatedValue(el.getAttribute(attr)));
-    });
-  });
 
   if(page==='contato.html'){
     const form=document.getElementById('contact-form-v22');
-    if(form){
+    if(form && !form.dataset.whatsappBound){
+      form.dataset.whatsappBound='true';
       form.addEventListener('submit',(event)=>{
         event.preventDefault();
+        if(!form.reportValidity())return;
+
         const data=new FormData(form);
         const nome=(data.get('nome')||'').toString().trim();
         const email=(data.get('email')||'').toString().trim();
@@ -481,14 +464,46 @@ function applySiteTranslations(){
             : {name:'Nome',email:'E-mail',phone:'Telefone',message:'Mensagem'};
 
         const text=`${intro}\n\n${labels.name}: ${nome}\n${labels.email}: ${email}\n${labels.phone}: ${telefone}\n\n${labels.message}:\n${mensagem}`;
-        window.open(wa(text),'_blank','noopener');
+        window.location.href=wa(text);
       });
     }
 
     const links=[...document.querySelectorAll('.whatsapp-action-v22')];
-    if(links[0])links[0].href=wa(lang==='en'?'Hello Marcia! I found your contact through the lodge website and would like more information.':'¡Hola Marcia! Encontré tu contacto a través del sitio web de la posada y me gustaría recibir más información.');
-    if(links[1])links[1].href=wa(lang==='en'?'Hello Nereu! I found your contact through the lodge website and would like more information.':'¡Hola Nereu! Encontré tu contacto a través del sitio web de la posada y me gustaría recibir más información.',SITE.nereuPhone);
+    const marciaText=lang==='en'
+      ? 'Hello Marcia! I found your contact through the lodge website and would like more information.'
+      : lang==='es'
+        ? '¡Hola Marcia! Encontré tu contacto a través del sitio web de la posada y me gustaría recibir más información.'
+        : 'Olá Marcia, tudo bem? Peguei seu contato pelo site da pousada e gostaria de mais informações.';
+    const nereuText=lang==='en'
+      ? 'Hello Nereu! I found your contact through the lodge website and would like more information.'
+      : lang==='es'
+        ? '¡Hola Nereu! Encontré tu contacto a través del sitio web de la posada y me gustaría recibir más información.'
+        : 'Olá Seu Nereu, tudo bem? Peguei seu contato pelo site da pousada e gostaria de mais informações.';
+    if(links[0])links[0].href=wa(marciaText);
+    if(links[1])links[1].href=wa(nereuText,SITE.nereuPhone);
   }
+
+  if(lang==='pt'){document.documentElement.lang='pt-BR';return}
+  document.documentElement.lang=lang==='en'?'en':'es';
+  if(PAGE_TITLES[lang]?.[page])document.title=PAGE_TITLES[lang][page];
+
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+    acceptNode(node){
+      const parent=node.parentElement;
+      if(!parent||['SCRIPT','STYLE','NOSCRIPT'].includes(parent.tagName))return NodeFilter.FILTER_REJECT;
+      return node.nodeValue.trim()?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+    }
+  });
+  const nodes=[];
+  while(walker.nextNode())nodes.push(walker.currentNode);
+  nodes.forEach(node=>{node.nodeValue=translatedValue(node.nodeValue)});
+
+  document.querySelectorAll('[alt],[aria-label],[title],[placeholder],[data-title],[data-caption]').forEach(el=>{
+    ['alt','aria-label','title','placeholder','data-title','data-caption'].forEach(attr=>{
+      if(el.hasAttribute(attr))el.setAttribute(attr,translatedValue(el.getAttribute(attr)));
+    });
+  });
+
   if(page==='marina.html'){
     const cta=document.querySelector('.marina-cta');
     if(cta)cta.href=wa(lang==='en'?'Hello! I saw the marina on the Pousada do Nereu website and would like to check availability and rates to keep my boat with you. My boat is approximately ___ meters long and I would need a space for the following period: _______.':'¡Hola! Vi la marina en el sitio web de Pousada do Nereu y me gustaría consultar disponibilidad y precios para dejar mi barco con ustedes. Mi barco mide aproximadamente ___ metros y necesitaría el espacio durante el siguiente período: _______.');
