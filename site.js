@@ -458,6 +458,33 @@ function applySiteTranslations(){
   });
 
   if(page==='contato.html'){
+    const form=document.getElementById('contact-form-v22');
+    if(form){
+      form.addEventListener('submit',(event)=>{
+        event.preventDefault();
+        const data=new FormData(form);
+        const nome=(data.get('nome')||'').toString().trim();
+        const email=(data.get('email')||'').toString().trim();
+        const telefone=(data.get('telefone')||'').toString().trim();
+        const mensagem=(data.get('mensagem')||'').toString().trim();
+
+        const intro=lang==='en'
+          ? 'Hello! I sent this message through the Pousada do Nereu website.'
+          : lang==='es'
+            ? '¡Hola! Envié este mensaje a través del sitio web de Pousada do Nereu.'
+            : 'Olá! Enviei esta mensagem pelo site da Pousada do Nereu.';
+
+        const labels=lang==='en'
+          ? {name:'Name',email:'Email',phone:'Phone',message:'Message'}
+          : lang==='es'
+            ? {name:'Nombre',email:'Correo electrónico',phone:'Teléfono',message:'Mensaje'}
+            : {name:'Nome',email:'E-mail',phone:'Telefone',message:'Mensagem'};
+
+        const text=`${intro}\n\n${labels.name}: ${nome}\n${labels.email}: ${email}\n${labels.phone}: ${telefone}\n\n${labels.message}:\n${mensagem}`;
+        window.open(wa(text),'_blank','noopener');
+      });
+    }
+
     const links=[...document.querySelectorAll('.whatsapp-action-v22')];
     if(links[0])links[0].href=wa(lang==='en'?'Hello Marcia! I found your contact through the lodge website and would like more information.':'¡Hola Marcia! Encontré tu contacto a través del sitio web de la posada y me gustaría recibir más información.');
     if(links[1])links[1].href=wa(lang==='en'?'Hello Nereu! I found your contact through the lodge website and would like more information.':'¡Hola Nereu! Encontré tu contacto a través del sitio web de la posada y me gustaría recibir más información.',SITE.nereuPhone);
