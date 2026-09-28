@@ -439,32 +439,59 @@ function applySiteTranslations(){
 
   if(page==='contato.html'){
     const form=document.getElementById('contact-form-v22');
-    if(form && !form.dataset.whatsappBound){
-      form.dataset.whatsappBound='true';
-      form.addEventListener('submit',(event)=>{
+    const status=document.getElementById('contact-form-status-v22');
+
+    if(form && !form.dataset.emailBound){
+      form.dataset.emailBound='true';
+      form.addEventListener('submit',async(event)=>{
         event.preventDefault();
         if(!form.reportValidity())return;
 
-        const data=new FormData(form);
-        const nome=(data.get('nome')||'').toString().trim();
-        const email=(data.get('email')||'').toString().trim();
-        const telefone=(data.get('telefone')||'').toString().trim();
-        const mensagem=(data.get('mensagem')||'').toString().trim();
+        const button=form.querySelector('.submit-contact-v22');
+        const originalText=button?.textContent||'';
+        if(button){
+          button.disabled=true;
+          button.textContent=lang==='en'?'Sending...':lang==='es'?'Enviando...':'Enviando...';
+        }
+        if(status){
+          status.textContent='';
+          status.classList.remove('is-success','is-error');
+        }
 
-        const intro=lang==='en'
-          ? 'Hello! I sent this message through the Pousada do Nereu website.'
-          : lang==='es'
-            ? '¡Hola! Envié este mensaje a través del sitio web de Pousada do Nereu.'
-            : 'Olá! Enviei esta mensagem pelo site da Pousada do Nereu.';
+        try{
+          const response=await fetch(form.action,{
+            method:'POST',
+            body:new FormData(form),
+            headers:{'Accept':'application/json'}
+          });
+          const result=await response.json().catch(()=>({}));
+          if(!response.ok || result.success===false)throw new Error(result.message||'Submission failed');
 
-        const labels=lang==='en'
-          ? {name:'Name',email:'Email',phone:'Phone',message:'Message'}
-          : lang==='es'
-            ? {name:'Nombre',email:'Correo electrónico',phone:'Teléfono',message:'Mensaje'}
-            : {name:'Nome',email:'E-mail',phone:'Telefone',message:'Mensagem'};
-
-        const text=`${intro}\n\n${labels.name}: ${nome}\n${labels.email}: ${email}\n${labels.phone}: ${telefone}\n\n${labels.message}:\n${mensagem}`;
-        window.location.href=wa(text);
+          form.reset();
+          if(status){
+            status.textContent=lang==='en'
+              ? 'Message sent successfully. We will get back to you soon.'
+              : lang==='es'
+                ? 'Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.'
+                : 'Mensagem enviada com sucesso. Entraremos em contato em breve.';
+            status.classList.add('is-success');
+          }
+        }catch(error){
+          console.warn('Contact form submission failed.',error);
+          if(status){
+            status.textContent=lang==='en'
+              ? 'We could not send your message. Please try again or contact us on WhatsApp.'
+              : lang==='es'
+                ? 'No pudimos enviar tu mensaje. Inténtalo de nuevo o contáctanos por WhatsApp.'
+                : 'Não foi possível enviar sua mensagem. Tente novamente ou fale conosco pelo WhatsApp.';
+            status.classList.add('is-error');
+          }
+        }finally{
+          if(button){
+            button.disabled=false;
+            button.textContent=originalText;
+          }
+        }
       });
     }
 
@@ -477,7 +504,7 @@ function applySiteTranslations(){
     const nereuText=lang==='en'
       ? 'Hello Nereu! I found your contact through the lodge website and would like more information.'
       : lang==='es'
-        ? '¡Hola Nereu! Encontré tu contacto a través del sitio web de la posada y me gustaría recibir más información.'
+        ? '¡Hola Nereu! Encontré tu contato a través del sitio web de la posada y me gustaría recibir más información.'
         : 'Olá Seu Nereu, tudo bem? Peguei seu contato pelo site da pousada e gostaria de mais informações.';
     if(links[0])links[0].href=wa(marciaText);
     if(links[1])links[1].href=wa(nereuText,SITE.nereuPhone);
