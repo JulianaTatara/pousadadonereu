@@ -28,13 +28,16 @@
   <div class="contact-card contact-card-v22 contact-form-card-v22">
     <div class="eyebrow">Mensagem</div>
     <h2>Envie uma mensagem</h2>
-    <form id="contact-form-v22" name="contato">
+    <form id="contact-form-v22" name="contato" action="https://formsubmit.co/ajax/nereutatara@hotmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nova mensagem pelo site da Pousada do Nereu">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
       <div class="form-grid form-grid-v22">
         <div class="field"><label>Nome *</label><input required name="nome"></div>
         <div class="field"><label>E-mail *</label><input required type="email" name="email"></div>
         <div class="field full"><label>Telefone *</label><input required name="telefone"></div>
         <div class="field full"><label>Mensagem *</label><textarea required name="mensagem"></textarea></div>
-        <div class="field full"><button class="btn btn-primary contact-action-v22 submit-contact-v22" type="submit">Enviar mensagem →</button></div>
+        <div class="field full"><button class="btn btn-primary contact-action-v22 submit-contact-v22" type="submit">Enviar mensagem →</button><div id="contact-form-status-v22" class="contact-form-status-v22" role="status" aria-live="polite"></div></div>
       </div>
     </form>
   </div>
