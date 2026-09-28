@@ -2050,3 +2050,16 @@ section{padding:58px 0}.section-soft{background:rgba(250,246,238,.78)}.section-s
     font-size:12px;
   }
 }
+
+
+/* Contact form submission status */
+.contact-form-status-v22{
+  min-height:22px;
+  margin-top:10px;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.4;
+}
+.contact-form-status-v22.is-success{color:#256b48}
+.contact-form-status-v22.is-error{color:#9a3a2a}
+.submit-contact-v22:disabled{opacity:.72;cursor:wait;transform:none!important}
