@@ -1,4 +1,5 @@
 let SITE = {
+  gaMeasurementId: '',
   phone: '5547999753651',
   phoneDisplay: '(47) 99975-3651',
   nereuPhone: '5547999846109',
@@ -1349,4 +1350,101 @@ function bindGalleryFilters(){const buttons=[...document.querySelectorAll('[data
 function initInteractiveGallery(){const thumbs=[...document.querySelectorAll('.gallery-thumb')];const main=document.querySelector('[data-gallery-main-image]');if(!thumbs.length||!main)return;const title=document.getElementById('galleryCurrentTitle');const caption=document.getElementById('galleryCurrentCaption');const chip=document.getElementById('galleryCurrentCategory');const prev=document.querySelector('.gallery-nav.prev');const next=document.querySelector('.gallery-nav.next');const open=document.querySelector('.gallery-open');const frame=document.getElementById('galleryStageFrame');const thumbTrack=document.getElementById('galleryThumbs');const visible=()=>thumbs.filter(t=>t.style.display!=='none');const activate=thumb=>{if(!thumb)return;thumbs.forEach(t=>t.classList.toggle('active',t===thumb));main.src=thumb.dataset.full||thumb.querySelector('img')?.src||'';main.alt=thumb.dataset.title||thumb.querySelector('span')?.textContent||'Imagem da galeria';if(title)title.textContent=thumb.dataset.title||main.alt;if(caption)caption.textContent=thumb.dataset.caption||'';if(chip)chip.textContent=(thumb.dataset.title||'Galeria').toUpperCase();thumb.scrollIntoView({behavior:'smooth',inline:'nearest',block:'nearest'});if(thumbTrack){thumbTrack.scrollTop=0}};const currentVisible=()=>visible();const currentIndex=()=>currentVisible().findIndex(t=>t.classList.contains('active'));thumbs.forEach(t=>t.addEventListener('click',()=>activate(t)));prev?.addEventListener('click',e=>{e.stopPropagation();const list=currentVisible();if(!list.length)return;let idx=currentIndex();idx=idx<=0?list.length-1:idx-1;activate(list[idx])});next?.addEventListener('click',e=>{e.stopPropagation();const list=currentVisible();if(!list.length)return;let idx=currentIndex();idx=idx>=list.length-1?0:idx+1;activate(list[idx])});open?.addEventListener('click',e=>{e.stopPropagation();window.openSiteLightbox?.(main.src,main.alt)});frame?.addEventListener('click',e=>{if(e.target.closest('.gallery-nav')||e.target.closest('.gallery-open'))return;window.openSiteLightbox?.(main.src,main.alt)});document.addEventListener('gallery:filterChanged',()=>{const list=currentVisible();if(thumbTrack)thumbTrack.scrollTo({left:0,behavior:'smooth'});if(list.length)activate(list[0])});activate(thumbs.find(t=>t.classList.contains('active'))||thumbs[0])}
 function initRoomFilters(){const buttons=[...document.querySelectorAll('[data-room-filter]')];const cards=[...document.querySelectorAll('[data-room-card]')];if(!buttons.length||!cards.length)return;const empty=document.getElementById('roomsEmptyState');const apply=filter=>{let shown=0;cards.forEach(card=>{const cap=card.dataset.capacity;const isDouble=card.dataset.double==='true';const show=filter==='all'||filter===`capacity-${cap}`||(filter==='double-bed'&&isDouble);card.hidden=!show;if(show)shown++});if(empty)empty.hidden=shown!==0};buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');apply(btn.dataset.roomFilter)}));apply('all')}
 function animateStats(){const els=[...document.querySelectorAll('[data-count]')];if(!els.length)return;const obs=new IntersectionObserver(entries=>entries.forEach(en=>{if(!en.isIntersecting)return;const el=en.target,target=+el.dataset.count;const dur=900,t0=performance.now();function frame(t){const p=Math.min(1,(t-t0)/dur);el.textContent=Math.round(target*(1-Math.pow(1-p,3)))+(el.dataset.suffix||'');if(p<1)requestAnimationFrame(frame)}requestAnimationFrame(frame);obs.unobserve(el)}),{threshold:.45});els.forEach(el=>obs.observe(el))}
-document.addEventListener('DOMContentLoaded',async()=>{await loadCmsSiteConfig();renderShell();await loadCmsPageContent();});
+
+function initSiteAnalytics(){
+  const measurementId=String(SITE.gaMeasurementId||'').trim();
+  if(!/^G-[A-Z0-9]+$/i.test(measurementId))return;
+
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
+  window.gtag('js',new Date());
+  window.gtag('config',measurementId,{
+    send_page_view:true
+  });
+
+  const script=document.createElement('script');
+  script.async=true;
+  script.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(measurementId);
+  document.head.appendChild(script);
+
+  const cleanText=value=>String(value||'').replace(/\s+/g,' ').trim().slice(0,100);
+  const pagePath=()=>window.location.pathname||'/';
+
+  function sendSiteEvent(name,params={}){
+    if(typeof window.gtag!=='function')return;
+    window.gtag('event',name,{
+      page_path:pagePath(),
+      page_title:document.title,
+      transport_type:'beacon',
+      ...params
+    });
+  }
+
+  function classifyTrackedLink(link){
+    const href=(link.getAttribute('href')||'').trim();
+    const absolute=link.href||href;
+    const text=cleanText(link.dataset.trackLabel||link.getAttribute('aria-label')||link.textContent);
+    const explicit=cleanText(link.dataset.track);
+
+    if(explicit){
+      return {name:explicit,params:{link_text:text,link_url:absolute}};
+    }
+    if(/wa\.me|api\.whatsapp\.com|whatsapp\.com/i.test(absolute)){
+      let contact='general';
+      if(String(absolute).includes(String(SITE.nereuPhone||'')))contact='nereu';
+      else if(String(absolute).includes(String(SITE.phone||'')))contact='marcia';
+      return {name:'whatsapp_click',params:{contact,link_text:text,link_url:absolute}};
+    }
+    if(/^tel:/i.test(href)){
+      return {name:'phone_click',params:{link_text:text,link_url:href}};
+    }
+    if(/instagram\.com/i.test(absolute)){
+      return {name:'instagram_click',params:{link_text:text,link_url:absolute}};
+    }
+    if(/facebook\.com/i.test(absolute)){
+      return {name:'facebook_click',params:{link_text:text,link_url:absolute}};
+    }
+    if(/google\.[^/]+\/maps|maps\.google\.|google\.com\/maps|maps\.app\.goo\.gl/i.test(absolute)){
+      return {name:'directions_click',params:{link_text:text,link_url:absolute}};
+    }
+
+    let path='';
+    try{path=new URL(absolute,window.location.href).pathname.toLowerCase()}catch(e){}
+    if(/\/acomodacoes(?:\.html)?$/.test(path)){
+      return {name:'accommodations_click',params:{link_text:text,link_url:absolute}};
+    }
+    if(/\/valores(?:\.html)?$/.test(path)){
+      return {name:'rates_click',params:{link_text:text,link_url:absolute}};
+    }
+    if(/\/marina(?:\.html)?$/.test(path)){
+      return {name:'marina_click',params:{link_text:text,link_url:absolute}};
+    }
+    if(/\/contato(?:\.html)?$/.test(path)){
+      return {name:'contact_page_click',params:{link_text:text,link_url:absolute}};
+    }
+    if(/\/como-chegar(?:\.html)?$/.test(path)){
+      return {name:'directions_page_click',params:{link_text:text,link_url:absolute}};
+    }
+    return null;
+  }
+
+  document.addEventListener('click',event=>{
+    const link=event.target.closest?.('a[href]');
+    if(!link)return;
+    const tracked=classifyTrackedLink(link);
+    if(tracked)sendSiteEvent(tracked.name,tracked.params);
+  },{capture:true});
+
+  document.addEventListener('submit',event=>{
+    const form=event.target;
+    if(!(form instanceof HTMLFormElement))return;
+    sendSiteEvent('contact_form_submit',{
+      form_id:form.id||'',
+      form_name:form.getAttribute('name')||''
+    });
+  },{capture:true});
+
+  window.trackPousadaEvent=sendSiteEvent;
+}
+
+document.addEventListener('DOMContentLoaded',async()=>{await loadCmsSiteConfig();initSiteAnalytics();renderShell();await loadCmsPageContent();});
